@@ -1,4 +1,4 @@
-package repository.impl;
+package DAO.repository.impl;
 
 public class ProductRepositoryImpl {
 }
