@@ -1,8 +1,8 @@
 package by.gruca.cafe;
 
-import by.gruca.cafe.Command.ActionCommand;
-import by.gruca.cafe.Command.CommandEnum;
-import by.gruca.cafe.Command.EmptyCommand;
+import by.gruca.cafe.command.ActionCommand;
+import by.gruca.cafe.command.CommandEnum;
+import by.gruca.cafe.command.EmptyCommand;
 import by.gruca.cafe.configuration.MessageManager;
 
 import javax.servlet.http.HttpServletRequest;

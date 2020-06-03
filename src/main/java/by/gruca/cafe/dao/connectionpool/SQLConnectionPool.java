@@ -1,8 +1,10 @@
-package by.gruca.cafe.DAO.db;
+package by.gruca.cafe.dao.connectionpool;
 
 
-import by.gruca.cafe.DAO.config.ConnectionPoolConfig;
-import by.gruca.cafe.DAO.exception.DAOException;
+
+import by.gruca.cafe.dao.exception.DAOException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,7 +16,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 public enum SQLConnectionPool {
     INSTANCE;
 
-
+    Logger logger = LogManager.getLogger(SQLConnectionPool.class);
     private int initConnections;
     private int maxConnections;
     private String url;
@@ -25,20 +27,12 @@ public enum SQLConnectionPool {
 
 
     SQLConnectionPool() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-
         connectionPool = new LinkedBlockingQueue<>();
         usedConnections = new ArrayList<>();
         createConnectionPool();
-
     }
 
     private ConnectionProxy createConnection() throws SQLException {
-
         return new ConnectionProxy(DriverManager.getConnection(url, user, password));
     }
 
@@ -49,7 +43,7 @@ public enum SQLConnectionPool {
                 connectionPool.add(createConnection());
             }
         } catch (SQLException e) {
-
+            logger.error(e);
         }
     }
 
@@ -59,7 +53,7 @@ public enum SQLConnectionPool {
                 try {
                     connectionPool.add(createConnection());
                 } catch (SQLException e) {
-
+                    logger.error(e);
                     throw new DAOException("Connection creating error", e);
                 }
             } else {
@@ -68,18 +62,18 @@ public enum SQLConnectionPool {
         }
         ConnectionProxy connection = connectionPool.poll();
         usedConnections.add(connection);
-     /*  logger.info("GETOONN");
+        logger.info("GETOONN");
         logger.info("conpool = " + connectionPool.size());
-        logger.info("usedcon = " + usedConnections.size());*/
+       logger.info("usedcon = " + usedConnections.size());
         return connection;
     }
 
     public void releaseConnection(ConnectionProxy connection) {
         usedConnections.remove(connection);
         connectionPool.add(connection);
-     /*  logger.info("OUTCONN");
-       logger.info("conpool = " + connectionPool.size());
-       logger.info("usedcon = " + usedConnections.size());*/
+        logger.info("OUTCONN");
+        logger.info("conpool = " + connectionPool.size());
+        logger.info("usedcon = " + usedConnections.size());
     }
 
     public int getSize() {

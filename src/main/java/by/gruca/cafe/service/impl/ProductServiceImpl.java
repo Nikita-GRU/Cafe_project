@@ -1,7 +1,7 @@
 package by.gruca.cafe.service.impl;
 
-import by.gruca.cafe.DAO.exception.DAOException;
-import by.gruca.cafe.DAO.repository.impl.ProductDAOImpl;
+import by.gruca.cafe.dao.exception.DAOException;
+import by.gruca.cafe.dao.impl.ProductDAOImpl;
 import by.gruca.cafe.model.Product;
 import by.gruca.cafe.service.ProductService;
 import by.gruca.cafe.service.exception.ServiceException;

@@ -1,4 +1,4 @@
-package by.gruca.cafe.Command;
+package by.gruca.cafe.command;
 
 import javax.servlet.http.HttpServletRequest;
 

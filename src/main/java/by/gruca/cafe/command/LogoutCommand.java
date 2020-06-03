@@ -1,4 +1,4 @@
-package by.gruca.cafe.Command;
+package by.gruca.cafe.command;
 
 import by.gruca.cafe.configuration.ConfigurationManager;
 

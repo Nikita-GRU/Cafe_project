@@ -1,8 +1,8 @@
 package by.gruca.cafe.service.impl;
 
 
-import by.gruca.cafe.DAO.exception.DAOException;
-import by.gruca.cafe.DAO.repository.impl.AccountDAO;
+import by.gruca.cafe.dao.exception.DAOException;
+import by.gruca.cafe.dao.impl.AccountDAOImpl;
 import by.gruca.cafe.model.Account;
 import by.gruca.cafe.service.AccountService;
 import by.gruca.cafe.service.exception.ServiceException;
@@ -13,7 +13,7 @@ public class AccountServiceImpl implements AccountService {
         Account account = new Account();
         account.setLogin(login);
         account.setPassword(password);
-        AccountDAO accountDAO = new AccountDAO();
+        AccountDAOImpl accountDAO = new AccountDAOImpl();
         try {
             accountDAO.create(account);
         } catch (DAOException e) {
@@ -25,7 +25,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public Account getAccountByLogin(String login) throws ServiceException {
         Account account = null;
-        AccountDAO accountDAO = new AccountDAO();
+        AccountDAOImpl accountDAO = new AccountDAOImpl();
         try {
             account = accountDAO.read(login).get();
         } catch (DAOException e) {

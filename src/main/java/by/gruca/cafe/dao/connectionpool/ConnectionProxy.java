@@ -1,4 +1,4 @@
-package by.gruca.cafe.DAO.db;
+package by.gruca.cafe.dao.connectionpool;
 
 import java.sql.*;
 import java.util.Map;

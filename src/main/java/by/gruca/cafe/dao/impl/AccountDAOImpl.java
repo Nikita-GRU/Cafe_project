@@ -1,10 +1,10 @@
-package by.gruca.cafe.DAO.repository.impl;
+package by.gruca.cafe.dao.impl;
 
 
-import by.gruca.cafe.DAO.db.ConnectionProxy;
-import by.gruca.cafe.DAO.db.SQLConnectionPool;
-import by.gruca.cafe.DAO.exception.DAOException;
-import by.gruca.cafe.DAO.repository.DAO;
+import by.gruca.cafe.dao.connectionpool.ConnectionProxy;
+import by.gruca.cafe.dao.connectionpool.SQLConnectionPool;
+import by.gruca.cafe.dao.exception.DAOException;
+import by.gruca.cafe.dao.AccountDAO;
 import by.gruca.cafe.model.Account;
 import by.gruca.cafe.model.Role;
 
@@ -13,7 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Optional;
 
-public class AccountDAO implements DAO<Account, String> {
+public class AccountDAOImpl implements AccountDAO {
     private static final String ACCOUNT_ID = "id";
     private static final String ACCOUNT_LOGIN = "login";
     private static final String ACCOUNT_PASSWORD = "password";

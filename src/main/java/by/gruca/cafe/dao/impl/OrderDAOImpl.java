@@ -1,14 +1,15 @@
-package by.gruca.cafe.DAO.repository.impl;
+package by.gruca.cafe.dao.impl;
 
 
-import by.gruca.cafe.DAO.exception.DAOException;
-import by.gruca.cafe.DAO.repository.DAO;
+import by.gruca.cafe.dao.exception.DAOException;
+import by.gruca.cafe.dao.OrderDAO;
 import by.gruca.cafe.model.Order;
 
 
+import java.util.List;
 import java.util.Optional;
 
-public class OrderDAO implements DAO<Order, Integer> {
+public class OrderDAOImpl implements OrderDAO {
 
     private static final String SQL_GET = "select * from order where id=(?)";
     private static final String SQL_GET_ALL = "select * from order";
@@ -39,6 +40,11 @@ public class OrderDAO implements DAO<Order, Integer> {
     @Override
     public boolean delete(Order model) throws DAOException {
         return false;
+    }
+
+    @Override
+    public List<Order> getAll() throws DAOException {
+        return null;
     }
 //    @Override
 //    public Optional<Order> get(int id) throws DAOException {

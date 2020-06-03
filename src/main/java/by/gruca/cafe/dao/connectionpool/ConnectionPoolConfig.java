@@ -1,11 +1,10 @@
-package by.gruca.cafe.DAO.config;
+package by.gruca.cafe.dao.connectionpool;
 
 import java.util.ResourceBundle;
 
 public class ConnectionPoolConfig {
     private final static ResourceBundle resourceBundle = ResourceBundle.getBundle("connectionPool");
 
-    // класс извлекает информацию из файла config.properties
     private ConnectionPoolConfig() {
     }
 

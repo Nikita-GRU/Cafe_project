@@ -1,11 +1,11 @@
-package by.gruca.cafe.DAO.repository;
+package by.gruca.cafe.dao;
 
 
-import by.gruca.cafe.DAO.exception.DAOException;
+import by.gruca.cafe.dao.exception.DAOException;
 
 import java.util.Optional;
 
-public interface DAO<Entity, Key> {
+public interface AbstractDAO<Entity, Key> {
     boolean create(Entity model) throws DAOException, DAOException;
 
     Optional<Entity> read(Key key) throws DAOException;

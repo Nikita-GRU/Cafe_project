@@ -1,4 +1,4 @@
-package by.gruca.cafe.DAO.exception;
+package by.gruca.cafe.dao.exception;
 
 public class DAOException extends Exception {
     public DAOException(Throwable cause) {

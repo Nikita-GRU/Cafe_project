@@ -1,9 +1,9 @@
-package by.gruca.cafe.DAO.repository.impl;
+package by.gruca.cafe.dao.impl;
 
-import by.gruca.cafe.DAO.db.ConnectionProxy;
-import by.gruca.cafe.DAO.db.SQLConnectionPool;
-import by.gruca.cafe.DAO.exception.DAOException;
-import by.gruca.cafe.DAO.repository.DAO;
+import by.gruca.cafe.dao.connectionpool.ConnectionProxy;
+import by.gruca.cafe.dao.connectionpool.SQLConnectionPool;
+import by.gruca.cafe.dao.exception.DAOException;
+import by.gruca.cafe.dao.ProductDAO;
 import by.gruca.cafe.model.Product;
 
 import java.sql.PreparedStatement;
@@ -14,11 +14,11 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-public class ProductDAOImpl implements DAO<Product, String> {
+public class ProductDAOImpl implements ProductDAO {
     private static final String SQL_GET_ALL = "select * from product";
 
     @Override
-    public boolean create(Product product) throws DAOException, DAOException {
+    public boolean create(Product product) throws DAOException {
         return false;
     }
 

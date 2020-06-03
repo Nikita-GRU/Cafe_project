@@ -1,6 +1,6 @@
-package by.gruca.cafe.Command;
+package by.gruca.cafe.command;
 
-import by.gruca.cafe.DAO.config.ConnectionPoolProperties;
+import by.gruca.cafe.dao.config.ConnectionPoolProperties;
 import by.gruca.cafe.configuration.ConfigurationManager;
 import by.gruca.cafe.configuration.MessageManager;
 import by.gruca.cafe.service.exception.ServiceException;

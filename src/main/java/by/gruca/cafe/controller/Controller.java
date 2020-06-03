@@ -1,7 +1,7 @@
-package by.gruca.cafe;
+package by.gruca.cafe.controller;
 
-import by.gruca.cafe.Command.ActionCommand;
-import by.gruca.cafe.DAO.db.SQLConnectionPool;
+import by.gruca.cafe.ActionFactory;
+import by.gruca.cafe.command.ActionCommand;
 import by.gruca.cafe.configuration.ConfigurationManager;
 import by.gruca.cafe.configuration.MessageManager;
 
