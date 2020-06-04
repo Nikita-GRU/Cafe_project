@@ -1,6 +1,6 @@
 package by.gruca.cafe.command;
 
-import by.gruca.cafe.dao.config.ConnectionPoolProperties;
+
 import by.gruca.cafe.configuration.ConfigurationManager;
 import by.gruca.cafe.configuration.MessageManager;
 import by.gruca.cafe.service.exception.ServiceException;
@@ -19,8 +19,6 @@ public class SignInCommand implements ActionCommand {
         String login = request.getParameter(PARAM_NAME_LOGIN);
         String pass = request.getParameter(PARAM_NAME_PASSWORD);
         AccountServiceImpl accountService = new AccountServiceImpl();
-        ConnectionPoolProperties instance = ConnectionPoolProperties.INSTANCE;
-        request.setAttribute("url1", instance.getUrl());
         try {
             accountService.createAccount(login, pass);
             page = ConfigurationManager.getProperty("path.page.main");

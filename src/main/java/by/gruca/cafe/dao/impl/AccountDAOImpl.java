@@ -1,12 +1,14 @@
 package by.gruca.cafe.dao.impl;
 
 
+import by.gruca.cafe.dao.AccountDAO;
 import by.gruca.cafe.dao.connectionpool.ConnectionProxy;
 import by.gruca.cafe.dao.connectionpool.SQLConnectionPool;
 import by.gruca.cafe.dao.exception.DAOException;
-import by.gruca.cafe.dao.AccountDAO;
 import by.gruca.cafe.model.Account;
 import by.gruca.cafe.model.Role;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,7 +26,7 @@ public class AccountDAOImpl implements AccountDAO {
     private static final String ACCOUNT_IS_ENABLED = "is_enabled";
     private static final String ACCOUNT_ROLE = "role";
 
-    private static final String SQL_GET = "select * from account  join role on role_id=role.id where login=? ";
+    private static final String SQL_GET = "select * from account join role on role_id=role.id where login=? ";
     private static final String SQL_GET_ALL = "select * from account";
     private static final String SQL_SAVE = "insert into account(id,login,password,email,firstname,lastname,role_id,is_enabled) " +
             "values(DEFAULT,?,?,?,?,?,?,?)";
@@ -33,7 +35,7 @@ public class AccountDAOImpl implements AccountDAO {
     private static final String SQL_DELETE = "delete from account where id=? ";
     private static final String SQL_GET_ROLE = "select role from role where id=?";
 
-    // Logger logger = LogManager.getLogger(AccountDAO.class);
+    Logger logger = LogManager.getLogger(AccountDAO.class);
 
     @Override
     public boolean create(Account account) throws DAOException {
@@ -48,7 +50,7 @@ public class AccountDAOImpl implements AccountDAO {
             statement.setBoolean(7, account.isEnabled());
             return statement.execute();
         } catch (SQLException e) {
-            // logger.error(e);
+             logger.error(e);
             throw new DAOException("SQL statement error", e);
         }
 
@@ -72,10 +74,10 @@ public class AccountDAOImpl implements AccountDAO {
                     account.setRole(new Role(rs.getInt(ACCOUNT_ROLE_ID), rs.getNString(ACCOUNT_ROLE)));
                 } else throw new DAOException("Account is not exist");
             } catch (SQLException e) {
-                //   logger.error(e);
+                logger.error(e);
             }
         } catch (SQLException e) {
-            // logger.error(e);
+            logger.error(e);
             throw new DAOException("SQL statement error", e);
         }
         return Optional.of(account);
@@ -95,11 +97,11 @@ public class AccountDAOImpl implements AccountDAO {
             statement.setBoolean(7, account.isEnabled());
             statement.setInt(8, account.getId());
             int rowsAffected = statement.executeUpdate();
-            //  logger.info(rowsAffected + " row affected");
+            logger.info(rowsAffected + " row affected");
             return rowsAffected;
 
         } catch (SQLException e) {
-            //  logger.error(e);
+            logger.error(e);
             throw new DAOException("SQL statement error", e);
         }
 
@@ -112,7 +114,7 @@ public class AccountDAOImpl implements AccountDAO {
             statement.setInt(1, account.getId());
             return statement.execute();
         } catch (SQLException e) {
-            // logger.error(e);
+            logger.error(e);
             throw new DAOException("SQL statement error", e);
         }
 

@@ -11,4 +11,6 @@ public interface OrderDAO extends AbstractDAO<Order, Integer> {
 
     List<Order> getAll() throws DAOException;
 
+    List<Order> getAllByAccount(String login) throws DAOException;
+
 }

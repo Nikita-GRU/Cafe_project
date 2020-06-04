@@ -1,7 +1,6 @@
 package by.gruca.cafe.dao.connectionpool;
 
 
-
 import by.gruca.cafe.dao.exception.DAOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -57,14 +56,14 @@ public enum SQLConnectionPool {
                     throw new DAOException("Connection creating error", e);
                 }
             } else {
-                throw new DAOException("Maximum pool size reached, no available connections!", new RuntimeException());
+                throw new DAOException("Maximum pool size reached, no available connections!");
             }
         }
         ConnectionProxy connection = connectionPool.poll();
         usedConnections.add(connection);
         logger.info("GETOONN");
         logger.info("conpool = " + connectionPool.size());
-       logger.info("usedcon = " + usedConnections.size());
+        logger.info("usedcon = " + usedConnections.size());
         return connection;
     }
 

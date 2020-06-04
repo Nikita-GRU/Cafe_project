@@ -1,18 +1,19 @@
 package by.gruca.cafe.model;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 public class Order {
     private int id;
-    private String orderDate;
+    private LocalDateTime date;
     private int totalPrice;
-    private int bonusPoints;
     private List<Product> products;
     private String review;
     private Account account;
-    private PaymentMethod paymentMethod;
 
     public Order() {
+        date = LocalDateTime.now();
     }
 
     public int getId() {
@@ -23,12 +24,12 @@ public class Order {
         this.id = id;
     }
 
-    public String getOrderDate() {
-        return orderDate;
+    public LocalDateTime getDate() {
+        return date;
     }
 
-    public void setOrderDate(String orderDate) {
-        this.orderDate = orderDate;
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 
     public int getTotalPrice() {
@@ -37,14 +38,6 @@ public class Order {
 
     public void setTotalPrice(int totalPrice) {
         this.totalPrice = totalPrice;
-    }
-
-    public int getBonusPoints() {
-        return bonusPoints;
-    }
-
-    public void setBonusPoints(int bonusPoints) {
-        this.bonusPoints = bonusPoints;
     }
 
     public List<Product> getProducts() {
@@ -71,11 +64,4 @@ public class Order {
         this.account = account;
     }
 
-    public PaymentMethod getPaymentMethod() {
-        return paymentMethod;
-    }
-
-    public void setPaymentMethod(PaymentMethod paymentMethod) {
-        this.paymentMethod = paymentMethod;
-    }
 }

@@ -1,6 +1,12 @@
-2020-06-01 18:01:05.000 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - GETOONN
-2020-06-01 18:01:05.003 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - conpool = 9
-2020-06-01 18:01:05.003 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - usedcon = 1
-2020-06-01 18:01:05.038 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - OUTCONN
-2020-06-01 18:01:05.038 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - conpool = 10
-2020-06-01 18:01:05.039 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - usedcon = 0
+2020-06-04 17:07:56.637 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - GETOONN
+2020-06-04 17:07:56.639 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - conpool = 9
+2020-06-04 17:07:56.639 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - usedcon = 1
+2020-06-04 17:07:56.668 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - OUTCONN
+2020-06-04 17:07:56.669 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - conpool = 10
+2020-06-04 17:07:56.669 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - usedcon = 0
+2020-06-04 17:07:56.669 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - GETOONN
+2020-06-04 17:07:56.669 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - conpool = 9
+2020-06-04 17:07:56.669 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - usedcon = 1
+2020-06-04 17:07:56.676 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - OUTCONN
+2020-06-04 17:07:56.677 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - conpool = 10
+2020-06-04 17:07:56.677 [main] INFO  by.gruca.cafe.dao.connectionpool.SQLConnectionPool - usedcon = 0
