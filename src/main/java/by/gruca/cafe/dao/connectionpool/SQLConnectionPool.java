@@ -14,8 +14,10 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public enum SQLConnectionPool {
     INSTANCE;
+    private Logger logger = LogManager.getLogger(SQLConnectionPool.class);
 
-    Logger logger = LogManager.getLogger(SQLConnectionPool.class);
+
+
     private int initConnections;
     private int maxConnections;
     private String url;
@@ -29,6 +31,11 @@ public enum SQLConnectionPool {
         connectionPool = new LinkedBlockingQueue<>();
         usedConnections = new ArrayList<>();
         createConnectionPool();
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            logger.error(e);
+        }
     }
 
     private ConnectionProxy createConnection() throws SQLException {

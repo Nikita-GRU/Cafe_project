@@ -28,12 +28,12 @@ public class AccountDAOImpl implements AccountDAO {
 
     private static final String SQL_GET = "select * from account join role on role_id=role.id where login=? ";
     private static final String SQL_GET_ALL = "select * from account";
-    private static final String SQL_SAVE = "insert into account(id,login,password,email,firstname,lastname,role_id,is_enabled) " +
+    private static final String SQL_SAVE = "insert into account (id,login,password,email,firstname,lastname,role_id,is_enabled) " +
             "values(DEFAULT,?,?,?,?,?,?,?)";
-    private static final String SQL_UPDATE = "update account set login=?,password=?,email=?" +
+    private static final String SQL_UPDATE = "update 'account' set login=?,password=?,email=?" +
             ",firstname=?,lastname=?,role_id=?, is_enabled=? where id=?";
-    private static final String SQL_DELETE = "delete from account where id=? ";
-    private static final String SQL_GET_ROLE = "select role from role where id=?";
+    private static final String SQL_DELETE = "delete from 'account' where id=? ";
+    private static final String SQL_GET_ROLE = "select role from 'role' where id=?";
 
     Logger logger = LogManager.getLogger(AccountDAO.class);
 

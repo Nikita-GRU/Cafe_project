@@ -6,11 +6,12 @@ import by.gruca.cafe.dao.OrderDAO;
 import by.gruca.cafe.dao.connectionpool.ConnectionProxy;
 import by.gruca.cafe.dao.connectionpool.SQLConnectionPool;
 import by.gruca.cafe.dao.exception.DAOException;
+import by.gruca.cafe.factory.DAOFactory;
 import by.gruca.cafe.model.Order;
+import by.gruca.cafe.model.Product;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,24 +19,25 @@ import java.util.List;
 import java.util.Optional;
 
 
+
 public class OrderDAOImpl implements OrderDAO {
+    private static final String SQL_ATTACH_PRODUCTS = "insert into 'order_detail'(id, order_id, product_id, quantity) values(DEFAULT,?,?,?)";
     private static final String SQL_GET = "select * from `order` where id=(?)";
     private static final String SQL_GET_ALL = "select * from order";
     private static final String SQL_GET_ALL_BY_LOGIN = "select * from `order` join account on `order`.id = account.id where login=?";
     private static final String SQL_CREATE = "insert into `order` (id,date,price,account_id,review) values(DEFAULT,CURRENT_TIMESTAMP,?,?,?)";
-    private static final String SQL_UPDATE = "update `order` set id=?,date=?,account_id=?,review=?" +
+    private static final String SQL_UPDATE = "update `order` set date=?,price=?,account_id=?,review=?" +
             "where id=?";
     private static final String SQL_DELETE = "delete from `order` where id=?";
     private static final String SQL_GET_PRODUCTS = "select product_id from order join product on order.product_id=product.id where order.id=?";
-    //  AccountDAO accountDAO = DAOFactory.getInstance().getAccountDAO();
     Logger logger = LogManager.getLogger(AccountDAO.class);
+    private AccountDAO accountDAO = DAOFactory.INSTANCE.getAccountDAO();
 
     @Override
     public boolean create(Order order) throws DAOException {
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_CREATE)) {
-            //statement.setDate(1, Date.valueOf(order.getDate().toLocalDate()));
-            statement.setInt(1, order.getTotalPrice());
+            statement.setDouble(1, order.getPrice());
             statement.setInt(2, order.getAccount().getId());
             statement.setString(3, order.getReview());
             return statement.execute();
@@ -55,11 +57,12 @@ public class OrderDAOImpl implements OrderDAO {
                 if (resultSet.next()) {
                     order.setId(resultSet.getInt("id"));
                     order.setReview(resultSet.getString("review"));
-                    //     order.setAccount(accountDAO.read(resultSet.getString("login")).get());
-                    order.setTotalPrice(resultSet.getInt("price"));
+                    order.setAccount(accountDAO.read(resultSet.getString("login")).get());
+                    order.setPrice(resultSet.getInt("price"));
                 } else throw new DAOException("Account is not exist");
             } catch (SQLException e) {
                 logger.error(e);
+                throw new DAOException("SQL statement error", e);
             }
         } catch (SQLException e) {
             logger.error(e);
@@ -73,9 +76,10 @@ public class OrderDAOImpl implements OrderDAO {
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_UPDATE)) {
             statement.setString(1, order.getDate().toString());
-            statement.setInt(2, order.getTotalPrice());
+            statement.setDouble(2, order.getPrice());
             statement.setInt(3, order.getAccount().getId());
             statement.setString(4, order.getReview());
+            statement.setInt(5, order.getId());
             int rowsAffected = statement.executeUpdate();
             logger.info(rowsAffected + " row affected");
             return rowsAffected;
@@ -119,6 +123,19 @@ public class OrderDAOImpl implements OrderDAO {
         return null;
     }
 
+    private void attachProductsToOrder(List<Product> products, Order order) throws DAOException {
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement statement = connection.prepareStatement(SQL_ATTACH_PRODUCTS)) {
+            for (Product product : products) {
+                statement.setInt(1, order.getId());
+                statement.setInt(2, product.getId());
+                statement.setInt(3, product.getQuantity());
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException("SQL statement error", e);
+        }
+    }
 //    @Override
 //    public List<Order> getAll() throws DAOException {
 //        List<Order> resultCollection = new ArrayList<>();

@@ -24,4 +24,30 @@ public class Category {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", category='" + category + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Category)) return false;
+
+        Category category1 = (Category) o;
+
+        if (getId() != category1.getId()) return false;
+        return getCategory() != null ? getCategory().equals(category1.getCategory()) : category1.getCategory() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getId();
+        result = 31 * result + (getCategory() != null ? getCategory().hashCode() : 0);
+        return result;
+    }
 }

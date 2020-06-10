@@ -15,6 +15,12 @@ import java.io.IOException;
 
 @WebServlet("/jsp/controller")
 public class Controller extends HttpServlet {
+    @Override
+    public void init() throws ServletException {
+
+        super.init();
+    }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);

@@ -1,11 +1,29 @@
 package by.gruca.cafe.model;
 
 public class Product {
+    private int id;
     private String name;
-    private int price;
+    private double price;
     private String description;
+    private int quantity;
 
     public Product() {
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getDescription() {
@@ -24,19 +42,20 @@ public class Product {
         this.name = name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
     @Override
     public String toString() {
         return "Product{" +
-                "name='" + name + '\'' +
-                ", price='" + price + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
                 ", description='" + description + '\'' +
                 '}';
     }
@@ -48,15 +67,20 @@ public class Product {
 
         Product product = (Product) o;
 
-        if (getPrice() != product.getPrice()) return false;
+        if (getId() != product.getId()) return false;
+        if (Double.compare(product.getPrice(), getPrice()) != 0) return false;
         if (!getName().equals(product.getName())) return false;
         return getDescription() != null ? getDescription().equals(product.getDescription()) : product.getDescription() == null;
     }
 
     @Override
     public int hashCode() {
-        int result = getName().hashCode();
-        result = 31 * result + getPrice();
+        int result;
+        long temp;
+        result = getId();
+        result = 31 * result + getName().hashCode();
+        temp = Double.doubleToLongBits(getPrice());
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
         return result;
     }

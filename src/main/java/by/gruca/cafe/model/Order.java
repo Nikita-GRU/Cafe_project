@@ -1,13 +1,12 @@
 package by.gruca.cafe.model;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 public class Order {
     private int id;
     private LocalDateTime date;
-    private int totalPrice;
+    private double price;
     private List<Product> products;
     private String review;
     private Account account;
@@ -32,12 +31,12 @@ public class Order {
         this.date = date;
     }
 
-    public int getTotalPrice() {
-        return totalPrice;
+    public double getPrice() {
+        return price;
     }
 
-    public void setTotalPrice(int totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public List<Product> getProducts() {
@@ -64,4 +63,45 @@ public class Order {
         this.account = account;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Order)) return false;
+
+        Order order = (Order) o;
+
+        if (getId() != order.getId()) return false;
+        if (Double.compare(order.getPrice(), getPrice()) != 0) return false;
+        if (!getDate().equals(order.getDate())) return false;
+        if (getProducts() != null ? !getProducts().equals(order.getProducts()) : order.getProducts() != null)
+            return false;
+        if (getReview() != null ? !getReview().equals(order.getReview()) : order.getReview() != null) return false;
+        return getAccount().equals(order.getAccount());
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = getId();
+        result = 31 * result + getDate().hashCode();
+        temp = Double.doubleToLongBits(getPrice());
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (getProducts() != null ? getProducts().hashCode() : 0);
+        result = 31 * result + (getReview() != null ? getReview().hashCode() : 0);
+        result = 31 * result + getAccount().hashCode();
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", date=" + date +
+                ", price=" + price +
+                ", products=" + products +
+                ", review='" + review + '\'' +
+                ", account=" + account +
+                '}';
+    }
 }

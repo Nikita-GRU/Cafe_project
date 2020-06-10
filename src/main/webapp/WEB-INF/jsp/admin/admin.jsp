@@ -9,5 +9,5 @@
     Content admin page<br/>
     <input type="submit" value="to Index">
 </form>
-<c:import url="..\common\footer.jsp" /> </body></
-html>
+<c:import url="..\common\footer.jsp" /> </body>
+</html>

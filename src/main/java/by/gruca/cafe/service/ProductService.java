@@ -7,4 +7,11 @@ import java.util.List;
 
 public interface ProductService {
     List<Product> getProducts() throws ServiceException;
+
+    void addNewProduct(Product newProduct) throws ServiceException;
+
+    void updateProduct(Product product) throws ServiceException;
+
+
+
 }
