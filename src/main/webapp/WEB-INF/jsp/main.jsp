@@ -41,12 +41,16 @@
 <body>
 <h3>Welcome, ${username}!</h3>
 <hr/>
+${pageContext.request.requestURI}
+
+${pageContext.request.contextPath}
+
 <ul class="nav">
     <li><a href="#">Главная</a></li>
-    <li><a href="jsp\controller?command=showmenu">Menu</a></li>
+    <li><a href="${pageContext.request.contextPath}\menu">Menu</a></li>
     <li><a href="#">Контакты</a></li>
-    <li><a href="jsp\signin.jsp">Sign in</a></li>
-    <li><a href="jsp\login.jsp">Login</a></li>
+    <li><a href="${pageContext.request.contextPath}\signup">Sign up</a></li>
+    <li><a href="${pageContext.request.contextPath}\login">Login</a></li>
 </ul>
 </body>
 </html>

@@ -8,7 +8,7 @@ import by.gruca.cafe.service.impl.AccountServiceImpl;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class SignInCommand implements ActionCommand {
+public class SignUpCommand implements ActionCommand {
     private static final String PARAM_NAME_LOGIN = "login";
     private static final String PARAM_NAME_PASSWORD = "password";
     private static final String PARAM_NAME_EMAIL ="email" ;

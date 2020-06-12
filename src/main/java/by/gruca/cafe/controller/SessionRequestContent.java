@@ -1,4 +1,4 @@
-package by.gruca.cafe;
+package by.gruca.cafe.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;

@@ -3,5 +3,6 @@
 <head><title>Footer</title></head>
 <body>
 <hr/>
-Copyright, 2001-2013, ${requestScope.admin}
+<hr/>
+FOOTER
 </body></html>

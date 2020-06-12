@@ -1,6 +1,9 @@
 package by.gruca.cafe.command;
 
 public enum CommandEnum {
+    SIGNUPREDIRECT {{
+        this.command = new SignUpRedirectCommand();
+    }},
     LOGIN {
         {
             this.command = new LoginCommand();
@@ -11,9 +14,9 @@ public enum CommandEnum {
             this.command = new LogoutCommand();
         }
     },
-    SIGNIN {
+    SIGNUP {
         {
-            this.command = new SignInCommand();
+            this.command = new SignUpCommand();
         }
     },
     SHOWMENU {
