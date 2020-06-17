@@ -2,7 +2,6 @@ package by.gruca.cafe.service.impl;
 
 
 import by.gruca.cafe.dao.exception.DAOException;
-import by.gruca.cafe.dao.impl.AccountDAOImpl;
 import by.gruca.cafe.factory.DAOFactory;
 import by.gruca.cafe.model.Account;
 import by.gruca.cafe.service.AccountService;
@@ -61,16 +60,12 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public void createAccount(String login, String password, String email, String firstName, String lastName) throws ServiceException {
+    public void createAccount(Account account) throws ServiceException {
 
-        AccountDAOImpl accountDAO = new AccountDAOImpl();
-        Account account = new Account();
-        account.setLogin(login);
-        account.setEmail(email);
         try {
-            account.setPassword(hashGeneratorUtil.generateHash(password));
-            accountDAO.create(account);
-            logger.info("Account" + login + " created");
+            account.setPassword(hashGeneratorUtil.generateHash(account.getPassword()));
+            DAOFactory.INSTANCE.getAccountDAO().create(account);
+            logger.info("Account" + account.getEmail() + " created");
         } catch (DAOException | UtilException e) {
             logger.error(e);
             throw new ServiceException(e);
@@ -78,12 +73,12 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Account getAccountByLogin(String login) throws ServiceException {
+    public Account getAccountByEmail(String email) throws ServiceException {
         Account account = null;
-        AccountDAOImpl accountDAO = new AccountDAOImpl();
+
         try {
-            account = accountDAO.read(login).get();
-            logger.info("Account" + login + " is taken");
+            account = DAOFactory.INSTANCE.getAccountDAO().read(email).get();
+            logger.info("Account" + email + " is taken");
         } catch (DAOException e) {
             logger.error(e);
             throw new ServiceException(e);

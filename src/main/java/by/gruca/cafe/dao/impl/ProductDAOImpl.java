@@ -19,15 +19,17 @@ import java.util.Objects;
 import java.util.Optional;
 
 public class ProductDAOImpl implements ProductDAO {
-    private static final String SQL_GET_ALL = "select * from 'product'";
-    private static final String SQL_GET = "select * from 'product' where name=? ";
-    private static final String SQL_CREATE = "insert into 'product'(id,name,price,description) " +
+    private static final String SQL_GET_ALL = "select * from product";
+    private static final String SQL_GET = "select * from product where name=? ";
+    private static final String SQL_CREATE = "insert into product(id,name,price,description) " +
             "values(DEFAULT,?,?,?)";
-    private static final String SQL_UPDATE = "update 'product' set name=?,price=?,description=? where id=?";
-    private static final String SQL_DELETE = "delete from 'product' where id=? ";
-    Logger logger = LogManager.getLogger(AccountDAO.class);
+    private static final String SQL_UPDATE = "update product set name=?,price=?,description=? where id=?";
+    private static final String SQL_DELETE = "delete from product where id=? ";
+    Logger logger = LogManager.getLogger(ProductDAOImpl.class);
 
 
+    public ProductDAOImpl() {
+    }
 
     @Override
     public boolean create(Product product) throws DAOException {
@@ -52,8 +54,9 @@ public class ProductDAOImpl implements ProductDAO {
             try (ResultSet resultSet = readStatement.executeQuery()) {
                 if (resultSet.next()) {
                     product.setId(resultSet.getInt("id"));
-                    product.setDescription(resultSet.getString("review"));
+                    product.setDescription(resultSet.getString("description"));
                     product.setPrice(resultSet.getDouble("price"));
+                    product.setName(productName);
                 } else throw new DAOException("Account is not exist");
             } catch (SQLException e) {
                 logger.error(e);
@@ -114,6 +117,7 @@ public class ProductDAOImpl implements ProductDAO {
                 productList.add(product);
             }
         } catch (SQLException e) {
+            logger.error(e);
             throw new DAOException("getAll query error", e);
         }
 

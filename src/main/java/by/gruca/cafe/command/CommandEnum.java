@@ -1,8 +1,11 @@
 package by.gruca.cafe.command;
 
 public enum CommandEnum {
-    SIGNUPREDIRECT {{
-        this.command = new SignUpRedirectCommand();
+    ORDER {{
+        this.command = new OrderCommand();
+    }},
+    SHOWCART {{
+        this.command = new AddToCartCommand();
     }},
     LOGIN {
         {

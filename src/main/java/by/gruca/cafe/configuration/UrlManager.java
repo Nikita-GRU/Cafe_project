@@ -2,10 +2,10 @@ package by.gruca.cafe.configuration;
 
 import java.util.ResourceBundle;
 
-public class MessageManager {
-    private final static ResourceBundle resourceBundle = ResourceBundle.getBundle("messages");
+public class UrlManager {
+    private final static ResourceBundle resourceBundle = ResourceBundle.getBundle("urlconfig");
 
-    private MessageManager() {
+    private UrlManager() {
     }
 
     public static String getProperty(String key) {

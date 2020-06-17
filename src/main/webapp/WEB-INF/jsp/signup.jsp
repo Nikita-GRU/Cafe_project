@@ -11,11 +11,16 @@
     <title>Sign in</title>
 </head>
 <body>
-<form name="signUpForm" method="POST" action="">
+<form name="signUpForm" method="POST" action="controller">
     <input type="hidden" name="command" value="signup"/>
-    Login:
+    Email
     <br/>
-    <input type="text" name="login" value=""/> <a href="">check login</a>
+    <input type="email" name="email" value=""/>
+    <br/>
+    <br/>
+    Phone Number:
+    <br/>
+    <input type="number" name="phonenumber" value=""/> <a href="">check login</a>
     <br/>
     <br/>
     Password:
@@ -26,11 +31,6 @@
     Verify password
     <br/>
     <input type="password" name="password_verify" value=""/>
-    <br/>
-    <br/>
-    Email
-    <br/>
-    <input type="email" name="email" value=""/>
     <br/>
     <br/>
     Firstname

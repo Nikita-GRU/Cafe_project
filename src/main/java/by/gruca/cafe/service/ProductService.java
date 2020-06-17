@@ -11,6 +11,7 @@ public interface ProductService {
     void addNewProduct(Product newProduct) throws ServiceException;
 
     void updateProduct(Product product) throws ServiceException;
+    Product getProductByName(String productName) throws ServiceException;
 
 
 

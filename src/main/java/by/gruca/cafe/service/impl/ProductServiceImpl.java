@@ -47,4 +47,15 @@ public class ProductServiceImpl implements ProductService {
             throw new ServiceException(e);
         }
     }
+
+    @Override
+    public Product getProductByName(String productName) throws ServiceException {
+        Product product = new Product();
+        try {
+            product = DAOFactory.INSTANCE.getProductDAO().read(productName).get();
+        } catch (DAOException e) {
+            throw new ServiceException(e);
+        }
+        return product;
+    }
 }

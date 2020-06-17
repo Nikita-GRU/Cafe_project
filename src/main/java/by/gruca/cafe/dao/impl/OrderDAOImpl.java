@@ -19,19 +19,21 @@ import java.util.List;
 import java.util.Optional;
 
 
-
 public class OrderDAOImpl implements OrderDAO {
-    private static final String SQL_ATTACH_PRODUCTS = "insert into 'order_detail'(id, order_id, product_id, quantity) values(DEFAULT,?,?,?)";
-    private static final String SQL_GET = "select * from `order` where id=(?)";
+    private static final String SQL_ATTACH_PRODUCTS = "insert into order_detail(id, order_id, product_id, quantity) values(DEFAULT,?,?,?)";
+    private static final String SQL_GET = "select * from order where id=(?)";
     private static final String SQL_GET_ALL = "select * from order";
-    private static final String SQL_GET_ALL_BY_LOGIN = "select * from `order` join account on `order`.id = account.id where login=?";
-    private static final String SQL_CREATE = "insert into `order` (id,date,price,account_id,review) values(DEFAULT,CURRENT_TIMESTAMP,?,?,?)";
-    private static final String SQL_UPDATE = "update `order` set date=?,price=?,account_id=?,review=?" +
+    private static final String SQL_GET_ALL_BY_LOGIN = "select * from order join account on `order`.id = account.id where email=?";
+    private static final String SQL_CREATE = "insert into order (id,date,price,account_id,review) values(DEFAULT,CURRENT_TIMESTAMP,?,?,?)";
+    private static final String SQL_UPDATE = "update order set date=?,price=?,account_id=?,review=?" +
             "where id=?";
-    private static final String SQL_DELETE = "delete from `order` where id=?";
+    private static final String SQL_DELETE = "delete from order where id=?";
     private static final String SQL_GET_PRODUCTS = "select product_id from order join product on order.product_id=product.id where order.id=?";
-    Logger logger = LogManager.getLogger(AccountDAO.class);
-    private AccountDAO accountDAO = DAOFactory.INSTANCE.getAccountDAO();
+    private final AccountDAO accountDAO =new AccountDAOImpl();
+    Logger logger = LogManager.getLogger(OrderDAOImpl.class);
+
+    public OrderDAOImpl() {
+    }
 
     @Override
     public boolean create(Order order) throws DAOException {

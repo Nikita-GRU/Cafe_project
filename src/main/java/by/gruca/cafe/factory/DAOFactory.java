@@ -13,10 +13,10 @@ public enum DAOFactory {
     private AccountDAO accountDAO;
     private ProductDAO productDAO;
 
-    private DAOFactory() {
-        orderDAO = new OrderDAOImpl();
+    DAOFactory() {
         accountDAO = new AccountDAOImpl();
         productDAO = new ProductDAOImpl();
+        orderDAO = new OrderDAOImpl();
     }
 
     public OrderDAO getOrderDAO() {

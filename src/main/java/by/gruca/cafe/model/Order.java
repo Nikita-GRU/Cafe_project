@@ -1,6 +1,7 @@
 package by.gruca.cafe.model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
@@ -13,6 +14,7 @@ public class Order {
 
     public Order() {
         date = LocalDateTime.now();
+        products = new ArrayList<>();
     }
 
     public int getId() {
@@ -61,6 +63,10 @@ public class Order {
 
     public void setAccount(Account account) {
         this.account = account;
+    }
+
+    public void addNewProduct(Product product) {
+        products.add(product);
     }
 
     @Override

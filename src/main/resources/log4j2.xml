@@ -1,21 +1,30 @@
-<Configuration status="error">
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug">
     <Properties>
         <Property name="logdir">${sys:catalina.base}/logs</Property>
+        <Property name="logfiledir"></Property>
         <Property name="layout">TOMCAT %d [%t] %-5p %c- %m%n</Property>
     </Properties>
     <Appenders>
-        <RollingFile name="CATALINA" fileName="${logdir}/catalina.log" filePattern="${logdir}/catalina.%d{yyyy-MM-dd}-%i.log">
+        <RollingFile name="CATALINA" fileName="${logdir}/catalina.log"
+                     filePattern="${logdir}/catalina.%d{yyyy-MM-dd}-%i.log">
             <PatternLayout pattern="${layout}"/>
             <Policies>
-                <TimeBasedTriggeringPolicy />
+                <TimeBasedTriggeringPolicy/>
                 <SizeBasedTriggeringPolicy size="1 MB"/>
             </Policies>
             <DefaultRolloverStrategy max="10"/>
         </RollingFile>
+        <File name="LogToFile" fileName="C:\Users\User\IdeaProjects\new11\log.log">
+            <PatternLayout>
+                <pattern>%d %p %C{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+        </File>
     </Appenders>
     <Loggers>
         <Root level="INFO">
-            <AppenderRef ref="CATALINA"/>
+            <AppenderRef ref="CATALINA" level="ERROR"/>
+            <AppenderRef ref="LogToFile" level="INFO"/>
         </Root>
         <Logger name="org.apache.catalina.core.ContainerBase.[Catalina].[localhost]" level="info" additivity="false">
             <AppenderRef ref="CATALINA"/>

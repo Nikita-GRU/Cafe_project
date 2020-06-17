@@ -32,6 +32,23 @@
             text-align: center;
         }
 
+        ul.nav input {
+            display: block;
+            width: 5em;
+            padding: 10px;
+            margin: 0 5px;
+            background-color: #f4f4f4;
+            border: 1px dashed #333;
+            text-decoration: none;
+            color: #333;
+            text-align: center;
+        }
+
+        ul.nav input:hover {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+
         ul.nav a:hover {
             background-color: #333;
             color: #f4f4f4;
@@ -41,14 +58,10 @@
 <body>
 <h3>Welcome, ${username}!</h3>
 <hr/>
-${pageContext.request.requestURI}
-
-${pageContext.request.contextPath}
 
 <ul class="nav">
-    <li><a href="#">Главная</a></li>
+    <li><a href="${pageContext.request.contextPath}\">Главная</a></li>
     <li><a href="${pageContext.request.contextPath}\menu">Menu</a></li>
-    <li><a href="#">Контакты</a></li>
     <li><a href="${pageContext.request.contextPath}\signup">Sign up</a></li>
     <li><a href="${pageContext.request.contextPath}\login">Login</a></li>
 </ul>

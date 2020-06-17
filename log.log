@@ -1,0 +1,1340 @@
+2020-06-17 13:27:00,454 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-17 13:27:00,454 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/
+2020-06-17 13:27:01,625 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 13:27:01,626 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 13:27:01,643 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 13:27:01,643 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 13:27:01,643 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 13:27:03,542 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-17 13:27:03,543 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/cart
+2020-06-17 13:29:11,475 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 13:29:11,493 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 13:29:12,179 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 13:29:12,180 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-17 13:29:18,548 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 13:29:18,548 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 13:29:18,595 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 13:29:18,968 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 13:29:18,969 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 13:29:18,969 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-17 13:29:20,223 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 13:29:20,223 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/cart
+2020-06-17 13:29:20,226 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-10] null
+2020-06-17 13:29:20,227 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-10] null
+2020-06-17 13:29:24,371 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 13:29:24,372 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/cart
+2020-06-17 13:29:26,737 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 13:29:26,738 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/cart
+2020-06-17 13:29:27,224 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-17 13:29:27,225 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-17 13:29:47,457 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 13:29:47,457 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/cart
+2020-06-17 13:29:57,549 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-17 13:29:57,549 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/cart
+2020-06-17 13:31:12,300 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 13:31:12,310 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 13:31:12,996 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 13:31:12,997 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 13:31:13,930 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 13:31:13,930 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 13:31:13,973 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 13:31:14,297 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 13:31:14,297 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 13:31:14,297 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 13:31:15,173 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 13:31:15,174 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-17 13:31:15,176 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-7] null
+2020-06-17 13:31:15,177 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-7] null
+2020-06-17 13:40:02,023 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 13:40:02,033 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 13:40:02,685 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 13:40:02,686 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 13:40:04,758 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 13:40:04,759 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 13:40:04,803 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 13:40:05,117 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 13:40:05,118 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 13:40:05,118 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 13:40:06,149 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 13:40:06,150 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/cart
+2020-06-17 13:47:11,893 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 13:47:11,904 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 13:47:12,595 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 13:47:12,596 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/
+2020-06-17 13:48:49,885 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 13:48:49,886 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 13:48:49,932 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 13:48:50,279 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 13:48:50,280 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 13:48:50,280 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-17 13:48:51,472 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 13:48:51,472 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/cart
+2020-06-17 13:51:30,969 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 13:51:30,979 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 13:51:31,659 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 13:51:31,660 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 13:51:33,645 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 13:51:33,646 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 13:51:33,690 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 13:51:34,020 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 13:51:34,020 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 13:51:34,021 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 13:51:34,862 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 13:51:34,862 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/cart
+2020-06-17 13:54:45,951 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 13:54:45,968 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 13:54:47,061 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-17 13:54:47,062 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/
+2020-06-17 13:54:48,160 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 13:54:48,160 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 13:54:52,499 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 13:54:52,499 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-17 13:54:53,265 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 13:54:53,266 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 13:54:55,795 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-17 13:54:55,795 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-17 13:54:56,806 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 13:54:56,807 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-17 13:54:57,810 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-17 13:54:57,810 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 13:54:58,463 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 13:54:58,463 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/menu
+2020-06-17 13:54:58,839 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 13:54:58,840 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-17 13:54:59,049 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 13:54:59,049 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 13:54:59,228 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-17 13:54:59,229 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-17 13:55:08,099 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 13:55:08,099 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 14:12:41,294 INFO b.g.c.d.c.SQLConnectionPool [main] GETOONN
+2020-06-17 14:12:41,297 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 9
+2020-06-17 14:12:41,297 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 1
+2020-06-17 14:12:41,320 ERROR b.g.c.d.i.ProductDAOImpl [main] java.sql.SQLException: Column 'review' not found.
+2020-06-17 14:12:41,320 INFO b.g.c.d.c.SQLConnectionPool [main] OUTCONN
+2020-06-17 14:12:41,320 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 10
+2020-06-17 14:12:41,320 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 0
+2020-06-17 14:13:03,742 INFO b.g.c.d.c.SQLConnectionPool [main] GETOONN
+2020-06-17 14:13:03,745 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 9
+2020-06-17 14:13:03,745 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 1
+2020-06-17 14:13:03,774 ERROR b.g.c.d.i.ProductDAOImpl [main] java.sql.SQLException: Column 'review' not found.
+2020-06-17 14:13:03,774 INFO b.g.c.d.c.SQLConnectionPool [main] OUTCONN
+2020-06-17 14:13:03,775 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 10
+2020-06-17 14:13:03,775 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 0
+2020-06-17 14:13:31,865 INFO b.g.c.d.c.SQLConnectionPool [main] GETOONN
+2020-06-17 14:13:31,870 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 9
+2020-06-17 14:13:31,870 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 1
+2020-06-17 14:13:31,898 ERROR b.g.c.d.i.ProductDAOImpl [main] java.sql.SQLException: Column 'review' not found.
+2020-06-17 14:13:31,898 INFO b.g.c.d.c.SQLConnectionPool [main] OUTCONN
+2020-06-17 14:13:31,899 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 10
+2020-06-17 14:13:31,899 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 0
+2020-06-17 14:17:15,986 INFO b.g.c.d.c.SQLConnectionPool [main] GETOONN
+2020-06-17 14:17:15,989 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 9
+2020-06-17 14:17:15,989 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 1
+2020-06-17 14:17:16,013 INFO b.g.c.d.c.SQLConnectionPool [main] OUTCONN
+2020-06-17 14:17:16,014 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 10
+2020-06-17 14:17:16,014 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 0
+2020-06-17 14:26:50,029 INFO b.g.c.d.c.SQLConnectionPool [main] GETOONN
+2020-06-17 14:26:50,032 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 9
+2020-06-17 14:26:50,033 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 1
+2020-06-17 14:26:50,053 INFO b.g.c.d.c.SQLConnectionPool [main] OUTCONN
+2020-06-17 14:26:50,054 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 10
+2020-06-17 14:26:50,054 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 0
+2020-06-17 14:43:09,421 INFO b.g.c.d.c.SQLConnectionPool [main] GETOONN
+2020-06-17 14:43:09,424 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 9
+2020-06-17 14:43:09,425 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 1
+2020-06-17 14:43:09,445 INFO b.g.c.d.c.SQLConnectionPool [main] OUTCONN
+2020-06-17 14:43:09,445 INFO b.g.c.d.c.SQLConnectionPool [main] conpool = 10
+2020-06-17 14:43:09,445 INFO b.g.c.d.c.SQLConnectionPool [main] usedcon = 0
+2020-06-17 14:43:59,374 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 14:43:59,384 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 14:44:00,202 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 14:44:00,204 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 14:44:20,161 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-17 14:44:20,162 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 14:46:17,678 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 14:46:17,691 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 14:46:18,343 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 14:46:18,344 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 14:46:20,057 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 14:46:20,058 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 14:49:15,456 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 14:49:15,466 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 14:49:16,120 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 14:49:16,121 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/
+2020-06-17 14:49:17,197 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 14:49:17,197 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 14:50:56,163 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 14:50:56,173 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 14:50:56,863 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 14:50:56,864 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 14:50:57,877 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 14:50:57,878 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 14:51:28,729 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 14:51:28,738 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 14:51:29,386 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 14:51:29,387 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/
+2020-06-17 14:51:30,881 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 14:51:30,881 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 14:53:09,339 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 14:53:09,351 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 14:53:10,003 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 14:53:10,004 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 14:53:11,226 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 14:53:11,227 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 14:53:11,271 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 14:53:11,596 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 14:53:11,597 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 14:53:11,597 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 14:53:19,926 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 14:53:19,926 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/cart
+2020-06-17 14:53:19,947 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 14:53:19,947 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 14:53:19,947 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 14:53:19,949 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 14:53:19,949 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 14:53:19,949 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-17 14:53:19,949 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 14:53:19,951 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] product
+2020-06-17 14:53:19,951 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] showcart
+2020-06-17 14:55:33,992 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 14:55:34,004 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 14:55:34,701 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 14:55:34,702 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 14:55:38,703 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 14:55:38,704 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 14:55:38,749 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 14:55:39,082 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 14:55:39,082 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 14:55:39,082 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 14:55:40,239 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-17 14:55:40,239 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/cart
+2020-06-17 14:55:40,259 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 14:55:40,259 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 14:55:40,259 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-17 14:55:40,261 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-17 14:55:40,261 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-17 14:55:40,261 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-17 14:55:40,261 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-5] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 14:55:40,263 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-5] product
+2020-06-17 14:55:40,263 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-5] showcart
+2020-06-17 14:56:44,226 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 14:56:44,237 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 14:56:44,966 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 14:56:44,967 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 14:57:11,472 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-17 14:57:11,472 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-17 14:57:11,518 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 14:57:11,860 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 14:57:11,860 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 14:57:11,860 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 1
+2020-06-17 14:57:12,821 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 14:57:12,821 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/cart
+2020-06-17 14:57:12,842 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 14:57:12,842 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 14:57:12,842 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-17 14:57:12,843 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 14:57:12,843 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 14:57:12,843 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 14:57:12,843 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-6] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 14:57:12,846 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-6] product
+2020-06-17 14:57:12,846 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-6] showcart
+2020-06-17 14:58:33,420 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 14:58:33,432 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 14:58:34,094 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 14:58:34,094 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/
+2020-06-17 14:58:47,449 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 14:58:47,449 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-17 14:58:47,498 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 14:58:47,817 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 14:58:47,818 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 14:58:47,818 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-17 14:58:49,010 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 14:58:49,010 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/cart
+2020-06-17 14:58:49,031 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 14:58:49,031 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 14:58:49,031 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 14:58:49,033 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 14:58:49,033 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 14:58:49,034 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-17 14:58:49,034 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 14:58:49,036 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] Product{id=0, name='grapes', price=35.0, description='lol'}
+2020-06-17 14:58:49,037 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] showcart
+2020-06-17 15:03:25,264 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 15:03:25,274 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 15:03:25,937 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 15:03:25,937 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/
+2020-06-17 15:03:28,686 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 15:03:28,686 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-17 15:03:28,729 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 15:03:29,043 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-17 15:03:29,043 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-17 15:03:29,043 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 1
+2020-06-17 15:03:30,318 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 15:03:30,318 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/cart
+2020-06-17 15:03:30,338 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:03:30,338 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:03:30,338 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 15:03:30,340 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 15:03:30,341 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 15:03:30,341 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-17 15:03:30,341 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] grapes
+2020-06-17 15:03:30,342 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] showcart
+2020-06-17 15:03:59,317 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 15:03:59,327 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 15:03:59,979 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 15:03:59,980 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/
+2020-06-17 15:04:01,966 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 15:04:01,967 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 15:04:02,009 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 15:04:02,326 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 15:04:02,326 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 15:04:02,327 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 15:04:03,377 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 15:04:03,377 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-17 15:04:03,397 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 15:04:03,398 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 15:04:03,398 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 2
+2020-06-17 15:04:03,401 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 15:04:03,401 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 15:04:03,402 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-17 15:04:03,402 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-7] meat
+2020-06-17 15:04:03,402 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-7] showcart
+2020-06-17 15:04:08,923 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 15:04:08,923 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/cart
+2020-06-17 15:04:08,923 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:04:08,924 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:04:08,924 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-17 15:04:08,926 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 15:04:08,926 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 15:04:08,926 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 15:04:08,926 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-6] apple
+2020-06-17 15:04:08,927 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-6] showcart
+2020-06-17 15:04:12,659 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 15:04:12,659 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/cart
+2020-06-17 15:04:12,660 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:04:12,660 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:04:12,660 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 15:04:12,661 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 15:04:12,661 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 15:04:12,661 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-17 15:04:12,661 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] grapes
+2020-06-17 15:04:12,661 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] showcart
+2020-06-17 15:08:45,086 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 15:08:45,096 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 15:08:45,755 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 15:08:45,757 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 15:09:12,246 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 15:09:12,246 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 15:09:12,295 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 15:09:12,628 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:09:12,628 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:09:12,628 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 15:09:15,946 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 15:09:15,947 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-17 15:09:15,970 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 15:09:15,970 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 15:09:15,970 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 2
+2020-06-17 15:09:15,971 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 15:09:15,972 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 15:09:15,972 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-17 15:09:15,972 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-7] grapes
+2020-06-17 15:09:15,972 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-7] showcart
+2020-06-17 15:11:40,510 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 15:11:40,522 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-17 15:11:40,575 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 15:11:40,750 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-17 15:11:40,751 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-17 15:11:40,751 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-17 15:25:39,644 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 15:25:39,654 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 15:25:40,323 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 15:25:40,324 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/
+2020-06-17 15:25:42,504 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 15:25:42,504 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 15:25:42,548 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 15:25:42,888 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 15:25:42,889 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 15:25:42,889 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 15:25:43,783 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-17 15:25:43,783 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/cart
+2020-06-17 15:25:43,804 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 15:25:43,804 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 15:25:43,804 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-17 15:25:43,805 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-17 15:25:43,806 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-17 15:25:43,806 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-17 15:25:43,806 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-5] apple
+2020-06-17 15:25:43,806 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-5] showcart
+2020-06-17 15:25:45,912 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 15:25:45,912 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/cart
+2020-06-17 15:25:45,913 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:25:45,913 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:25:45,913 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-17 15:25:45,916 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 15:25:45,916 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 15:25:45,916 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 15:25:45,917 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-6] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 15:25:45,917 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-6] null
+2020-06-17 15:25:45,917 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-6] showcart
+2020-06-17 15:25:47,530 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-17 15:25:47,530 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/cart
+2020-06-17 15:25:47,531 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 15:25:47,531 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 15:25:47,531 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 2
+2020-06-17 15:25:47,534 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-17 15:25:47,534 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-17 15:25:47,534 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 1
+2020-06-17 15:25:47,534 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-10] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 15:25:47,534 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-10] null
+2020-06-17 15:25:47,535 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-10] showcart
+2020-06-17 15:25:47,729 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-17 15:25:47,729 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/cart
+2020-06-17 15:25:47,730 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 15:25:47,730 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 15:25:47,730 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 2
+2020-06-17 15:25:47,731 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-17 15:25:47,731 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-17 15:25:47,732 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 1
+2020-06-17 15:25:47,732 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-9] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 15:25:47,732 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-9] null
+2020-06-17 15:25:47,732 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-9] showcart
+2020-06-17 15:25:48,674 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 15:25:48,675 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/cart
+2020-06-17 15:25:48,675 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:25:48,675 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:25:48,675 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 15:25:48,677 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 15:25:48,677 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 15:25:48,677 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-17 15:25:48,677 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 15:25:48,677 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] null
+2020-06-17 15:25:48,677 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-8] showcart
+2020-06-17 15:25:48,856 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-17 15:25:48,857 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-17 15:25:48,857 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 15:25:48,857 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 15:25:48,858 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 2
+2020-06-17 15:25:48,859 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 15:25:48,859 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 15:25:48,859 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-17 15:25:48,859 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-7] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 15:25:48,859 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-7] null
+2020-06-17 15:25:48,859 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-7] showcart
+2020-06-17 15:25:49,035 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 15:25:49,035 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/cart
+2020-06-17 15:25:49,036 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-17 15:25:49,036 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-17 15:25:49,036 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 2
+2020-06-17 15:25:49,037 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] OUTCONN
+2020-06-17 15:25:49,037 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 1
+2020-06-17 15:25:49,037 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 1
+2020-06-17 15:25:49,037 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-1] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 15:25:49,038 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-1] null
+2020-06-17 15:25:49,038 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-1] showcart
+2020-06-17 15:25:49,215 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 15:25:49,215 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/cart
+2020-06-17 15:25:49,216 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-17 15:25:49,216 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-17 15:25:49,216 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-17 15:25:49,217 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-17 15:25:49,217 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-17 15:25:49,217 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 1
+2020-06-17 15:25:49,218 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-3] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 15:25:49,218 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-3] null
+2020-06-17 15:25:49,218 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-3] showcart
+2020-06-17 15:25:54,820 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] POST
+2020-06-17 15:25:54,820 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/cart
+2020-06-17 15:25:54,820 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 15:25:54,821 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 15:25:54,821 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-17 15:25:54,822 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-17 15:25:54,822 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-17 15:25:54,822 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 15:25:54,822 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-4] apple
+2020-06-17 15:25:54,822 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-4] showcart
+2020-06-17 15:26:30,446 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 15:26:30,456 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 15:26:31,109 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 15:26:31,109 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 15:26:34,781 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 15:26:34,781 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 15:26:34,827 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 15:26:35,173 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:26:35,173 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:26:35,174 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-17 15:26:36,108 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 15:26:36,108 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-17 15:26:36,123 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 15:26:36,123 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 15:26:36,123 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 2
+2020-06-17 15:26:39,842 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 15:26:39,842 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 15:26:39,855 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:26:39,855 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:26:39,855 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 15:26:40,023 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-17 15:26:40,023 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-17 15:26:40,036 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 15:26:40,036 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 15:26:40,036 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 4
+2020-06-17 15:26:40,203 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] POST
+2020-06-17 15:26:40,203 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 15:26:40,214 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 15:26:40,214 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 15:26:40,214 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 5
+2020-06-17 15:26:40,526 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 15:26:40,526 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-17 15:26:40,537 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 15:26:40,538 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 15:26:40,538 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 6
+2020-06-17 15:26:40,969 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-17 15:26:40,970 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/cart
+2020-06-17 15:26:40,988 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 15:26:40,988 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 15:26:40,988 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 7
+2020-06-17 15:26:40,989 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-17 15:26:40,989 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-17 15:26:40,989 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 6
+2020-06-17 15:26:40,990 ERROR b.g.c.c.AddToCartCommand [http-nio-8082-exec-10] by.gruca.cafe.service.exception.ServiceException: by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-17 15:26:40,990 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-10] null
+2020-06-17 15:26:40,990 INFO b.g.c.c.AddToCartCommand [http-nio-8082-exec-10] showcart
+2020-06-17 15:29:13,545 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 15:29:13,556 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 15:29:14,268 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 15:29:14,269 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 15:30:18,651 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 15:30:18,651 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 15:30:18,726 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 15:30:19,153 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:30:19,153 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:30:19,154 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 15:30:20,613 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-17 15:30:20,613 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-17 15:30:20,628 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 15:30:20,629 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 15:30:20,629 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-17 15:30:22,354 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 15:30:22,354 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 15:30:22,366 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:30:22,366 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:30:22,366 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-17 15:30:22,562 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 15:30:22,562 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-17 15:30:22,574 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 15:30:22,575 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 15:30:22,575 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 4
+2020-06-17 15:30:22,759 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 15:30:22,759 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 15:30:22,771 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 15:30:22,772 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 15:30:22,772 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 5
+2020-06-17 15:30:23,240 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] POST
+2020-06-17 15:30:23,240 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/menu
+2020-06-17 15:30:23,252 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-17 15:30:23,252 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-17 15:30:23,252 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 6
+2020-06-17 15:30:23,465 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] POST
+2020-06-17 15:30:23,466 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-17 15:30:23,476 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-17 15:30:23,477 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-17 15:30:23,477 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 7
+2020-06-17 15:30:23,660 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] POST
+2020-06-17 15:30:23,660 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-17 15:30:23,671 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-17 15:30:23,672 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-17 15:30:23,672 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 8
+2020-06-17 15:30:23,853 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] POST
+2020-06-17 15:30:23,853 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 15:30:23,862 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 15:30:23,863 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 15:30:23,863 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 9
+2020-06-17 15:30:24,039 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 15:30:24,042 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-17 15:30:24,052 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 15:30:24,052 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 15:30:24,052 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 10
+2020-06-17 15:30:24,228 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 15:30:24,228 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 15:30:24,239 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:30:24,239 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:30:24,239 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 11
+2020-06-17 15:30:24,408 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-17 15:30:24,408 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-17 15:30:24,419 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 15:30:24,419 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 15:30:24,419 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 12
+2020-06-17 15:30:24,596 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 15:30:24,596 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 15:30:24,614 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:30:24,614 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:30:24,614 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 13
+2020-06-17 15:30:24,792 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 15:30:24,792 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-17 15:30:24,803 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 15:30:24,803 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 15:30:24,803 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 14
+2020-06-17 15:30:24,972 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 15:30:24,972 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 15:30:24,983 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 15:30:24,984 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 15:30:24,984 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 15
+2020-06-17 15:30:37,933 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] POST
+2020-06-17 15:30:37,933 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-17 15:30:37,944 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-17 15:30:37,944 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-17 15:30:37,944 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 16
+2020-06-17 15:34:24,774 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 15:34:24,784 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 15:34:25,434 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 15:34:25,434 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/
+2020-06-17 15:34:26,299 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 15:34:26,299 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-17 15:34:26,342 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 15:34:26,683 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 15:34:26,683 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 15:34:26,683 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-17 15:34:26,732 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 15:34:26,733 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 15:34:26,733 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-17 15:34:26,734 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-17 15:34:26,734 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-17 15:34:26,734 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-17 15:34:30,461 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] POST
+2020-06-17 15:34:30,461 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-17 15:34:30,461 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-17 15:34:30,461 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-17 15:34:30,462 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-17 15:34:30,476 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-17 15:34:30,477 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-17 15:34:30,477 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 3
+2020-06-17 15:34:30,478 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-17 15:34:30,478 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-17 15:34:30,478 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-17 15:34:31,460 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 15:34:31,460 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 15:34:31,461 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:34:31,461 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:34:31,461 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 15:34:31,476 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:34:31,476 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:34:31,477 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 4
+2020-06-17 15:34:31,478 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 15:34:31,478 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 15:34:31,478 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 15:34:32,011 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 15:34:32,011 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-17 15:34:32,012 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 15:34:32,012 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 15:34:32,012 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 4
+2020-06-17 15:34:32,026 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 15:34:32,026 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 15:34:32,026 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 5
+2020-06-17 15:34:32,027 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 15:34:32,027 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 15:34:32,028 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 4
+2020-06-17 15:34:33,318 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 15:34:33,318 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 15:34:33,319 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:34:33,319 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:34:33,319 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 5
+2020-06-17 15:34:33,331 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:34:33,332 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:34:33,332 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 6
+2020-06-17 15:34:33,333 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 15:34:33,333 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 15:34:33,333 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 5
+2020-06-17 15:34:33,515 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 15:34:33,516 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-17 15:34:33,517 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 15:34:33,517 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 15:34:33,518 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-17 15:34:33,529 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 15:34:33,530 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 15:34:33,530 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 7
+2020-06-17 15:34:33,532 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-17 15:34:33,532 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-17 15:34:33,532 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-17 15:34:34,241 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 15:34:34,241 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 15:34:34,241 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 15:34:34,241 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 15:34:34,242 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 7
+2020-06-17 15:34:34,254 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 15:34:34,254 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 15:34:34,254 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 8
+2020-06-17 15:34:34,255 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-17 15:34:34,255 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-17 15:34:34,255 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 7
+2020-06-17 15:34:34,406 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] POST
+2020-06-17 15:34:34,406 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/menu
+2020-06-17 15:34:34,407 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-17 15:34:34,407 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-17 15:34:34,407 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 8
+2020-06-17 15:34:34,419 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-17 15:34:34,419 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-17 15:34:34,420 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 9
+2020-06-17 15:34:34,421 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] OUTCONN
+2020-06-17 15:34:34,421 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 1
+2020-06-17 15:34:34,421 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 8
+2020-06-17 15:34:34,904 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 15:34:34,905 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/cart
+2020-06-17 15:35:59,072 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 15:35:59,082 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 15:35:59,736 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 15:35:59,736 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/
+2020-06-17 15:36:01,526 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 15:36:01,526 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-17 15:36:01,569 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 15:36:01,888 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 15:36:01,889 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 15:36:01,889 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-17 15:36:01,942 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 15:36:01,943 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 15:36:01,943 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-17 15:36:01,944 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-17 15:36:01,944 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-17 15:36:01,944 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-17 15:36:02,807 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 15:36:02,807 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 15:36:02,808 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:36:02,808 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:36:02,808 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-17 15:36:02,823 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:36:02,823 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:36:02,824 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 15:36:02,825 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 15:36:02,825 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 15:36:02,825 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-17 15:36:04,687 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] POST
+2020-06-17 15:36:04,688 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 15:36:04,688 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 15:36:04,688 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 15:36:04,688 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 3
+2020-06-17 15:36:04,701 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 15:36:04,702 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 15:36:04,702 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 4
+2020-06-17 15:36:04,703 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-17 15:36:04,703 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-17 15:36:04,703 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 3
+2020-06-17 15:36:04,842 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 15:36:04,842 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-17 15:36:04,842 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 15:36:04,842 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 15:36:04,842 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 4
+2020-06-17 15:36:04,856 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 15:36:04,857 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 15:36:04,857 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 5
+2020-06-17 15:36:04,858 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 15:36:04,858 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 15:36:04,858 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 4
+2020-06-17 15:36:05,015 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 15:36:05,016 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 15:36:05,016 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:36:05,017 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:36:05,017 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 5
+2020-06-17 15:36:05,028 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:36:05,028 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:36:05,028 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 6
+2020-06-17 15:36:05,029 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 15:36:05,029 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 15:36:05,029 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 5
+2020-06-17 15:36:05,654 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 15:36:05,654 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-17 15:36:05,654 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 15:36:05,655 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 15:36:05,655 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-17 15:36:05,666 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 15:36:05,667 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 15:36:05,667 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 7
+2020-06-17 15:36:05,668 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-17 15:36:05,668 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-17 15:36:05,668 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-17 15:36:05,940 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 15:36:05,940 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 15:36:05,941 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 15:36:05,941 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 15:36:05,941 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 7
+2020-06-17 15:36:05,955 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 15:36:05,955 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 15:36:05,955 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 8
+2020-06-17 15:36:05,956 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-17 15:36:05,956 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-17 15:36:05,956 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 7
+2020-06-17 15:36:06,333 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] POST
+2020-06-17 15:36:06,333 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/menu
+2020-06-17 15:36:06,333 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-17 15:36:06,334 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-17 15:36:06,334 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 8
+2020-06-17 15:36:06,345 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-17 15:36:06,345 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-17 15:36:06,345 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 9
+2020-06-17 15:36:06,349 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] OUTCONN
+2020-06-17 15:36:06,349 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 1
+2020-06-17 15:36:06,349 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 8
+2020-06-17 15:36:07,088 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 15:36:07,088 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/cart
+2020-06-17 15:38:57,366 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 15:38:57,366 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/cart
+2020-06-17 15:39:18,127 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 15:39:18,137 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 15:39:19,010 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 15:39:19,010 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 15:39:20,462 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 15:39:20,463 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 15:39:20,512 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 15:39:20,865 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:39:20,865 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:39:20,865 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 15:39:20,917 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 15:39:20,918 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 15:39:20,918 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-17 15:39:20,919 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 15:39:20,920 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 15:39:20,920 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 15:39:21,602 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 15:39:21,603 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/cart
+2020-06-17 15:39:24,639 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] POST
+2020-06-17 15:39:24,639 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 15:39:24,639 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 15:39:24,639 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 15:39:24,640 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-17 15:39:24,655 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 15:39:24,655 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 15:39:24,655 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 3
+2020-06-17 15:39:24,656 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-17 15:39:24,656 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-17 15:39:24,656 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-17 15:39:26,634 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 15:39:26,634 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-17 15:39:26,634 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 15:39:26,635 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 15:39:26,635 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 3
+2020-06-17 15:39:26,650 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 15:39:26,650 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 15:39:26,650 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 4
+2020-06-17 15:39:26,651 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-17 15:39:26,651 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-17 15:39:26,651 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 3
+2020-06-17 15:39:27,285 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 15:39:27,285 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 15:39:27,285 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:39:27,286 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:39:27,286 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-17 15:39:27,299 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 15:39:27,299 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 15:39:27,299 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 5
+2020-06-17 15:39:27,300 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 15:39:27,300 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 15:39:27,300 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-17 15:39:28,066 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-17 15:39:28,066 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-17 16:36:12,600 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 16:36:12,610 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 16:36:13,287 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 16:36:13,288 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-17 16:36:17,731 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-17 16:36:17,731 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-17 16:36:17,777 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 16:36:18,107 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 16:36:18,108 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 16:36:18,108 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-17 16:36:18,157 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 16:36:18,157 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 16:36:18,158 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 2
+2020-06-17 16:36:18,159 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 16:36:18,159 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 16:36:18,159 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-17 16:36:19,134 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] POST
+2020-06-17 16:36:19,134 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 16:36:19,134 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 16:36:19,134 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 16:36:19,135 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-17 16:36:19,150 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 16:36:19,150 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 16:36:19,150 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 3
+2020-06-17 16:36:19,151 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-17 16:36:19,151 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-17 16:36:19,151 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-17 16:36:20,552 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 16:36:20,553 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 16:36:20,553 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 16:36:20,553 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 16:36:20,554 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 16:36:20,570 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 16:36:20,571 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 16:36:20,571 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 4
+2020-06-17 16:36:20,575 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 16:36:20,575 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 16:36:20,575 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 16:36:20,783 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 16:36:20,783 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 16:36:20,784 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 16:36:20,784 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 16:36:20,784 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 4
+2020-06-17 16:36:20,798 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 16:36:20,798 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 16:36:20,798 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 5
+2020-06-17 16:36:20,799 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-17 16:36:20,799 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-17 16:36:20,800 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 4
+2020-06-17 16:36:24,599 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 16:36:24,599 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/cart
+2020-06-17 16:36:53,163 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] POST
+2020-06-17 16:36:53,163 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-17 16:36:53,163 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-17 16:36:53,163 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-17 16:36:53,164 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 5
+2020-06-17 16:36:53,178 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-17 16:36:53,179 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-17 16:36:53,179 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 6
+2020-06-17 16:36:53,180 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-17 16:36:53,180 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-17 16:36:53,180 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 5
+2020-06-17 16:36:53,872 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-17 16:36:53,873 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-17 16:36:53,873 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 16:36:53,873 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 16:36:53,873 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 6
+2020-06-17 16:36:53,886 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 16:36:53,886 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 16:36:53,886 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 7
+2020-06-17 16:36:53,887 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-17 16:36:53,887 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-17 16:36:53,887 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 6
+2020-06-17 16:36:54,085 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 16:36:54,085 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-17 16:36:54,085 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 16:36:54,085 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 16:36:54,085 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 7
+2020-06-17 16:36:54,097 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 16:36:54,097 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 16:36:54,097 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 8
+2020-06-17 16:36:54,098 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 16:36:54,098 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 16:36:54,099 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 7
+2020-06-17 16:36:54,712 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 16:36:54,713 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/cart
+2020-06-17 16:37:00,916 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 16:37:00,916 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 16:37:00,917 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 16:37:00,917 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 16:37:00,917 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 8
+2020-06-17 16:37:00,930 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 16:37:00,930 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 16:37:00,930 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 9
+2020-06-17 16:37:00,931 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 16:37:00,931 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 16:37:00,931 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 8
+2020-06-17 16:37:01,089 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 16:37:01,089 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 16:37:01,090 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 16:37:01,090 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 16:37:01,090 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 9
+2020-06-17 16:37:01,101 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 16:37:01,101 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 16:37:01,101 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 10
+2020-06-17 16:37:01,102 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-17 16:37:01,103 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-17 16:37:01,103 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 9
+2020-06-17 16:37:01,416 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 16:37:01,417 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 16:37:01,417 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 16:37:01,417 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 16:37:01,417 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 10
+2020-06-17 16:37:01,430 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 16:37:01,430 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 16:37:01,430 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 11
+2020-06-17 16:37:01,431 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 16:37:01,431 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 16:37:01,431 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 10
+2020-06-17 16:37:02,088 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] POST
+2020-06-17 16:37:02,088 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-17 16:37:02,088 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-17 16:37:02,088 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-17 16:37:02,088 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 11
+2020-06-17 16:37:02,099 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-17 16:37:02,099 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-17 16:37:02,100 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 12
+2020-06-17 16:37:02,101 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-17 16:37:02,101 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-17 16:37:02,101 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 11
+2020-06-17 16:37:03,215 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 16:37:03,215 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/cart
+2020-06-17 16:40:09,302 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-17 16:40:09,303 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-17 16:54:10,437 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 16:54:10,448 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 16:54:11,183 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 16:54:11,184 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/
+2020-06-17 16:54:12,726 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 16:54:12,726 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 16:54:12,771 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 16:54:13,105 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 16:54:13,106 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 16:54:13,106 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-17 16:54:13,158 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 16:54:13,158 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 16:54:13,158 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 16:54:13,160 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 16:54:13,160 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 16:54:13,160 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-17 16:54:15,566 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 16:54:15,566 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-17 16:54:15,567 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 16:54:15,567 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 16:54:15,567 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 2
+2020-06-17 16:54:15,583 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 16:54:15,583 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 16:54:15,583 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 3
+2020-06-17 16:54:15,584 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-17 16:54:15,585 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-17 16:54:15,585 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 2
+2020-06-17 16:54:15,861 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 16:54:15,861 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 16:54:15,862 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 16:54:15,862 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 16:54:15,862 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 16:54:15,878 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 16:54:15,878 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 16:54:15,878 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 4
+2020-06-17 16:54:15,881 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 16:54:15,882 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 16:54:15,882 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 16:54:16,732 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 16:54:16,732 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/cart
+2020-06-17 16:56:00,461 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 16:56:00,473 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 16:56:01,135 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 16:56:01,136 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-17 16:56:02,772 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 16:56:02,773 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 16:56:02,821 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 16:56:03,152 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 16:56:03,153 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 16:56:03,153 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 16:56:03,209 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 16:56:03,209 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 16:56:03,209 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-17 16:56:03,210 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-17 16:56:03,211 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-17 16:56:03,211 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 16:56:04,091 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] POST
+2020-06-17 16:56:04,091 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-17 16:56:04,092 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-17 16:56:04,092 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-17 16:56:04,092 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-17 16:56:04,108 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-17 16:56:04,108 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-17 16:56:04,109 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 3
+2020-06-17 16:56:04,110 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-17 16:56:04,110 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-17 16:56:04,110 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-17 16:56:04,493 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 16:56:04,494 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 16:56:04,494 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 16:56:04,494 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 16:56:04,494 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 16:56:04,508 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 16:56:04,508 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 16:56:04,508 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 4
+2020-06-17 16:56:04,509 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 16:56:04,509 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 16:56:04,510 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 16:56:04,876 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 16:56:04,876 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 16:56:04,877 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 16:56:04,877 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 16:56:04,877 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 4
+2020-06-17 16:56:04,891 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 16:56:04,891 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 16:56:04,891 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 5
+2020-06-17 16:56:04,892 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-17 16:56:04,892 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-17 16:56:04,892 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 4
+2020-06-17 16:56:05,593 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 16:56:05,594 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/cart
+2020-06-17 16:58:05,714 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 16:58:05,728 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 16:58:06,430 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 16:58:06,431 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/
+2020-06-17 16:58:07,829 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 16:58:07,829 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 16:58:07,879 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 16:58:08,216 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 16:58:08,216 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 16:58:08,216 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 16:58:08,265 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 16:58:08,267 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 16:58:08,267 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-17 16:58:08,267 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 16:58:08,267 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 16:58:08,268 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 16:58:09,308 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-17 16:58:09,308 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-17 16:58:09,309 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 16:58:09,310 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 16:58:09,310 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-17 16:58:09,325 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 16:58:09,325 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 16:58:09,326 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 3
+2020-06-17 16:58:09,327 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-17 16:58:09,327 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-17 16:58:09,327 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-17 16:58:10,384 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 16:58:10,384 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-17 16:58:10,384 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 16:58:10,384 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 16:58:10,385 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 3
+2020-06-17 16:58:10,398 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-17 16:58:10,399 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-17 16:58:10,399 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 4
+2020-06-17 16:58:10,400 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-17 16:58:10,400 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-17 16:58:10,400 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 3
+2020-06-17 16:58:10,695 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 16:58:10,695 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 16:58:10,695 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 16:58:10,696 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 16:58:10,696 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 4
+2020-06-17 16:58:10,707 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 16:58:10,708 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 16:58:10,708 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 5
+2020-06-17 16:58:10,710 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-17 16:58:10,710 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-17 16:58:10,710 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 4
+2020-06-17 16:58:11,738 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 16:58:11,738 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/cart
+2020-06-17 16:58:13,730 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 16:58:13,731 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/order
+2020-06-17 16:59:08,340 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 16:59:08,351 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 16:59:09,018 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 16:59:09,019 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/
+2020-06-17 16:59:11,322 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-17 16:59:11,322 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-17 16:59:11,367 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 16:59:11,683 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 16:59:11,683 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 16:59:11,683 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-17 16:59:11,734 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 16:59:11,735 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 16:59:11,735 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 2
+2020-06-17 16:59:11,736 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 16:59:11,736 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 16:59:11,737 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-17 16:59:12,719 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 16:59:12,719 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 16:59:12,722 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 16:59:12,722 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 16:59:12,722 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 16:59:12,736 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 16:59:12,736 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 16:59:12,736 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-17 16:59:12,737 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 16:59:12,738 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 16:59:12,738 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 16:59:12,926 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 16:59:12,926 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-17 16:59:12,927 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 16:59:12,927 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 16:59:12,927 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 3
+2020-06-17 16:59:12,940 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 16:59:12,940 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 16:59:12,941 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 4
+2020-06-17 16:59:12,942 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-17 16:59:12,942 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-17 16:59:12,942 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 3
+2020-06-17 16:59:13,501 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 16:59:13,501 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/cart
+2020-06-17 16:59:14,912 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 16:59:14,912 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/order
+2020-06-17 17:00:13,227 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 17:00:13,237 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 17:00:13,877 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 17:00:13,878 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 17:00:15,272 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 17:00:15,273 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 17:00:15,318 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 17:00:15,634 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 17:00:15,635 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 17:00:15,635 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 17:00:15,684 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 17:00:15,684 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 17:00:15,685 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-17 17:00:15,686 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 17:00:15,686 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 17:00:15,686 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-17 17:00:16,921 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-17 17:00:16,921 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-17 17:00:16,921 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 17:00:16,921 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 17:00:16,921 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-17 17:00:16,938 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-17 17:00:16,938 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-17 17:00:16,938 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 3
+2020-06-17 17:00:16,939 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-17 17:00:16,939 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-17 17:00:16,939 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-17 17:00:17,572 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] POST
+2020-06-17 17:00:17,572 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 17:00:17,572 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 17:00:17,573 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 17:00:17,573 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 3
+2020-06-17 17:00:17,586 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 17:00:17,586 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 17:00:17,587 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 4
+2020-06-17 17:00:17,588 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-17 17:00:17,588 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-17 17:00:17,588 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 3
+2020-06-17 17:00:17,908 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 17:00:17,909 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-17 17:00:17,909 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 17:00:17,909 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 17:00:17,909 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 4
+2020-06-17 17:00:17,925 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 17:00:17,925 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 17:00:17,925 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 5
+2020-06-17 17:00:17,926 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 17:00:17,926 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 17:00:17,926 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 4
+2020-06-17 17:00:18,522 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 17:00:18,522 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/cart
+2020-06-17 17:00:20,143 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-17 17:00:20,143 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/order
+2020-06-17 17:44:00,155 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 17:44:00,166 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 17:44:00,864 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 17:44:00,865 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 17:44:03,920 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 17:44:03,920 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-17 17:44:03,970 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 17:44:04,339 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-17 17:44:04,339 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-17 17:44:04,339 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-17 17:44:04,399 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-17 17:44:04,400 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-17 17:44:04,400 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 2
+2020-06-17 17:44:04,401 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-17 17:44:04,401 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-17 17:44:04,402 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-17 17:44:05,487 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 17:44:05,488 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 17:44:05,488 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 17:44:05,488 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 17:44:05,488 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 17:44:05,504 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 17:44:05,504 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 17:44:05,504 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-17 17:44:05,505 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 17:44:05,506 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 17:44:05,506 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-17 17:44:05,658 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-17 17:44:05,658 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-17 17:44:05,659 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 17:44:05,659 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 17:44:05,659 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 17:44:05,673 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-17 17:44:05,673 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-17 17:44:05,673 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 4
+2020-06-17 17:44:05,674 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-17 17:44:05,675 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-17 17:44:05,675 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 3
+2020-06-17 17:44:06,200 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-17 17:44:06,201 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/cart
+2020-06-17 17:44:08,652 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-17 17:44:08,652 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/order
+2020-06-17 17:44:58,964 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 17:44:58,976 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 17:44:59,782 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 17:44:59,784 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 17:45:04,769 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-17 17:45:04,769 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-17 17:45:04,818 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 17:45:05,176 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 17:45:05,176 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 17:45:05,177 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 17:45:05,230 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-17 17:45:05,230 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-17 17:45:05,230 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-17 17:45:05,232 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-17 17:45:05,232 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-17 17:45:05,232 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-17 17:45:06,649 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-17 17:45:06,649 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/cart
+2020-06-17 17:45:10,054 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 17:45:10,054 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-17 17:45:10,055 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 17:45:10,055 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 17:45:10,055 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 2
+2020-06-17 17:45:10,071 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 17:45:10,072 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 17:45:10,072 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 3
+2020-06-17 17:45:10,073 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 17:45:10,074 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 17:45:10,074 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 2
+2020-06-17 17:45:10,365 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 17:45:10,365 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-17 17:45:10,366 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 17:45:10,366 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 17:45:10,366 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-17 17:45:10,382 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-17 17:45:10,382 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-17 17:45:10,382 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-17 17:45:10,383 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-17 17:45:10,384 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-17 17:45:10,384 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-17 17:45:11,938 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-17 17:45:11,938 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/cart
+2020-06-17 17:45:15,961 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-17 17:45:15,962 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/order
+2020-06-17 19:07:58,545 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 19:07:58,558 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 19:07:59,260 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 19:07:59,261 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 19:08:43,159 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-17 19:08:43,160 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/signup
+2020-06-17 19:08:55,799 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-17 19:08:55,799 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/controller
+2020-06-17 19:09:07,293 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 19:09:07,293 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/controller
+2020-06-17 19:24:44,614 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-17 19:24:44,624 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-17 19:24:45,291 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 19:24:45,292 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-17 19:24:48,511 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-17 19:24:48,512 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/signup
+2020-06-17 19:25:10,130 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-17 19:25:10,130 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/controller
+2020-06-17 19:25:23,610 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-17 19:25:23,610 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/controller
+2020-06-17 19:25:23,677 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-17 19:25:24,001 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-17 19:25:24,001 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-17 19:25:24,001 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-17 19:25:24,029 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-17 19:25:24,029 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-17 19:25:24,029 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 0
+2020-06-17 19:25:24,030 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-7] Accountmikitka334@gmail.com created
+2020-06-17 19:26:43,150 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-17 19:26:43,150 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-17 19:26:43,151 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-17 19:26:43,152 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-17 19:26:43,152 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-17 19:26:43,191 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-17 19:26:43,191 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-17 19:26:43,192 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 2
+2020-06-17 19:26:43,193 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-17 19:26:43,193 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-17 19:26:43,193 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-17 19:26:46,146 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-17 19:26:46,146 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/login
+2020-06-17 19:26:58,333 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-17 19:26:58,334 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/controller
+2020-06-17 19:26:58,334 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-17 19:26:58,334 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-17 19:26:58,334 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 2
+2020-06-17 19:26:58,342 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-17 19:26:58,343 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-17 19:26:58,343 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 1
+2020-06-17 19:26:58,343 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-10] Accountmikitka334@gmail.com is taken

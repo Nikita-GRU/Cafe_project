@@ -6,7 +6,7 @@ import by.gruca.cafe.service.exception.ServiceException;
 
 public interface AccountService {
 
-    void createAccount(String login, String password, String email, String firstName, String lastName) throws ServiceException;
+    void createAccount(Account account) throws ServiceException;
 
     void updateAccount(Account account, String email, String firstName, String lastName) throws ServiceException;
 
@@ -14,7 +14,7 @@ public interface AccountService {
 
     void setBanStatus(Account account, boolean banStatus) throws ServiceException;
 
-    Account getAccountByLogin(String login) throws ServiceException;
+    Account getAccountByEmail(String email) throws ServiceException;
 
 
 }

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: JJ93
-  Date: 22.05.2020
-  Time: 15:01
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
@@ -12,14 +5,17 @@
     <title>Menu</title>
 </head>
 <body>
-<ol class="rectangle">
-
-
-    <c:forEach items="${products}" var="product">
-        <li><a href="#">${product.name}, ${product.price}, ${product.description}</a></li>
-        <br>
-    </c:forEach>
-
-</ol>
+<!DOCTYPE HTML>
+<html>
+<body>
+<c:forEach items="${products}" var="product">
+    <form method="post" action="">
+        <input type="hidden" name="checkedproduct" value="${product.name}"/>${product.name}
+            <input type="submit" value="add to cart"/>
+    </form>
+</c:forEach>
+<a href="cart">go to cart</a>
+</body>
+</html>
 </body>
 </html>
