@@ -7,7 +7,6 @@ import by.gruca.cafe.service.AccountService;
 import by.gruca.cafe.service.exception.ServiceException;
 import by.gruca.cafe.service.impl.AccountServiceImpl;
 import by.gruca.cafe.util.HashGeneratorUtil;
-import by.gruca.cafe.util.UtilException;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -24,13 +23,12 @@ public class LoginCommand implements ActionCommand {
         String pass = request.getParameter(PARAM_NAME_PASSWORD);
         AccountService accountService = new AccountServiceImpl();
         try {
-            account = accountService.getAccountByEmail(email);
-            request.setAttribute("username", account.getFirstName());
-            if (hashGeneratorUtil.validatePassword(pass, account.getPassword()))
-                request.getSession().setAttribute("username", account.getFirstName());
+            account = accountService.getAccountByEmail(email, pass);
+            request.getSession().setAttribute("username", account.getFirstName());
             request.getSession().setAttribute("account", account);
+            request.getSession().setAttribute("role", account.getRole().getRole());
             page = UrlManager.getProperty("path.page.main");
-        } catch (ServiceException | UtilException e) {
+        } catch (ServiceException e) {
             request.setAttribute("errorLoginPassMessage",
                     MessageManager.getProperty("message.loginerror"));
             page = UrlManager.getProperty("path.page.login");

@@ -1338,3 +1338,1461 @@
 2020-06-17 19:26:58,343 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
 2020-06-17 19:26:58,343 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 1
 2020-06-17 19:26:58,343 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-10] Accountmikitka334@gmail.com is taken
+2020-06-18 11:55:09,289 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 11:55:09,300 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 11:55:10,379 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-18 11:55:10,380 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/
+2020-06-18 12:13:20,654 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-18 12:13:20,655 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/
+2020-06-18 12:13:22,642 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-18 12:13:22,643 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/
+2020-06-18 12:13:23,240 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-18 12:13:23,240 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/
+2020-06-18 12:13:23,875 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-18 12:13:23,875 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-18 12:13:23,925 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 12:13:24,557 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 12:13:24,557 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 12:13:24,557 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 1
+2020-06-18 12:13:24,632 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 12:13:24,632 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 12:13:24,632 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 2
+2020-06-18 12:13:24,634 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-18 12:13:24,634 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-18 12:13:24,635 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 1
+2020-06-18 12:13:29,494 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 12:13:29,494 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/signup
+2020-06-18 12:23:37,456 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 12:23:37,456 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/login
+2020-06-18 12:23:41,142 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-18 12:23:41,142 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/controller
+2020-06-18 12:23:41,148 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 12:23:41,148 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 12:23:41,148 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-18 12:23:41,158 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-18 12:23:41,158 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-18 12:23:41,158 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-18 12:23:41,159 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-5] Accountmikitka334@gmail.com is taken
+2020-06-18 12:25:43,309 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 12:25:43,320 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 12:25:43,973 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 12:25:43,974 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-18 12:25:45,998 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-18 12:25:45,999 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/login
+2020-06-18 12:25:49,765 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-18 12:25:49,765 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/main
+2020-06-18 12:27:00,628 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 12:27:00,638 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 12:27:01,363 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 12:27:01,363 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-18 12:27:04,006 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-18 12:27:04,007 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/login
+2020-06-18 12:27:09,182 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] POST
+2020-06-18 12:27:09,183 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/main
+2020-06-18 13:21:56,534 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:21:56,545 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:21:57,277 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 13:21:57,278 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-18 13:24:30,459 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-18 13:24:30,460 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/signup
+2020-06-18 13:24:32,728 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-18 13:24:32,729 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/login
+2020-06-18 13:24:37,543 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-18 13:24:37,544 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/main
+2020-06-18 13:26:16,837 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:26:16,847 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:26:17,503 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 13:26:17,504 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/
+2020-06-18 13:26:19,141 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-18 13:26:19,141 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/login
+2020-06-18 13:26:23,465 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-18 13:26:23,465 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/main
+2020-06-18 13:31:10,984 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 13:31:10,984 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-18 13:31:11,031 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 13:31:11,368 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 13:31:11,368 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 13:31:11,369 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-18 13:31:11,434 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 13:31:11,435 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 13:31:11,435 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-18 13:31:11,437 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-18 13:31:11,438 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-18 13:31:11,438 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-18 13:32:41,501 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:32:41,511 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:32:42,166 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-18 13:32:42,167 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-18 13:32:46,334 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 13:32:46,334 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/login
+2020-06-18 13:32:49,763 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-18 13:32:49,764 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/main
+2020-06-18 13:32:49,851 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 13:32:50,231 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 13:32:50,231 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 13:32:50,231 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 1
+2020-06-18 13:32:50,269 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-18 13:32:50,269 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-18 13:32:50,269 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 0
+2020-06-18 13:32:50,269 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-9] Accountmikitka334@gmail.com is taken
+2020-06-18 13:34:27,317 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-18 13:34:27,317 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/login
+2020-06-18 13:34:30,621 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-18 13:34:30,621 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/main
+2020-06-18 13:34:30,622 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 13:34:30,622 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 13:34:30,622 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-18 13:34:30,624 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-18 13:34:30,625 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-18 13:34:30,625 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 0
+2020-06-18 13:34:30,625 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-5] Accountmikitka334@gmail.com is taken
+2020-06-18 13:36:05,780 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:36:05,789 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:36:06,427 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 13:36:06,428 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/
+2020-06-18 13:37:07,320 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:37:07,329 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:37:08,001 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 13:37:08,002 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-18 13:38:27,857 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:38:27,867 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:38:28,515 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 13:38:28,515 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-18 13:38:30,390 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 13:38:30,390 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/login
+2020-06-18 13:38:35,610 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] POST
+2020-06-18 13:38:35,611 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/main
+2020-06-18 13:38:35,697 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 13:38:36,107 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 13:38:36,108 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 13:38:36,108 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-18 13:38:36,146 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 13:38:36,146 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 13:38:36,147 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 0
+2020-06-18 13:38:36,147 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-2] Accountmikitka334@gmail.com is taken
+2020-06-18 13:38:37,616 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-18 13:38:37,616 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/
+2020-06-18 13:38:38,243 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-18 13:38:38,243 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/
+2020-06-18 13:38:38,454 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-18 13:38:38,454 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/
+2020-06-18 13:38:38,656 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-18 13:38:38,657 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/
+2020-06-18 13:38:38,852 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:38:38,852 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:38:39,040 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-18 13:38:39,040 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-18 13:38:39,236 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 13:38:39,236 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-18 13:38:39,424 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 13:38:39,425 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/
+2020-06-18 13:38:39,616 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-18 13:38:39,616 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/
+2020-06-18 13:38:39,780 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-18 13:38:39,780 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/
+2020-06-18 13:38:39,967 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-18 13:38:39,967 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/
+2020-06-18 13:38:40,142 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-18 13:38:40,142 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/
+2020-06-18 13:38:40,322 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-18 13:38:40,322 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/
+2020-06-18 13:38:40,495 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-18 13:38:40,495 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/
+2020-06-18 13:38:40,880 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:38:40,880 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/menu
+2020-06-18 13:38:40,884 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 13:38:40,884 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 13:38:40,885 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 1
+2020-06-18 13:38:40,914 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 13:38:40,914 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 13:38:40,914 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 2
+2020-06-18 13:38:40,915 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] OUTCONN
+2020-06-18 13:38:40,916 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 1
+2020-06-18 13:38:40,916 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 1
+2020-06-18 13:38:42,985 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] POST
+2020-06-18 13:38:42,985 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-18 13:38:42,985 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 13:38:42,986 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 13:38:42,986 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-18 13:38:43,000 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 13:38:43,000 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 13:38:43,000 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 3
+2020-06-18 13:38:43,001 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-18 13:38:43,001 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-18 13:38:43,001 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-18 13:38:43,854 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 13:38:43,854 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/cart
+2020-06-18 13:38:47,032 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 13:38:47,033 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/order
+2020-06-18 13:39:08,246 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] POST
+2020-06-18 13:39:08,246 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-18 13:39:08,246 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 13:39:08,246 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 13:39:08,246 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 3
+2020-06-18 13:39:08,260 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 13:39:08,261 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 13:39:08,261 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 4
+2020-06-18 13:39:08,264 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-18 13:39:08,264 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-18 13:39:08,264 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 3
+2020-06-18 13:39:08,413 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-18 13:39:08,413 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-18 13:39:08,413 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 13:39:08,413 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 13:39:08,413 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-18 13:39:08,426 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 13:39:08,426 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 13:39:08,426 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 5
+2020-06-18 13:39:08,427 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 13:39:08,427 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 13:39:08,428 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-18 13:39:08,576 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] POST
+2020-06-18 13:39:08,576 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-18 13:39:08,578 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 13:39:08,578 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 13:39:08,578 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 5
+2020-06-18 13:39:08,591 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 13:39:08,591 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 13:39:08,591 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-18 13:39:08,592 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-18 13:39:08,592 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-18 13:39:08,593 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 5
+2020-06-18 13:39:08,907 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] POST
+2020-06-18 13:39:08,907 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-18 13:39:08,907 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 13:39:08,907 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 13:39:08,907 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 6
+2020-06-18 13:39:08,920 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 13:39:08,920 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 13:39:08,920 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 7
+2020-06-18 13:39:08,921 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 13:39:08,922 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 13:39:08,922 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 6
+2020-06-18 13:39:09,539 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:39:09,539 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/cart
+2020-06-18 13:39:13,375 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-18 13:39:13,375 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/order
+2020-06-18 13:51:35,603 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:51:35,615 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:51:36,566 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-18 13:51:36,568 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-18 13:52:03,314 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 13:52:03,314 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/login
+2020-06-18 13:52:09,343 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] POST
+2020-06-18 13:52:09,343 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/main
+2020-06-18 13:52:09,413 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 13:52:09,819 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 13:52:09,819 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 13:52:09,819 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-18 13:52:09,859 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 13:52:09,860 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 13:52:09,860 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 0
+2020-06-18 13:52:09,860 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-8] Accountmikitka334@gmail.com is taken
+2020-06-18 13:52:15,299 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-18 13:52:15,299 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/login
+2020-06-18 13:52:17,935 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-18 13:52:17,935 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/main
+2020-06-18 13:52:17,937 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 13:52:17,937 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 13:52:17,937 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 1
+2020-06-18 13:52:17,939 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-18 13:52:17,939 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-18 13:52:17,939 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 0
+2020-06-18 13:52:17,939 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-10] Accountmikitka334@gmail.com is taken
+2020-06-18 13:52:19,482 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:52:19,482 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/login
+2020-06-18 13:52:22,866 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] POST
+2020-06-18 13:52:22,866 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/main
+2020-06-18 13:52:22,867 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 13:52:22,867 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 13:52:22,867 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-18 13:52:22,868 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 13:52:22,868 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 13:52:22,869 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 0
+2020-06-18 13:52:22,869 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-2] Accountmikitka334@gmail.com is taken
+2020-06-18 13:52:24,946 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-18 13:52:24,947 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/login
+2020-06-18 13:52:29,107 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] POST
+2020-06-18 13:52:29,107 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/main
+2020-06-18 13:52:29,108 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 13:52:29,108 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 13:52:29,108 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-18 13:52:29,109 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-18 13:52:29,109 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-18 13:52:29,110 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 0
+2020-06-18 13:52:29,110 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-4] Accountmikitka334@gmail.com is taken
+2020-06-18 13:52:31,860 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 13:52:31,861 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-18 13:52:33,905 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-18 13:52:33,905 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/
+2020-06-18 13:52:34,093 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-18 13:52:34,093 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/
+2020-06-18 13:52:34,282 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-18 13:52:34,284 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/
+2020-06-18 13:52:34,464 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] GET
+2020-06-18 13:52:34,464 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/
+2020-06-18 13:52:34,656 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:52:34,656 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:52:34,831 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-18 13:52:34,832 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/
+2020-06-18 13:52:35,024 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-18 13:52:35,025 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-18 13:52:35,262 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-18 13:52:35,262 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/
+2020-06-18 13:52:35,536 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 13:52:35,536 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/
+2020-06-18 13:52:37,277 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 13:52:37,278 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-18 13:52:37,473 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-18 13:52:37,473 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/
+2020-06-18 13:52:37,660 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-18 13:52:37,660 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/
+2020-06-18 13:52:38,293 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-18 13:52:38,294 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/login
+2020-06-18 13:52:46,359 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:52:46,359 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:52:46,553 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] GET
+2020-06-18 13:52:46,554 INFO b.g.c.f.UriFilter [http-nio-8082-exec-2] reqURI=/cafe/
+2020-06-18 13:52:46,727 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-18 13:52:46,727 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-18 13:52:46,907 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] GET
+2020-06-18 13:52:46,908 INFO b.g.c.f.UriFilter [http-nio-8082-exec-6] reqURI=/cafe/
+2020-06-18 13:52:47,081 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 13:52:47,081 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/
+2020-06-18 13:52:47,269 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] GET
+2020-06-18 13:52:47,269 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/
+2020-06-18 13:52:47,447 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-18 13:52:47,447 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/
+2020-06-18 13:52:47,637 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] GET
+2020-06-18 13:52:47,637 INFO b.g.c.f.UriFilter [http-nio-8082-exec-7] reqURI=/cafe/
+2020-06-18 13:52:48,351 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] GET
+2020-06-18 13:52:48,351 INFO b.g.c.f.UriFilter [http-nio-8082-exec-9] reqURI=/cafe/login
+2020-06-18 13:53:59,775 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] GET
+2020-06-18 13:53:59,787 INFO b.g.c.f.UriFilter [http-nio-8082-exec-1] reqURI=/cafe/
+2020-06-18 13:54:00,440 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-18 13:54:00,441 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-18 13:54:03,562 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 13:54:03,562 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/login
+2020-06-18 13:54:04,740 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] POST
+2020-06-18 13:54:04,741 INFO b.g.c.f.UriFilter [http-nio-8082-exec-5] reqURI=/cafe/main
+2020-06-18 13:54:04,813 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 13:54:05,161 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 13:54:05,162 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 13:54:05,162 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-18 13:54:05,193 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-18 13:54:05,193 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-18 13:54:05,193 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 0
+2020-06-18 13:54:05,193 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-5] by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-18 13:54:09,380 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] POST
+2020-06-18 13:54:09,380 INFO b.g.c.f.UriFilter [http-nio-8082-exec-10] reqURI=/cafe/main
+2020-06-18 13:54:09,382 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 13:54:09,382 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 13:54:09,382 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 1
+2020-06-18 13:54:09,386 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-18 13:54:09,386 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-18 13:54:09,386 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 0
+2020-06-18 13:54:09,386 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-10] Accountmikitka334@gmail.com is taken
+2020-06-18 13:54:10,820 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] GET
+2020-06-18 13:54:10,820 INFO b.g.c.f.UriFilter [http-nio-8082-exec-8] reqURI=/cafe/main
+2020-06-18 13:54:10,821 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 13:54:10,822 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 13:54:10,822 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-18 13:54:10,826 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 13:54:10,826 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 13:54:10,826 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 0
+2020-06-18 13:54:10,827 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-8] by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-18 13:55:34,936 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] GET
+2020-06-18 13:55:34,936 INFO b.g.c.f.UriFilter [http-nio-8082-exec-3] reqURI=/cafe/
+2020-06-18 13:55:36,165 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] GET
+2020-06-18 13:55:36,165 INFO b.g.c.f.UriFilter [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-18 13:55:36,169 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 13:55:36,169 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 13:55:36,169 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-18 13:55:36,194 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 13:55:36,194 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 13:55:36,195 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-18 13:55:36,196 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-18 13:55:36,196 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-18 13:55:36,196 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-18 16:27:57,456 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] GET
+2020-06-18 16:27:57,467 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-18 16:27:57,513 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 16:27:57,848 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 16:27:57,848 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 16:27:57,848 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 1
+2020-06-18 16:27:57,902 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 16:27:57,902 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 16:27:57,902 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-18 16:27:57,903 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-18 16:27:57,903 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-18 16:27:57,903 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 1
+2020-06-18 16:30:37,883 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] GET
+2020-06-18 16:30:37,894 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-18 16:30:37,941 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 16:30:38,276 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 16:30:38,277 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 16:30:38,277 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-18 16:30:38,341 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 16:30:38,341 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 16:30:38,341 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-18 16:30:38,344 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 16:30:38,344 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 16:30:38,345 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-18 16:30:38,890 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 16:30:38,891 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 16:30:38,891 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-18 16:30:44,580 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] POST
+2020-06-18 16:30:44,581 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-18 16:30:44,597 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 16:30:44,597 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 16:30:44,597 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-18 16:30:44,613 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 16:30:44,613 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 16:30:44,613 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-18 16:30:44,615 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 16:30:44,615 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 16:30:44,615 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-18 16:30:44,618 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 16:30:44,618 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 16:30:44,618 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-18 16:30:45,688 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] POST
+2020-06-18 16:30:45,689 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-18 16:30:45,699 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 16:30:45,699 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 16:30:45,700 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 5
+2020-06-18 16:30:45,713 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 16:30:45,713 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 16:30:45,713 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 6
+2020-06-18 16:30:45,714 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-18 16:30:45,714 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-18 16:30:45,714 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 5
+2020-06-18 16:30:45,715 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 16:30:45,715 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 16:30:45,715 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 6
+2020-06-18 16:30:45,857 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] POST
+2020-06-18 16:30:45,858 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-18 16:30:45,868 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 16:30:45,868 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 16:30:45,868 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 7
+2020-06-18 16:30:45,881 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 16:30:45,881 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 16:30:45,881 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 8
+2020-06-18 16:30:45,882 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 16:30:45,883 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 16:30:45,883 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 7
+2020-06-18 16:30:45,883 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 16:30:45,883 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 16:30:45,883 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 8
+2020-06-18 16:30:46,799 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] GET
+2020-06-18 16:30:46,799 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/cart
+2020-06-18 16:30:51,888 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] GET
+2020-06-18 16:30:51,889 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] reqURI=/cafe/order
+2020-06-18 16:31:02,564 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] GET
+2020-06-18 16:31:02,564 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-18 16:31:02,575 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 16:31:02,575 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 16:31:02,575 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 9
+2020-06-18 16:31:02,585 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 16:31:02,585 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 16:31:02,585 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 10
+2020-06-18 16:31:02,586 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-18 16:31:02,586 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-18 16:31:02,586 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 9
+2020-06-18 16:31:02,589 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 16:31:02,589 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 16:31:02,589 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 10
+2020-06-18 16:37:02,858 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] GET
+2020-06-18 16:37:02,858 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-18 16:37:02,871 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 16:37:02,871 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 16:37:02,871 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 11
+2020-06-18 16:37:02,884 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 16:37:02,885 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 16:37:02,885 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 12
+2020-06-18 16:37:02,886 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-18 16:37:02,886 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-18 16:37:02,886 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 11
+2020-06-18 16:37:02,888 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 16:37:02,888 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 16:37:02,888 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 12
+2020-06-18 16:37:05,753 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] GET
+2020-06-18 16:37:05,753 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-18 16:37:05,766 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 16:37:05,766 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 16:37:05,766 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 13
+2020-06-18 16:37:05,779 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 16:37:05,779 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 16:37:05,779 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 14
+2020-06-18 16:37:05,780 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 16:37:05,781 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 16:37:05,781 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 13
+2020-06-18 16:37:05,781 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 16:37:05,781 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 16:37:05,781 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 14
+2020-06-18 16:37:11,268 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] GET
+2020-06-18 16:37:11,268 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/login
+2020-06-18 16:37:14,201 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 16:37:14,201 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 16:37:14,201 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 15
+2020-06-18 16:37:14,204 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] OUTCONN
+2020-06-18 16:37:14,204 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 1
+2020-06-18 16:37:14,204 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 14
+2020-06-18 16:37:14,205 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-1] Accountmikitka334@gmail.com is taken
+2020-06-18 16:37:17,274 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] GET
+2020-06-18 16:37:17,274 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/signup
+2020-06-18 16:37:47,177 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 16:37:47,178 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 16:37:47,178 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 15
+2020-06-18 16:37:47,193 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 16:37:47,193 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 16:37:47,193 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 14
+2020-06-18 16:37:47,194 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-8] Accountnik334@tut.by created
+2020-06-18 16:39:01,005 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] GET
+2020-06-18 16:39:01,005 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/signup
+2020-06-18 16:39:22,744 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 16:39:22,744 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 16:39:22,744 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 15
+2020-06-18 16:39:22,748 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] OUTCONN
+2020-06-18 16:39:22,748 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 1
+2020-06-18 16:39:22,748 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 14
+2020-06-18 16:39:22,748 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-1] Account123@123 created
+2020-06-18 16:39:30,036 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] GET
+2020-06-18 16:39:30,036 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/login
+2020-06-18 16:39:36,189 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 16:39:36,189 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 16:39:36,189 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 15
+2020-06-18 16:39:36,191 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 16:39:36,191 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 16:39:36,191 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 14
+2020-06-18 16:39:36,191 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-6] by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-18 16:39:49,524 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 16:39:49,524 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 16:39:49,524 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 15
+2020-06-18 16:39:49,525 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-18 16:39:49,525 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-18 16:39:49,526 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 14
+2020-06-18 16:39:49,526 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-10] Account123@123 is taken
+2020-06-18 16:39:56,125 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] GET
+2020-06-18 16:39:56,125 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-18 16:39:56,126 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 16:39:56,126 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 16:39:56,126 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 15
+2020-06-18 16:39:56,140 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 16:39:56,140 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 16:39:56,140 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 16
+2020-06-18 16:39:56,141 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-18 16:39:56,141 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-18 16:39:56,141 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 15
+2020-06-18 16:39:56,143 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 16:39:56,143 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 16:39:56,144 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 16
+2020-06-18 16:39:58,616 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] GET
+2020-06-18 16:39:58,616 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-18 16:39:58,627 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 16:39:58,628 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 16:39:58,628 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 17
+2020-06-18 16:39:58,637 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 16:39:58,638 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 16:39:58,638 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 18
+2020-06-18 16:39:58,638 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 16:39:58,639 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 16:39:58,639 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 17
+2020-06-18 16:39:58,639 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 16:39:58,639 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 16:39:58,639 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 18
+2020-06-18 16:40:02,976 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] POST
+2020-06-18 16:40:02,977 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-18 16:40:02,986 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 16:40:02,986 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 16:40:02,986 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 19
+2020-06-18 16:40:02,995 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 16:40:02,995 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 16:40:02,995 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 20
+2020-06-18 16:40:02,997 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-18 16:40:02,997 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-18 16:40:02,997 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 19
+2020-06-18 16:40:03,000 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 16:40:03,000 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 16:40:03,000 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 20
+2020-06-18 16:40:04,060 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] GET
+2020-06-18 16:40:04,060 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] reqURI=/cafe/cart
+2020-06-18 17:32:30,832 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] GET
+2020-06-18 17:32:30,841 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-18 17:32:30,885 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 17:32:31,218 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 17:32:31,218 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 17:32:31,219 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-18 17:32:31,281 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 17:32:31,281 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 17:32:31,281 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 2
+2020-06-18 17:32:31,282 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-18 17:32:31,283 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-18 17:32:31,283 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-18 17:32:31,450 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 17:32:31,451 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 17:32:31,451 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 2
+2020-06-18 17:32:47,438 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] GET
+2020-06-18 17:32:47,438 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] reqURI=/cafe/login
+2020-06-18 17:32:53,698 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 17:32:53,698 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 17:32:53,699 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 3
+2020-06-18 17:32:53,701 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] OUTCONN
+2020-06-18 17:32:53,702 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 1
+2020-06-18 17:32:53,702 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 2
+2020-06-18 17:32:53,712 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-1] by.gruca.cafe.util.UtilException: Invalid password
+2020-06-18 17:32:57,056 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 17:32:57,056 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 17:32:57,056 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 3
+2020-06-18 17:32:57,058 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 17:32:57,058 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 17:32:57,058 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 2
+2020-06-18 17:32:57,066 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-2] by.gruca.cafe.util.UtilException: Invalid password
+2020-06-18 17:33:01,810 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 17:33:01,810 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 17:33:01,810 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 3
+2020-06-18 17:33:01,812 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-18 17:33:01,812 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-18 17:33:01,812 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 2
+2020-06-18 17:33:01,815 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-5] by.gruca.cafe.util.UtilException: Invalid password
+2020-06-18 17:33:07,095 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 17:33:07,095 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 17:33:07,096 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 3
+2020-06-18 17:33:07,097 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-18 17:33:07,097 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-18 17:33:07,097 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-18 17:33:07,100 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-3] Account123@123 is taken
+2020-06-18 17:39:26,511 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] GET
+2020-06-18 17:39:26,523 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] reqURI=/cafe/main
+2020-06-18 17:39:26,600 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 17:39:26,903 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 17:39:26,903 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 17:39:26,904 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-18 17:39:26,933 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 17:39:26,933 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 17:39:26,934 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 0
+2020-06-18 17:39:26,934 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-6] by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-18 17:39:37,669 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] GET
+2020-06-18 17:39:37,669 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/main
+2020-06-18 17:39:37,670 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 17:39:37,671 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 17:39:37,671 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-18 17:39:37,675 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 17:39:37,676 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 17:39:37,676 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 0
+2020-06-18 17:39:37,676 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-2] by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-18 18:00:32,259 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] GET
+2020-06-18 18:00:32,270 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] reqURI=/cafe/login
+2020-06-18 18:00:36,929 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 18:00:37,233 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 18:00:37,234 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 18:00:37,234 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 1
+2020-06-18 18:00:37,266 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-18 18:00:37,266 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-18 18:00:37,266 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 0
+2020-06-18 18:00:37,267 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-7] by.gruca.cafe.dao.exception.DAOException: Account is not exist
+2020-06-18 18:00:59,295 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] GET
+2020-06-18 18:00:59,295 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/login
+2020-06-18 18:01:03,965 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 18:01:03,965 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 18:01:03,965 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 1
+2020-06-18 18:01:03,969 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-18 18:01:03,969 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-18 18:01:03,969 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 0
+2020-06-18 18:01:03,980 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-5] by.gruca.cafe.util.UtilException: Invalid password
+2020-06-18 18:01:06,577 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 18:01:06,578 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 18:01:06,578 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-18 18:01:06,579 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-18 18:01:06,579 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-18 18:01:06,579 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 0
+2020-06-18 18:01:06,587 ERROR b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-4] by.gruca.cafe.util.UtilException: Invalid password
+2020-06-18 18:01:12,911 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 18:01:12,911 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 18:01:12,911 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-18 18:01:12,912 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 18:01:12,913 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 18:01:12,913 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 0
+2020-06-18 18:01:12,921 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-6] Account123@123 is taken
+2020-06-18 18:02:43,824 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] GET
+2020-06-18 18:02:43,825 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/signup
+2020-06-18 18:06:50,835 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] GET
+2020-06-18 18:06:50,846 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-18 18:06:50,889 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 18:06:51,218 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 18:06:51,218 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 18:06:51,218 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-18 18:06:51,278 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 18:06:51,278 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 18:06:51,278 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-18 18:06:51,279 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-18 18:06:51,280 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-18 18:06:51,280 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-18 18:06:51,280 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-4] checkedproduct= null
+2020-06-18 18:06:51,280 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-4] command= showmenu
+2020-06-18 18:06:51,440 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 18:06:51,441 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 18:06:51,441 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-18 18:06:52,843 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] POST
+2020-06-18 18:06:52,843 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-18 18:06:52,859 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:06:52,859 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:06:52,859 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 3
+2020-06-18 18:06:52,874 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:06:52,874 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:06:52,874 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 4
+2020-06-18 18:06:52,875 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-18 18:06:52,876 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-18 18:06:52,876 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 3
+2020-06-18 18:06:52,876 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-3] checkedproduct= apple
+2020-06-18 18:06:52,876 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-3] command= showmenu
+2020-06-18 18:06:52,876 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:06:52,877 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:06:52,877 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 4
+2020-06-18 18:06:54,564 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] POST
+2020-06-18 18:06:54,565 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-18 18:06:54,577 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 18:06:54,577 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 18:06:54,577 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 5
+2020-06-18 18:06:54,591 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 18:06:54,591 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 18:06:54,591 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-18 18:06:54,593 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-18 18:06:54,593 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-18 18:06:54,593 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 5
+2020-06-18 18:06:54,593 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] checkedproduct= apple
+2020-06-18 18:06:54,593 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] command= showmenu
+2020-06-18 18:06:54,594 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 18:06:54,594 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 18:06:54,594 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-18 18:06:55,495 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] GET
+2020-06-18 18:06:55,495 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-18 18:06:59,230 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] GET
+2020-06-18 18:06:59,231 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] reqURI=/cafe/order
+2020-06-18 18:07:07,992 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] POST
+2020-06-18 18:07:07,992 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] reqURI=/cafe/order
+2020-06-18 18:07:08,661 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] POST
+2020-06-18 18:07:08,661 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] reqURI=/cafe/order
+2020-06-18 18:07:08,860 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] POST
+2020-06-18 18:07:08,860 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/order
+2020-06-18 18:43:07,471 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] GET
+2020-06-18 18:43:07,483 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-18 18:43:07,526 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 18:43:07,829 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] GET
+2020-06-18 18:43:07,830 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] reqURI=/cafe/signup
+2020-06-18 18:43:07,850 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 18:43:07,850 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 18:43:07,850 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-18 18:43:07,908 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 18:43:07,908 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 18:43:07,908 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 2
+2020-06-18 18:43:07,910 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 18:43:07,910 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 18:43:07,910 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-18 18:43:07,910 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-2] checkedproduct= null
+2020-06-18 18:43:07,911 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-2] command= showmenu
+2020-06-18 18:43:08,146 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 18:43:08,146 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 18:43:08,147 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 2
+2020-06-18 18:43:10,427 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] GET
+2020-06-18 18:43:10,427 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] reqURI=/cafe/login
+2020-06-18 18:43:12,156 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] GET
+2020-06-18 18:43:12,156 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-18 18:43:12,173 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:43:12,174 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:43:12,174 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 3
+2020-06-18 18:43:12,186 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:43:12,187 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:43:12,187 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 4
+2020-06-18 18:43:12,188 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-18 18:43:12,188 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-18 18:43:12,188 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 3
+2020-06-18 18:43:12,188 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-3] checkedproduct= null
+2020-06-18 18:43:12,188 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-3] command= showmenu
+2020-06-18 18:43:12,190 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:43:12,191 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:43:12,191 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 4
+2020-06-18 18:43:13,756 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] POST
+2020-06-18 18:43:13,756 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-18 18:43:13,769 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 18:43:13,769 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 18:43:13,769 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 5
+2020-06-18 18:43:13,782 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 18:43:13,782 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 18:43:13,782 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 6
+2020-06-18 18:43:13,783 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 18:43:13,783 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 18:43:13,783 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 5
+2020-06-18 18:43:13,784 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-6] checkedproduct= meat
+2020-06-18 18:43:13,784 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-6] command= showmenu
+2020-06-18 18:43:13,784 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 18:43:13,784 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 18:43:13,784 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 6
+2020-06-18 18:43:15,028 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] POST
+2020-06-18 18:43:15,029 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-18 18:43:15,040 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 18:43:15,040 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 18:43:15,040 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 7
+2020-06-18 18:43:15,054 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 18:43:15,054 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 18:43:15,054 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 8
+2020-06-18 18:43:15,057 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-18 18:43:15,057 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-18 18:43:15,057 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 7
+2020-06-18 18:43:15,057 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-7] checkedproduct= apple
+2020-06-18 18:43:15,057 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-7] command= showmenu
+2020-06-18 18:43:15,057 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 18:43:15,057 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 18:43:15,057 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 8
+2020-06-18 18:43:15,601 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] POST
+2020-06-18 18:43:15,601 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-18 18:43:15,611 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:43:15,612 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:43:15,612 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 9
+2020-06-18 18:43:15,622 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:43:15,622 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:43:15,622 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 10
+2020-06-18 18:43:15,623 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 18:43:15,623 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 18:43:15,623 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 9
+2020-06-18 18:43:15,623 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] checkedproduct= grapes
+2020-06-18 18:43:15,623 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] command= showmenu
+2020-06-18 18:43:15,624 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:43:15,624 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:43:15,624 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 10
+2020-06-18 18:43:16,628 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] GET
+2020-06-18 18:43:16,629 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/cart
+2020-06-18 18:43:19,744 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] GET
+2020-06-18 18:43:19,745 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] reqURI=/cafe/order
+2020-06-18 18:44:54,504 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] GET
+2020-06-18 18:44:54,513 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-18 18:44:54,563 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 18:44:54,906 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 18:44:54,906 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 18:44:54,906 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-18 18:44:54,980 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 18:44:54,980 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 18:44:54,981 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-18 18:44:54,982 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-18 18:44:54,983 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-18 18:44:54,983 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-18 18:44:54,984 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-4] checkedproduct= null
+2020-06-18 18:44:54,984 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-4] command= showmenu
+2020-06-18 18:44:55,182 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 18:44:55,182 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 18:44:55,182 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 2
+2020-06-18 18:44:56,187 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] POST
+2020-06-18 18:44:56,187 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-18 18:44:56,205 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 18:44:56,205 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 18:44:56,205 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 3
+2020-06-18 18:44:56,225 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 18:44:56,226 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 18:44:56,227 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 4
+2020-06-18 18:44:56,232 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-18 18:44:56,234 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-18 18:44:56,234 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 3
+2020-06-18 18:44:56,234 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-5] checkedproduct= apple
+2020-06-18 18:44:56,235 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-5] command= showmenu
+2020-06-18 18:44:56,237 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 18:44:56,237 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 18:44:56,237 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 4
+2020-06-18 18:44:56,615 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] POST
+2020-06-18 18:44:56,615 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-18 18:44:56,628 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 18:44:56,628 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 18:44:56,628 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 5
+2020-06-18 18:44:56,642 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 18:44:56,642 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 18:44:56,642 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 6
+2020-06-18 18:44:56,644 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 18:44:56,644 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 18:44:56,644 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 5
+2020-06-18 18:44:56,644 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-6] checkedproduct= apple
+2020-06-18 18:44:56,644 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-6] command= showmenu
+2020-06-18 18:44:56,644 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 18:44:56,644 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 18:44:56,645 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 6
+2020-06-18 18:44:57,380 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] POST
+2020-06-18 18:44:57,380 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-18 18:44:57,391 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 18:44:57,391 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 18:44:57,391 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 7
+2020-06-18 18:44:57,401 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 18:44:57,402 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 18:44:57,402 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 8
+2020-06-18 18:44:57,402 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-18 18:44:57,403 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-18 18:44:57,403 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 7
+2020-06-18 18:44:57,403 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-7] checkedproduct= grapes
+2020-06-18 18:44:57,403 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-7] command= showmenu
+2020-06-18 18:44:57,403 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 18:44:57,403 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 18:44:57,403 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 8
+2020-06-18 18:44:57,592 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] POST
+2020-06-18 18:44:57,592 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-18 18:44:57,601 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:44:57,601 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:44:57,602 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 9
+2020-06-18 18:44:57,612 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:44:57,612 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:44:57,613 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 10
+2020-06-18 18:44:57,613 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 18:44:57,614 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 18:44:57,614 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 9
+2020-06-18 18:44:57,614 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] checkedproduct= grapes
+2020-06-18 18:44:57,614 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] command= showmenu
+2020-06-18 18:44:57,614 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:44:57,614 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:44:57,614 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 10
+2020-06-18 18:44:58,477 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] GET
+2020-06-18 18:44:58,477 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/cart
+2020-06-18 18:45:40,024 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] GET
+2020-06-18 18:45:40,024 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/order
+2020-06-18 18:45:49,046 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] GET
+2020-06-18 18:45:49,046 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] reqURI=/cafe/login
+2020-06-18 18:45:57,640 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 18:45:57,640 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 18:45:57,640 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 11
+2020-06-18 18:45:57,644 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 18:45:57,644 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 18:45:57,644 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 10
+2020-06-18 18:45:57,654 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-6] Account123@123 is taken
+2020-06-18 18:45:59,596 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] GET
+2020-06-18 18:45:59,596 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-18 18:45:59,597 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 18:45:59,597 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 18:45:59,597 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 11
+2020-06-18 18:45:59,609 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 18:45:59,609 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 18:45:59,609 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 12
+2020-06-18 18:45:59,610 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-18 18:45:59,610 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-18 18:45:59,610 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 11
+2020-06-18 18:45:59,610 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-7] checkedproduct= null
+2020-06-18 18:45:59,611 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-7] command= showmenu
+2020-06-18 18:45:59,613 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 18:45:59,613 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 18:45:59,613 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 12
+2020-06-18 18:46:02,018 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] GET
+2020-06-18 18:46:02,019 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] reqURI=/cafe/cart
+2020-06-18 18:46:07,928 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] GET
+2020-06-18 18:46:07,928 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] reqURI=/cafe/order
+2020-06-18 18:56:23,457 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] GET
+2020-06-18 18:56:23,469 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-18 18:56:23,517 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 18:56:23,858 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:56:23,859 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:56:23,859 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 1
+2020-06-18 18:56:23,913 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:56:23,913 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:56:23,913 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-18 18:56:23,915 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-18 18:56:23,915 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-18 18:56:23,915 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 1
+2020-06-18 18:56:23,916 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-3] checkedproduct= null
+2020-06-18 18:56:23,916 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-3] command= showmenu
+2020-06-18 18:56:24,086 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:56:24,086 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:56:24,086 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 2
+2020-06-18 18:56:25,123 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] POST
+2020-06-18 18:56:25,123 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-18 18:56:25,138 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:56:25,138 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:56:25,138 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-18 18:56:25,151 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:56:25,151 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:56:25,151 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-18 18:56:25,153 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 18:56:25,153 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 18:56:25,153 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-18 18:56:25,153 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] checkedproduct= apple
+2020-06-18 18:56:25,153 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] command= showmenu
+2020-06-18 18:56:25,154 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:56:25,154 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:56:25,154 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-18 18:56:26,566 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] POST
+2020-06-18 18:56:26,567 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-18 18:56:26,577 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 18:56:26,577 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 18:56:26,577 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 5
+2020-06-18 18:56:26,589 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 18:56:26,590 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 18:56:26,590 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-18 18:56:26,591 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-18 18:56:26,591 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-18 18:56:26,591 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 5
+2020-06-18 18:56:26,592 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] checkedproduct= apple
+2020-06-18 18:56:26,592 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] command= showmenu
+2020-06-18 18:56:26,592 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 18:56:26,592 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 18:56:26,592 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-18 18:56:27,871 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] GET
+2020-06-18 18:56:27,871 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-18 18:56:29,452 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] GET
+2020-06-18 18:56:29,452 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] reqURI=/cafe/order
+2020-06-18 18:56:40,554 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] GET
+2020-06-18 18:56:40,554 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] reqURI=/cafe/login
+2020-06-18 18:56:44,253 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 18:56:44,253 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 18:56:44,253 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 7
+2020-06-18 18:56:44,256 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 18:56:44,256 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 18:56:44,256 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 6
+2020-06-18 18:56:44,270 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-2] Account123@123 is taken
+2020-06-18 18:56:45,181 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] GET
+2020-06-18 18:56:45,181 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-18 18:56:45,182 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 18:56:45,182 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 18:56:45,182 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 7
+2020-06-18 18:56:45,194 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 18:56:45,195 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 18:56:45,195 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 8
+2020-06-18 18:56:45,196 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-18 18:56:45,196 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-18 18:56:45,196 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 7
+2020-06-18 18:56:45,196 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-4] checkedproduct= null
+2020-06-18 18:56:45,197 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-4] command= showmenu
+2020-06-18 18:56:45,199 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 18:56:45,200 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 18:56:45,200 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 8
+2020-06-18 18:56:46,115 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] POST
+2020-06-18 18:56:46,115 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-18 18:56:46,124 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:56:46,124 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:56:46,124 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 9
+2020-06-18 18:56:46,135 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:56:46,135 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:56:46,135 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 10
+2020-06-18 18:56:46,136 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-18 18:56:46,136 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-18 18:56:46,136 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 9
+2020-06-18 18:56:46,136 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-3] checkedproduct= meat
+2020-06-18 18:56:46,136 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-3] command= showmenu
+2020-06-18 18:56:46,136 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 18:56:46,136 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 18:56:46,137 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 10
+2020-06-18 18:56:46,361 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] POST
+2020-06-18 18:56:46,361 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-18 18:56:46,371 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:56:46,371 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:56:46,371 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 11
+2020-06-18 18:56:46,381 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:56:46,381 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:56:46,381 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 12
+2020-06-18 18:56:46,382 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 18:56:46,382 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 18:56:46,382 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 11
+2020-06-18 18:56:46,383 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] checkedproduct= meat
+2020-06-18 18:56:46,383 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] command= showmenu
+2020-06-18 18:56:46,383 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 18:56:46,383 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 18:56:46,383 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 12
+2020-06-18 18:56:46,688 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] POST
+2020-06-18 18:56:46,688 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-18 18:56:46,700 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 18:56:46,700 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 18:56:46,700 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 13
+2020-06-18 18:56:46,710 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 18:56:46,710 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 18:56:46,710 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 14
+2020-06-18 18:56:46,711 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-18 18:56:46,711 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-18 18:56:46,712 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 13
+2020-06-18 18:56:46,712 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] checkedproduct= meat
+2020-06-18 18:56:46,712 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] command= showmenu
+2020-06-18 18:56:46,713 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 18:56:46,713 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 18:56:46,713 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 14
+2020-06-18 18:56:47,211 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] GET
+2020-06-18 18:56:47,212 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-18 18:56:53,420 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] GET
+2020-06-18 18:56:53,420 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] reqURI=/cafe/order
+2020-06-18 20:12:41,176 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] GET
+2020-06-18 20:12:41,186 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/login
+2020-06-18 20:12:45,609 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 20:12:46,006 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 20:12:46,006 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 20:12:46,007 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 1
+2020-06-18 20:12:46,050 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 20:12:46,050 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 20:12:46,051 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 0
+2020-06-18 20:12:46,062 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-2] Account123@123 is taken
+2020-06-18 20:12:48,207 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] GET
+2020-06-18 20:12:48,208 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-18 20:12:48,211 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 20:12:48,211 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 20:12:48,212 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 1
+2020-06-18 20:12:48,238 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 20:12:48,239 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 20:12:48,239 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 2
+2020-06-18 20:12:48,240 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-18 20:12:48,240 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-18 20:12:48,240 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 1
+2020-06-18 20:12:48,240 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-10] checkedproduct= null
+2020-06-18 20:12:48,241 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-10] command= showmenu
+2020-06-18 20:12:48,400 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 20:12:48,400 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 20:12:48,400 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 2
+2020-06-18 20:12:49,699 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] POST
+2020-06-18 20:12:49,699 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-18 20:12:49,712 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 20:12:49,712 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 20:12:49,712 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-18 20:12:49,727 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 20:12:49,727 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 20:12:49,727 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-18 20:12:49,729 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 20:12:49,729 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 20:12:49,729 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 3
+2020-06-18 20:12:49,729 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] checkedproduct= apple
+2020-06-18 20:12:49,729 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] command= showmenu
+2020-06-18 20:12:49,730 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 20:12:49,730 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 20:12:49,730 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 4
+2020-06-18 20:12:49,964 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] POST
+2020-06-18 20:12:49,964 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-18 20:12:49,975 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:12:49,975 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:12:49,976 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 5
+2020-06-18 20:12:49,987 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:12:49,987 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:12:49,987 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-18 20:12:49,988 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-18 20:12:49,988 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-18 20:12:49,988 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 5
+2020-06-18 20:12:49,988 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] checkedproduct= apple
+2020-06-18 20:12:49,989 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] command= showmenu
+2020-06-18 20:12:49,989 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:12:49,989 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:12:49,989 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-18 20:12:51,181 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] POST
+2020-06-18 20:12:51,181 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-18 20:12:51,191 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:12:51,191 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:12:51,192 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 7
+2020-06-18 20:12:51,202 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:12:51,203 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:12:51,203 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 8
+2020-06-18 20:12:51,204 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 20:12:51,204 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 20:12:51,204 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 7
+2020-06-18 20:12:51,204 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-6] checkedproduct= grapes
+2020-06-18 20:12:51,204 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-6] command= showmenu
+2020-06-18 20:12:51,205 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:12:51,205 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:12:51,205 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 8
+2020-06-18 20:12:52,020 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] GET
+2020-06-18 20:12:52,020 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] reqURI=/cafe/cart
+2020-06-18 20:12:53,835 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] GET
+2020-06-18 20:12:53,835 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/order
+2020-06-18 20:13:06,960 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] POST
+2020-06-18 20:13:06,960 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/ordersuccess
+2020-06-18 20:15:45,109 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] GET
+2020-06-18 20:15:45,119 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] reqURI=/cafe/login
+2020-06-18 20:15:49,890 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 20:15:50,288 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 20:15:50,288 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 20:15:50,288 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-18 20:15:50,329 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 20:15:50,329 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 20:15:50,329 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 0
+2020-06-18 20:15:50,340 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-8] Account123@123 is taken
+2020-06-18 20:15:51,300 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] GET
+2020-06-18 20:15:51,300 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-18 20:15:51,304 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:15:51,304 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:15:51,304 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 1
+2020-06-18 20:15:51,337 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:15:51,337 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:15:51,337 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 2
+2020-06-18 20:15:51,338 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-18 20:15:51,338 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-18 20:15:51,339 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 1
+2020-06-18 20:15:51,339 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] checkedproduct= null
+2020-06-18 20:15:51,339 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] command= showmenu
+2020-06-18 20:15:51,499 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:15:51,499 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:15:51,499 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 2
+2020-06-18 20:15:52,976 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] POST
+2020-06-18 20:15:52,977 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/menu
+2020-06-18 20:15:52,991 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 20:15:52,992 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 20:15:52,992 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 3
+2020-06-18 20:15:53,009 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 20:15:53,009 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 20:15:53,009 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 4
+2020-06-18 20:15:53,011 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-18 20:15:53,011 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-18 20:15:53,012 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 3
+2020-06-18 20:15:53,012 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-3] checkedproduct= meat
+2020-06-18 20:15:53,012 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-3] command= showmenu
+2020-06-18 20:15:53,013 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 20:15:53,013 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 20:15:53,013 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 4
+2020-06-18 20:15:53,385 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] POST
+2020-06-18 20:15:53,385 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-18 20:15:53,396 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:15:53,396 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:15:53,396 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 5
+2020-06-18 20:15:53,408 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:15:53,409 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:15:53,409 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 6
+2020-06-18 20:15:53,410 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 20:15:53,410 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 20:15:53,410 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 5
+2020-06-18 20:15:53,410 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-6] checkedproduct= meat
+2020-06-18 20:15:53,410 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-6] command= showmenu
+2020-06-18 20:15:53,411 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:15:53,411 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:15:53,411 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 6
+2020-06-18 20:15:54,216 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] GET
+2020-06-18 20:15:54,216 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/cart
+2020-06-18 20:15:55,521 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] GET
+2020-06-18 20:15:55,522 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] reqURI=/cafe/order
+2020-06-18 20:16:01,077 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] POST
+2020-06-18 20:16:01,077 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/ordersuccess
+2020-06-18 20:21:04,176 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] GET
+2020-06-18 20:21:04,186 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] reqURI=/cafe/login
+2020-06-18 20:21:09,373 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 20:21:09,765 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:21:09,765 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:21:09,766 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-18 20:21:09,804 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 20:21:09,805 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 20:21:09,805 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 0
+2020-06-18 20:21:09,817 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-6] Account123@123 is taken
+2020-06-18 20:21:11,329 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] GET
+2020-06-18 20:21:11,330 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-18 20:21:11,335 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 20:21:11,335 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 20:21:11,335 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-18 20:21:11,361 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 20:21:11,362 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 20:21:11,362 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-18 20:21:11,364 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 20:21:11,364 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 20:21:11,364 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 1
+2020-06-18 20:21:11,364 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] checkedproduct= null
+2020-06-18 20:21:11,365 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] command= showmenu
+2020-06-18 20:21:11,549 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 20:21:11,549 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 20:21:11,549 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 2
+2020-06-18 20:21:12,276 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] POST
+2020-06-18 20:21:12,276 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] reqURI=/cafe/menu
+2020-06-18 20:21:12,288 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 20:21:12,288 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 20:21:12,288 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 3
+2020-06-18 20:21:12,299 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 20:21:12,299 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 20:21:12,299 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 4
+2020-06-18 20:21:12,300 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-18 20:21:12,300 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-18 20:21:12,300 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 3
+2020-06-18 20:21:12,300 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-4] checkedproduct= apple
+2020-06-18 20:21:12,301 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-4] command= showmenu
+2020-06-18 20:21:12,301 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 20:21:12,301 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 20:21:12,301 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 4
+2020-06-18 20:21:12,677 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] POST
+2020-06-18 20:21:12,677 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-18 20:21:12,688 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:21:12,688 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:21:12,688 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 5
+2020-06-18 20:21:12,699 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:21:12,699 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:21:12,700 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-18 20:21:12,701 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-18 20:21:12,701 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-18 20:21:12,702 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 5
+2020-06-18 20:21:12,702 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] checkedproduct= apple
+2020-06-18 20:21:12,702 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] command= showmenu
+2020-06-18 20:21:12,702 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:21:12,702 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:21:12,702 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 6
+2020-06-18 20:21:13,038 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] POST
+2020-06-18 20:21:13,039 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] reqURI=/cafe/menu
+2020-06-18 20:21:13,050 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 20:21:13,050 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 20:21:13,050 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 7
+2020-06-18 20:21:13,061 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 20:21:13,061 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 20:21:13,061 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 8
+2020-06-18 20:21:13,062 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] OUTCONN
+2020-06-18 20:21:13,062 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 1
+2020-06-18 20:21:13,062 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 7
+2020-06-18 20:21:13,062 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-10] checkedproduct= apple
+2020-06-18 20:21:13,062 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-10] command= showmenu
+2020-06-18 20:21:13,063 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] GETOONN
+2020-06-18 20:21:13,063 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] conpool = 0
+2020-06-18 20:21:13,063 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-10] usedcon = 8
+2020-06-18 20:21:13,464 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] POST
+2020-06-18 20:21:13,464 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] reqURI=/cafe/menu
+2020-06-18 20:21:13,473 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 20:21:13,474 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 20:21:13,474 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 9
+2020-06-18 20:21:13,486 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 20:21:13,486 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 20:21:13,486 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 10
+2020-06-18 20:21:13,487 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] OUTCONN
+2020-06-18 20:21:13,488 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 1
+2020-06-18 20:21:13,488 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 9
+2020-06-18 20:21:13,488 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-1] checkedproduct= grapes
+2020-06-18 20:21:13,488 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-1] command= showmenu
+2020-06-18 20:21:13,488 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 20:21:13,489 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 20:21:13,489 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 10
+2020-06-18 20:21:14,030 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] GET
+2020-06-18 20:21:14,030 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/cart
+2020-06-18 20:21:15,418 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] GET
+2020-06-18 20:21:15,419 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/order
+2020-06-18 20:22:00,480 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] GET
+2020-06-18 20:22:00,489 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] reqURI=/cafe/login
+2020-06-18 20:22:05,119 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 20:22:05,425 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] GETOONN
+2020-06-18 20:22:05,425 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 0
+2020-06-18 20:22:05,425 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 1
+2020-06-18 20:22:05,457 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] OUTCONN
+2020-06-18 20:22:05,457 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] conpool = 1
+2020-06-18 20:22:05,457 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-4] usedcon = 0
+2020-06-18 20:22:05,468 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-4] Account123@123 is taken
+2020-06-18 20:22:06,329 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] GET
+2020-06-18 20:22:06,329 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-6] reqURI=/cafe/menu
+2020-06-18 20:22:06,334 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:22:06,334 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:22:06,334 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-18 20:22:06,355 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:22:06,355 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:22:06,355 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-18 20:22:06,357 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 20:22:06,357 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 20:22:06,357 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-18 20:22:06,357 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-6] checkedproduct= null
+2020-06-18 20:22:06,357 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-6] command= showmenu
+2020-06-18 20:22:06,572 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:22:06,572 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:22:06,572 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 2
+2020-06-18 20:22:07,269 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] POST
+2020-06-18 20:22:07,269 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/menu
+2020-06-18 20:22:07,282 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 20:22:07,282 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 20:22:07,282 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 3
+2020-06-18 20:22:07,297 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 20:22:07,297 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 20:22:07,298 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 4
+2020-06-18 20:22:07,299 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] OUTCONN
+2020-06-18 20:22:07,299 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 1
+2020-06-18 20:22:07,299 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 3
+2020-06-18 20:22:07,299 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-7] checkedproduct= grapes
+2020-06-18 20:22:07,299 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-7] command= showmenu
+2020-06-18 20:22:07,300 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] GETOONN
+2020-06-18 20:22:07,300 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] conpool = 0
+2020-06-18 20:22:07,300 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-7] usedcon = 4
+2020-06-18 20:22:07,649 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] POST
+2020-06-18 20:22:07,649 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] reqURI=/cafe/menu
+2020-06-18 20:22:07,659 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 20:22:07,660 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 20:22:07,660 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 5
+2020-06-18 20:22:07,675 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 20:22:07,676 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 20:22:07,676 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 6
+2020-06-18 20:22:07,677 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] OUTCONN
+2020-06-18 20:22:07,677 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 1
+2020-06-18 20:22:07,677 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 5
+2020-06-18 20:22:07,677 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] checkedproduct= apple
+2020-06-18 20:22:07,677 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-8] command= showmenu
+2020-06-18 20:22:07,678 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] GETOONN
+2020-06-18 20:22:07,678 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] conpool = 0
+2020-06-18 20:22:07,678 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-8] usedcon = 6
+2020-06-18 20:22:08,048 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] POST
+2020-06-18 20:22:08,049 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/menu
+2020-06-18 20:22:08,059 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:22:08,059 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:22:08,060 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 7
+2020-06-18 20:22:08,074 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:22:08,074 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:22:08,074 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 8
+2020-06-18 20:22:08,075 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] OUTCONN
+2020-06-18 20:22:08,076 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 1
+2020-06-18 20:22:08,076 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 7
+2020-06-18 20:22:08,076 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] checkedproduct= meat
+2020-06-18 20:22:08,076 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-9] command= showmenu
+2020-06-18 20:22:08,076 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] GETOONN
+2020-06-18 20:22:08,077 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] conpool = 0
+2020-06-18 20:22:08,077 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-9] usedcon = 8
+2020-06-18 20:22:08,701 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] GET
+2020-06-18 20:22:08,701 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-10] reqURI=/cafe/cart
+2020-06-18 20:22:09,759 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] GET
+2020-06-18 20:22:09,759 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-3] reqURI=/cafe/order
+2020-06-18 20:23:34,007 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] GET
+2020-06-18 20:23:34,018 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] reqURI=/cafe/login
+2020-06-18 20:23:40,516 ERROR b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/epam_cafe?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+2020-06-18 20:23:40,812 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] GETOONN
+2020-06-18 20:23:40,812 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 0
+2020-06-18 20:23:40,813 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 1
+2020-06-18 20:23:40,849 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] OUTCONN
+2020-06-18 20:23:40,849 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] conpool = 1
+2020-06-18 20:23:40,850 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-3] usedcon = 0
+2020-06-18 20:23:40,860 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-3] Account123@123 is taken
+2020-06-18 20:23:41,759 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] GET
+2020-06-18 20:23:41,759 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-7] reqURI=/cafe/signup
+2020-06-18 20:23:44,751 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] GET
+2020-06-18 20:23:44,751 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-8] reqURI=/cafe/login
+2020-06-18 20:23:52,742 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] GETOONN
+2020-06-18 20:23:52,742 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 0
+2020-06-18 20:23:52,742 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 1
+2020-06-18 20:23:52,744 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] OUTCONN
+2020-06-18 20:23:52,745 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] conpool = 1
+2020-06-18 20:23:52,745 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-6] usedcon = 0
+2020-06-18 20:23:52,753 INFO b.g.c.s.i.AccountServiceImpl [http-nio-8082-exec-6] Account123@123 is taken
+2020-06-18 20:23:55,565 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] GET
+2020-06-18 20:23:55,565 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-1] reqURI=/cafe/menu
+2020-06-18 20:23:55,569 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 20:23:55,569 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 20:23:55,569 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 1
+2020-06-18 20:23:55,591 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 20:23:55,592 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 20:23:55,592 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 2
+2020-06-18 20:23:55,594 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] OUTCONN
+2020-06-18 20:23:55,594 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 1
+2020-06-18 20:23:55,594 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 1
+2020-06-18 20:23:55,594 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-1] checkedproduct= null
+2020-06-18 20:23:55,594 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-1] command= showmenu
+2020-06-18 20:23:55,744 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] GETOONN
+2020-06-18 20:23:55,744 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] conpool = 0
+2020-06-18 20:23:55,745 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-1] usedcon = 2
+2020-06-18 20:23:56,920 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] POST
+2020-06-18 20:23:56,920 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-2] reqURI=/cafe/menu
+2020-06-18 20:23:56,937 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 20:23:56,937 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 20:23:56,937 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 3
+2020-06-18 20:23:56,952 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 20:23:56,952 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 20:23:56,952 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 4
+2020-06-18 20:23:56,953 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] OUTCONN
+2020-06-18 20:23:56,953 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 1
+2020-06-18 20:23:56,953 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 3
+2020-06-18 20:23:56,953 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-2] checkedproduct= apple
+2020-06-18 20:23:56,954 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-2] command= showmenu
+2020-06-18 20:23:56,954 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] GETOONN
+2020-06-18 20:23:56,954 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] conpool = 0
+2020-06-18 20:23:56,954 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-2] usedcon = 4
+2020-06-18 20:23:57,240 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] POST
+2020-06-18 20:23:57,240 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-5] reqURI=/cafe/menu
+2020-06-18 20:23:57,250 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 20:23:57,250 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 20:23:57,250 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 5
+2020-06-18 20:23:57,261 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 20:23:57,261 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 20:23:57,261 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 6
+2020-06-18 20:23:57,262 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] OUTCONN
+2020-06-18 20:23:57,262 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 1
+2020-06-18 20:23:57,262 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 5
+2020-06-18 20:23:57,262 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-5] checkedproduct= apple
+2020-06-18 20:23:57,262 INFO b.g.c.c.ShowMenuCommand [http-nio-8082-exec-5] command= showmenu
+2020-06-18 20:23:57,263 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] GETOONN
+2020-06-18 20:23:57,263 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] conpool = 0
+2020-06-18 20:23:57,263 INFO b.g.c.d.c.SQLConnectionPool [http-nio-8082-exec-5] usedcon = 6
+2020-06-18 20:23:57,967 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] GET
+2020-06-18 20:23:57,967 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-4] reqURI=/cafe/cart
+2020-06-18 20:23:59,112 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] GET
+2020-06-18 20:23:59,113 INFO b.g.c.c.EmptyCommand [http-nio-8082-exec-9] reqURI=/cafe/order

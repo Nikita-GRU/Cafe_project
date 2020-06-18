@@ -2,7 +2,7 @@
 <html>
 <head><title>Login</title></head>
 <body>
-<form name="loginForm" method="POST" action="controller">
+<form name="loginForm" method="POST" action="main">
     <input type="hidden" name="command" value="login"/>
     Login:<br/>
     <input type="text" name="email" value=""/>

@@ -73,13 +73,15 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Account getAccountByEmail(String email) throws ServiceException {
+    public Account getAccountByEmail(String email, String password) throws ServiceException {
         Account account = null;
-
         try {
             account = DAOFactory.INSTANCE.getAccountDAO().read(email).get();
+            if (!(hashGeneratorUtil.validatePassword(password, account.getPassword()))) {
+                throw new UtilException("Invalid password");
+            }
             logger.info("Account" + email + " is taken");
-        } catch (DAOException e) {
+        } catch (DAOException | UtilException e) {
             logger.error(e);
             throw new ServiceException(e);
         }

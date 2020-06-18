@@ -11,7 +11,7 @@
     <title>Sign in</title>
 </head>
 <body>
-<form name="signUpForm" method="POST" action="controller">
+<form name="signUpForm" method="POST" action="main">
     <input type="hidden" name="command" value="signup"/>
     Email
     <br/>

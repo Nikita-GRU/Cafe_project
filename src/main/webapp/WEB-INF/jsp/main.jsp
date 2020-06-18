@@ -56,11 +56,12 @@
     </style>
 </head>
 <body>
-<h3>Welcome, ${username}!</h3>
+<h3>Welcome, ${sessionScope.username}!</h3>
+<p> It's ${sessionScope.role} page</p>
 <hr/>
 
 <ul class="nav">
-    <li><a href="${pageContext.request.contextPath}\">Главная</a></li>
+    <li><a href="${pageContext.request.contextPath}">Главная</a></li>
     <li><a href="${pageContext.request.contextPath}\menu">Menu</a></li>
     <li><a href="${pageContext.request.contextPath}\signup">Sign up</a></li>
     <li><a href="${pageContext.request.contextPath}\login">Login</a></li>

@@ -3,8 +3,9 @@ package by.gruca.cafe.command;
 import by.gruca.cafe.configuration.UrlManager;
 
 public enum UrlsEnum {
+    ORDERSUCCESS{{this.page = UrlManager.getProperty("path.page.ordersuccess");}},
     CART {{
-        this.page = UrlManager.getProperty("path.page.showcart");
+        this.page = UrlManager.getProperty("path.action.showcart");
     }},
 
     SIGNUP {
@@ -33,15 +34,18 @@ public enum UrlsEnum {
 
     MENU {
         {
-            this.page = UrlManager.getProperty("path.page.showmenu");
+            this.page = UrlManager.getProperty("path.action.showmenu");
         }
     },
-
-    CONTROLLER {
-        {
-            this.page = UrlManager.getProperty("path.page.controller");
-        }
-    };
+    MAIN {{
+        this.page = UrlManager.getProperty("path.action.login");
+    }},
+//    CONTROLLER {
+//        {
+//            this.page = UrlManager.getProperty("path.page.controller");
+//        }
+//    }
+    ;
 
 
     String page;

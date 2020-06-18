@@ -12,28 +12,33 @@
     <title>Order</title>
 </head>
 <body>
+
+who are u:
+<br/>
+${sessionScope.account}
 <c:set var="sum" value="${0}"/>
 You are ordering this:
 <c:forEach items="${sessionScope.cart}" var="product"><br>
     ${product}<br>
-   summ= ${sum= sum + product.price}<br>
+    summ= ${sum= sum + product.price}<br>
 </c:forEach>
 <br>
 cost=${sum}
 
-<form method="post" action="">
+<form method="post" action="ordersuccess">
+    <input type="hidden" name="command" value="order">
     <br/>
     <br/>
     Email
-    <input type="email" name="email" value=""/>
+    <input type="email" name="email" value="${sessionScope.account.email}"/>
     <br/>
     <br/>
     Firstname
-    <input type="text" name="firstname" value=""/>
+    <input type="text" name="firstname" value="${sessionScope.account.firstName}"/>
     <br/>
     <br/>
     Phone Number
-    <input type="text" name="phonenumber" value=""/>
+    <input type="text" name="phonenumber" value="${sessionScope.account.phoneNumber}"/>
     <br/>
     <br/>
     <input type="radio" name="payment" value="cash">cash

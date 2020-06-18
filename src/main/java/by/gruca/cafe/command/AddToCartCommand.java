@@ -14,7 +14,6 @@ public class AddToCartCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest req) {
-        ProductService productService = new ProductServiceImpl();
         return UrlManager.getProperty("path.page.cart");
     }
 }

@@ -3,12 +3,14 @@
 <html>
 <head>
     <title>Menu</title>
+    <jsp:useBean id="productmanager" class="by.gruca.cafe.model.ProductManager"/>
 </head>
 <body>
 <!DOCTYPE HTML>
 <html>
 <body>
-<c:forEach items="${products}" var="product">
+
+<c:forEach items="${productmanager.products}" var="product">
     <form method="post" action="">
         <input type="hidden" name="checkedproduct" value="${product.name}"/>${product.name}
             <input type="submit" value="add to cart"/>

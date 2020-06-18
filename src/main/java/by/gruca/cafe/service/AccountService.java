@@ -14,7 +14,7 @@ public interface AccountService {
 
     void setBanStatus(Account account, boolean banStatus) throws ServiceException;
 
-    Account getAccountByEmail(String email) throws ServiceException;
+    Account getAccountByEmail(String email,String password) throws ServiceException;
 
 
 }

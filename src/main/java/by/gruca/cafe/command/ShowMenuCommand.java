@@ -5,12 +5,16 @@ import by.gruca.cafe.configuration.UrlManager;
 import by.gruca.cafe.model.Product;
 import by.gruca.cafe.service.exception.ServiceException;
 import by.gruca.cafe.service.impl.ProductServiceImpl;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShowMenuCommand implements ActionCommand {
+    Logger logger = LogManager.getLogger(ShowMenuCommand.class);
+
     @Override
     public String execute(HttpServletRequest req) {
         String checkedProduct = req.getParameter("checkedproduct");
@@ -23,12 +27,11 @@ public class ShowMenuCommand implements ActionCommand {
             req.setAttribute("products", products);
             try {
                 product = productService.getProductByName(checkedProduct);
-                // req.setAttribute("product", product);
+
             } catch (ServiceException e) {
-                //logger.error(e);
             }
-            // logger.info(req.getParameter("checkedproduct"));
-            // logger.info(req.getParameter("command"));
+            logger.info("checkedproduct= " + req.getParameter("checkedproduct"));
+            logger.info("command= " + req.getParameter("command"));
             if (productsInCart == null) {
                 productsInCart = new ArrayList<>();
             }
