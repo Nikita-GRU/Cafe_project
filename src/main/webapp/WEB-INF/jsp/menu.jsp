@@ -6,18 +6,32 @@
     <jsp:useBean id="productmanager" class="by.gruca.cafe.model.ProductManager"/>
 </head>
 <body>
-<!DOCTYPE HTML>
-<html>
-<body>
+<header>
+    <jsp:include page="common/header.jsp"/>
+</header>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <c:forEach items="${productmanager.products}" var="product">
+                <div class="col-xs-12">
+                    <form method="post" action="">
+                        <input type="hidden" name="checkedproduct"
+                               value="${product.name}"/>
+                        <img src="${pageContext.request.contextPath}\images\sample.jpg" class="img-fluid product-image" alt="Responsive image"><br/>
+                            ${product.name}<br>
+                            ${product.price}<br>
+                            ${product.description}<br>
+                        <input type="submit" value="add to cart"/>
+                    </form>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
 
-<c:forEach items="${productmanager.products}" var="product">
-    <form method="post" action="">
-        <input type="hidden" name="checkedproduct" value="${product.name}"/>${product.name}
-            <input type="submit" value="add to cart"/>
-    </form>
-</c:forEach>
+</div>
 <a href="cart">go to cart</a>
-</body>
-</html>
+<footer>
+    <jsp:include page="common/footer.jsp"/>
+</footer>
 </body>
 </html>

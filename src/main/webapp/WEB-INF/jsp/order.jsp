@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>Order</title>
+    <jsp:include page="common/header.jsp"/>
 </head>
 <body>
 
@@ -41,6 +42,10 @@ cost=${sum}
     <input type="text" name="phonenumber" value="${sessionScope.account.phoneNumber}"/>
     <br/>
     <br/>
+    Review:
+    <input type="text" name="review" value=""/>
+    <br/>
+    <br/>
     <input type="radio" name="payment" value="cash">cash
     <input type="radio" name="payment" value="credit card">credit card
     <input type="radio" name="payment" value="bonus points">bonus points
@@ -48,5 +53,6 @@ cost=${sum}
     <br/>
     <br/>
 </form>
+<jsp:include page="common/footer.jsp"/>
 </body>
 </html>

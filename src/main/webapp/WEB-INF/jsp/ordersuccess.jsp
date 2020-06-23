@@ -9,22 +9,28 @@
 <html>
 <head>
     <title>GRATS</title>
+    <jsp:include page="common/header.jsp"/>
 </head>
 <body>
 Order success
+${account}
+<br/>
 ${payment}
 <br/>
 ${email}
 <br/>
 ${firstname}
 <br/>
-${lastname}
-<br/>
 ${phonenumber}
 <br/>
+${map}
+<br/>
+
+
 <c:forEach items="${sessionScope.cart}" var="product"><br>
     ${product}<br>
 </c:forEach>
 <a href="${pageContext.request.contextPath}"> Go to main page </a>
+<jsp:include page="common/footer.jsp"/>
 </body>
 </html>

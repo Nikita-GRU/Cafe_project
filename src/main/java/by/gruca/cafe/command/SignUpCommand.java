@@ -23,9 +23,8 @@ public class SignUpCommand implements ActionCommand {
         Account account = new Account();
         account.setEmail(request.getParameter(PARAM_NAME_EMAIL));
         account.setPassword(request.getParameter(PARAM_NAME_PASSWORD));
-        account.setPhoneNumber(Integer.parseInt(request.getParameter(PARAM_NAME_PHONE_NUMBER)));
+        account.setPhoneNumber(Long.parseLong(request.getParameter(PARAM_NAME_PHONE_NUMBER)));
         account.setFirstName(request.getParameter(PARAM_NAME_FIRSTNAME));
-        account.setLastName(request.getParameter(PARAM_NAME_LASTNAME));
         try {
             ServiceFactory.INSTANCE.getAccountService().createAccount(account);
             page = UrlManager.getProperty("path.page.main");

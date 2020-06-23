@@ -19,14 +19,14 @@ public class ShowMenuCommand implements ActionCommand {
     public String execute(HttpServletRequest req) {
         String checkedProduct = req.getParameter("checkedproduct");
         Product product = null;
-        ArrayList productsInCart = (ArrayList) req.getSession().getAttribute("cart");
+        ArrayList<Product> productsInCart = (ArrayList<Product>) req.getSession().getAttribute("cart");
         String page;
         ProductServiceImpl productService = new ProductServiceImpl();
         try {
             List<Product> products = productService.getProducts();
             req.setAttribute("products", products);
             try {
-                product = productService.getProductByName(checkedProduct);
+                product = productService.getProductByName(checkedProduct);//!!!!!!!!
 
             } catch (ServiceException e) {
             }
@@ -35,7 +35,9 @@ public class ShowMenuCommand implements ActionCommand {
             if (productsInCart == null) {
                 productsInCart = new ArrayList<>();
             }
-            productsInCart.add(product);
+            if (product != null) {
+                productsInCart.add(product);
+            }
             req.getSession().setAttribute("cart", productsInCart);
 
 

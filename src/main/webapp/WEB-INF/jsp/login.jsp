@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head><title>Login</title></head>
+<%--<link rel ="stylesheet" href="${pageContext.request.contextPath}/css/loginstyle.css"--%>
+<jsp:include page="common/header.jsp"/>
 <body>
+
 <form name="loginForm" method="POST" action="main">
     <input type="hidden" name="command" value="login"/>
     Login:<br/>
@@ -10,15 +13,15 @@
     <input type="password" name="password" value=""/>
     <br/>
     <input type="submit" value="Log in"/>
-    <br/>
-    ${errorLoginPassMessage}
-    <br/>
-    ${wrongAction}
-    <br/>
-    ${nullPage}
-    <br/>
 
-</form>
+<br/>
+${errorLoginPassMessage}
+<br/>
+${wrongAction}
+<br/>
+${nullPage}
+<br/>
 <hr/>
+<jsp:include page="common/footer.jsp"/>
 </body>
 </html>

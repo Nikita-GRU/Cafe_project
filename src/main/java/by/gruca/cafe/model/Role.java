@@ -1,30 +1,22 @@
 package by.gruca.cafe.model;
 
-public class Role {
-    private String role;
-    private int roleId;
+public enum Role {
+    ADMIN {{
+        this.roleValue = "admin";
+    }}, USER {{
+        this.roleValue = "user";
+    }}, GUEST {{
+        this.roleValue = "guest";
+    }}, BANNED {{
+        this.roleValue = "banned";
+    }};
 
-    public Role() {
+    String roleValue;
+
+    Role() {
     }
 
-    public Role(int roleId, String role) {
-        this.role = role;
-        this.roleId = roleId;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
+    public String getRoleValue() {
+        return roleValue;
     }
 }

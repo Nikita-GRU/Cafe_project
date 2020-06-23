@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>${login} profile</title>
+    <jsp:include page="common/header.jsp"/>
 </head>
 <body>
 <form name="updateUserForm" method="POST" action="controller">
@@ -20,9 +21,6 @@
     <br/>
     lastName:
     <br/>
-    <input type="text" name="lastName" value= ${lastName}/>
-    <br/>
-    <br/>
     login:
     <br/>
     <input type="text" name="login" value= ${login}/>
@@ -30,5 +28,6 @@
     <br/>
     <a href=""><h3> Order list</h3></a>
 </form>
+<jsp:include page="common/footer.jsp"/>
 </body>
 </html>

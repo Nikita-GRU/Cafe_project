@@ -1,11 +1,9 @@
 package by.gruca.cafe.dao.impl;
 
-import by.gruca.cafe.dao.AccountDAO;
 import by.gruca.cafe.dao.ProductDAO;
 import by.gruca.cafe.dao.connectionpool.ConnectionProxy;
 import by.gruca.cafe.dao.connectionpool.SQLConnectionPool;
 import by.gruca.cafe.dao.exception.DAOException;
-import by.gruca.cafe.model.Order;
 import by.gruca.cafe.model.Product;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,16 +13,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 public class ProductDAOImpl implements ProductDAO {
     private static final String SQL_GET_ALL = "select * from product";
-    private static final String SQL_GET = "select * from product where name=? ";
+    private static final String SQL_GET = "select * from product where id=? ";
     private static final String SQL_CREATE = "insert into product(id,name,price,description) " +
             "values(DEFAULT,?,?,?)";
     private static final String SQL_UPDATE = "update product set name=?,price=?,description=? where id=?";
     private static final String SQL_DELETE = "delete from product where id=? ";
+    private static final String SQL_GET_BY_NAME = "SELECT * FROM product WHERE name=?";
     Logger logger = LogManager.getLogger(ProductDAOImpl.class);
 
 
@@ -46,18 +44,18 @@ public class ProductDAOImpl implements ProductDAO {
     }
 
     @Override
-    public Optional<Product> read(String productName) throws DAOException {
+    public Optional<Product> read(Integer productId) throws DAOException {
         Product product = new Product();
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement readStatement = connection.prepareStatement(SQL_GET)) {
-            readStatement.setString(1, productName);
+            readStatement.setInt(1, productId);
             try (ResultSet resultSet = readStatement.executeQuery()) {
                 if (resultSet.next()) {
                     product.setId(resultSet.getInt("id"));
                     product.setDescription(resultSet.getString("description"));
                     product.setPrice(resultSet.getDouble("price"));
-                    product.setName(productName);
-                } else throw new DAOException("Account is not exist");
+                    product.setName(resultSet.getString("name"));
+                } else throw new DAOException("Product is not exist");
             } catch (SQLException e) {
                 logger.error(e);
             }
@@ -87,6 +85,30 @@ public class ProductDAOImpl implements ProductDAO {
     }
 
     @Override
+    public Optional<Product> getProductByName(String productName) throws DAOException {
+        Product product = new Product();
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement readStatement = connection.prepareStatement(SQL_GET_BY_NAME)) {
+            readStatement.setString(1, productName);
+            try (ResultSet resultSet = readStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    product.setId(resultSet.getInt("id"));
+                    product.setDescription(resultSet.getString("description"));
+                    product.setPrice(resultSet.getDouble("price"));
+                    product.setName(resultSet.getString("name"));
+                } else throw new DAOException("Product is not exist");
+            } catch (SQLException e) {
+                logger.error(e);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException("SQL statement error", e);
+        }
+        return Optional.of(product);
+
+    }
+
+    @Override
     public boolean delete(Product product) throws DAOException {
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_DELETE);) {
@@ -101,14 +123,10 @@ public class ProductDAOImpl implements ProductDAO {
     public List<Product> getAll() throws DAOException {
         List productList = new ArrayList();
 
-        ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-        if (Objects.isNull(connection)) {
-            throw new RuntimeException("No connection");
-        }
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(SQL_GET_ALL);
-            ResultSet resultSet = null;
-            resultSet = preparedStatement.executeQuery();
+
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL_GET_ALL);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
             while (resultSet.next()) {
                 Product product = new Product();
                 product.setName(resultSet.getString("name"));

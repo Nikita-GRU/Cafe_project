@@ -13,15 +13,8 @@ public class EmptyCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest request) {
         String page = UrlManager.getProperty("path.page.main");
-        String requestURI = request.getRequestURI();
         logger.info(request.getMethod());
         logger.info("reqURI=" + request.getRequestURI());
-        for (UrlsEnum url : UrlsEnum.values()
-        ) {
-            if (requestURI.equals(request.getContextPath() + "/" + url.toString().toLowerCase())) {
-                page = url.getPage();
-            }
-        }
         return page;
     }
 }

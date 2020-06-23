@@ -10,56 +10,59 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
-
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public enum SQLConnectionPool {
-    INSTANCE;
+    INSTANCE {{
+        isActive = new AtomicBoolean();
+        isActive.getAndSet(false);
+        connectionPool = new LinkedBlockingQueue<>();
+        usedConnections = new ArrayList<>();
+    }};
+    AtomicBoolean isActive;
+    LinkedBlockingQueue<ConnectionProxy> connectionPool;
+    List<ConnectionProxy> usedConnections;
     private Logger logger = LogManager.getLogger(SQLConnectionPool.class);
-
-
     private int initConnections;
     private int maxConnections;
     private String url;
     private String user;
     private String password;
-    private LinkedBlockingQueue<ConnectionProxy> connectionPool;
-    private List<ConnectionProxy> usedConnections;
-
 
     SQLConnectionPool() {
-        connectionPool = new LinkedBlockingQueue<>();
-        usedConnections = new ArrayList<>();
-        createConnectionPool();
-
     }
 
-    private ConnectionProxy createConnection() throws SQLException {
-        return new ConnectionProxy(DriverManager.getConnection(url, user, password));
-    }
-
-    private void createConnectionPool() {
-        initProperties();
+    private ConnectionProxy createConnection() throws DAOException {
+        ConnectionProxy connection;
         try {
-            for (int i = 0; i < initConnections; i++) {
-                connectionPool.add(createConnection());
-            }
+            connection = new ConnectionProxy(DriverManager.getConnection(url, user, password));
         } catch (SQLException e) {
             logger.error(e);
+            throw new DAOException(e);
         }
+        return connection;
+    }
+
+    private void createConnectionPool() throws DAOException {
+        isActive.getAndSet(true);
+        initProperties();
+        for (int i = 0; i < initConnections; i++) {
+            try {
+                connectionPool.put(createConnection());
+            } catch (InterruptedException e) {
+                logger.error(e);
+                throw new DAOException(e);
+            }
+        }
+
     }
 
     public ConnectionProxy getConnection() throws DAOException {
+        if (!isActive.get()) {
+            createConnectionPool();
+        }
         if (connectionPool.isEmpty()) {
-            if (usedConnections.size() < maxConnections) {
-                try {
-                    connectionPool.add(createConnection());
-                } catch (SQLException e) {
-                    logger.error(e);
-                    throw new DAOException("Connection creating error", e);
-                }
-            } else {
-                throw new DAOException("Maximum pool size reached, no available connections!");
-            }
+            addConnection();
         }
         ConnectionProxy connection = connectionPool.poll();
         usedConnections.add(connection);
@@ -89,17 +92,26 @@ public enum SQLConnectionPool {
     public void shutdown() throws DAOException {
 
         try {
-            for (int i = 0; i < usedConnections.size(); i++) {
-                usedConnections.get(i).getConnection().close();
+            for (ConnectionProxy usedConnection : usedConnections) {
+                usedConnection.getConnection().close();
             }
             for (int i = 0; i < connectionPool.size(); i++) {
                 connectionPool.peek().getConnection().close();
             }
         } catch (SQLException e) {
+            logger.error(e);
             throw new DAOException(e);
         }
         usedConnections.clear();
         connectionPool.clear();
+    }
+
+    private void addConnection() throws DAOException {
+        if (usedConnections.size() <= maxConnections) {
+            connectionPool.add(createConnection());
+        } else {
+            throw new DAOException("Too many connections");
+        }
     }
 
     public void initProperties() {

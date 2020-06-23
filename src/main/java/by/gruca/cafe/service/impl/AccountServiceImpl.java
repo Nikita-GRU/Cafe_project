@@ -4,6 +4,7 @@ package by.gruca.cafe.service.impl;
 import by.gruca.cafe.dao.exception.DAOException;
 import by.gruca.cafe.factory.DAOFactory;
 import by.gruca.cafe.model.Account;
+import by.gruca.cafe.model.Role;
 import by.gruca.cafe.service.AccountService;
 import by.gruca.cafe.service.exception.ServiceException;
 import by.gruca.cafe.util.HashGeneratorUtil;
@@ -11,8 +12,22 @@ import by.gruca.cafe.util.UtilException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.List;
+
 
 public class AccountServiceImpl implements AccountService {
+    @Override
+    public List<Account> getAllAccounts() throws ServiceException {
+        List<Account> accounts;
+        try {
+            accounts = DAOFactory.INSTANCE.getAccountDAO().getAllAccounts();
+        } catch (DAOException e) {
+            logger.error(e);
+            throw new ServiceException(e);
+        }
+        return accounts;
+    }
+
     HashGeneratorUtil hashGeneratorUtil;
     Logger logger = LogManager.getLogger(AccountServiceImpl.class);
 
@@ -24,7 +39,6 @@ public class AccountServiceImpl implements AccountService {
     public void updateAccount(Account account, String email, String firstName, String lastName) throws ServiceException {
         account.setEmail(email);
         account.setFirstName(firstName);
-        account.setLastName(lastName);
         try {
             DAOFactory.INSTANCE.getAccountDAO().update(account);
         } catch (DAOException e) {
@@ -49,8 +63,8 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public void setBanStatus(Account account, boolean banStatus) throws ServiceException {
-        account.setEnabled(false);
+    public void setAccountRole(Account account, Role role) throws ServiceException {
+        account.setRole(role);
         try {
             DAOFactory.INSTANCE.getAccountDAO().update(account);
         } catch (DAOException e) {
@@ -82,6 +96,19 @@ public class AccountServiceImpl implements AccountService {
             }
             logger.info("Account" + email + " is taken");
         } catch (DAOException | UtilException e) {
+            logger.error(e);
+            throw new ServiceException(e);
+        }
+        return account;
+    }
+
+    @Override
+    public Account getGuestAccountByEmail(String email) throws ServiceException {
+        Account account = null;
+        try {
+            account = DAOFactory.INSTANCE.getAccountDAO().read(email).get();
+            logger.info("Account" + email + " is taken");
+        } catch (DAOException e) {
             logger.error(e);
             throw new ServiceException(e);
         }

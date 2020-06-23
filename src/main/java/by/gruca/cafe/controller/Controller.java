@@ -1,8 +1,11 @@
 package by.gruca.cafe.controller;
 
 import by.gruca.cafe.command.ActionCommand;
+import by.gruca.cafe.command.UrlsEnum;
 import by.gruca.cafe.configuration.MessageManager;
 import by.gruca.cafe.configuration.UrlManager;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,11 +13,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet("/")
+@WebServlet("/controller")
 public class Controller extends HttpServlet {
+    Logger logger = LogManager.getLogger(Controller.class);
+
     @Override
     public void init() throws ServletException {
         super.init();
@@ -33,12 +37,14 @@ public class Controller extends HttpServlet {
     private void processRequest(HttpServletRequest request,
                                 HttpServletResponse response)
             throws ServletException, IOException {
+
         String page = null;
         ActionFactory client = new ActionFactory();
         ActionCommand command = client.defineCommand(request);
         page = command.execute(request);
         if (page != null) {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
+            logger.info("reqURL=" + request.getRequestURL());
             dispatcher.forward(request, response);
         } else {
             page = UrlManager.getProperty("path.page.error");

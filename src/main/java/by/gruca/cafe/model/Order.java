@@ -1,20 +1,43 @@
 package by.gruca.cafe.model;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class Order {
     private int id;
     private LocalDateTime date;
     private double price;
-    private List<Product> products;
+    private HashMap<Product, Integer> products;
     private String review;
     private Account account;
+    private boolean isDelivered;
+    private boolean isAccepted;
 
     public Order() {
-        date = LocalDateTime.now();
-        products = new ArrayList<>();
+    }
+
+    public boolean isDelivered() {
+        return isDelivered;
+    }
+
+    public void setDelivered(boolean delivered) {
+        isDelivered = delivered;
+    }
+
+    public boolean isAccepted() {
+        return isAccepted;
+    }
+
+    public void setAccepted(boolean accepted) {
+        isAccepted = accepted;
+    }
+
+    public HashMap<Product, Integer> getProducts() {
+        return products;
+    }
+
+    public void setProducts(HashMap<Product, Integer> products) {
+        this.products = products;
     }
 
     public int getId() {
@@ -41,14 +64,6 @@ public class Order {
         this.price = price;
     }
 
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
-
     public String getReview() {
         return review;
     }
@@ -65,10 +80,6 @@ public class Order {
         this.account = account;
     }
 
-    public void addNewProduct(Product product) {
-        products.add(product);
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -78,6 +89,8 @@ public class Order {
 
         if (getId() != order.getId()) return false;
         if (Double.compare(order.getPrice(), getPrice()) != 0) return false;
+        if (isDelivered() != order.isDelivered()) return false;
+        if (isAccepted() != order.isAccepted()) return false;
         if (!getDate().equals(order.getDate())) return false;
         if (getProducts() != null ? !getProducts().equals(order.getProducts()) : order.getProducts() != null)
             return false;
@@ -96,6 +109,8 @@ public class Order {
         result = 31 * result + (getProducts() != null ? getProducts().hashCode() : 0);
         result = 31 * result + (getReview() != null ? getReview().hashCode() : 0);
         result = 31 * result + getAccount().hashCode();
+        result = 31 * result + (isDelivered() ? 1 : 0);
+        result = 31 * result + (isAccepted() ? 1 : 0);
         return result;
     }
 
@@ -108,6 +123,8 @@ public class Order {
                 ", products=" + products +
                 ", review='" + review + '\'' +
                 ", account=" + account +
+                ", isDelivered=" + isDelivered +
+                ", isAccepted=" + isAccepted +
                 '}';
     }
 }

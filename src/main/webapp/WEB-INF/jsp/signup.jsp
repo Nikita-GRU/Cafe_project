@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Sign in</title>
+    <jsp:include page="common/header.jsp"/>
 </head>
 <body>
 <form name="signUpForm" method="POST" action="main">
@@ -40,9 +41,6 @@
     <br/>
     Lastname
     <br/>
-    <input type="text" name="lastname" value=""/>
-    <br/>
-    <br/>
     <input type="submit" value="Sign up"/>
     ${errorLoginPassMessage}
     <br/>
@@ -51,5 +49,6 @@
     ${nullPage}
     <br/>
 </form>
+<jsp:include page="common/footer.jsp"/>
 </body>
 </html>

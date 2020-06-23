@@ -26,7 +26,7 @@ public class LoginCommand implements ActionCommand {
             account = accountService.getAccountByEmail(email, pass);
             request.getSession().setAttribute("username", account.getFirstName());
             request.getSession().setAttribute("account", account);
-            request.getSession().setAttribute("role", account.getRole().getRole());
+            request.getSession().setAttribute("role", account.getRole().getRoleValue());
             page = UrlManager.getProperty("path.page.main");
         } catch (ServiceException e) {
             request.setAttribute("errorLoginPassMessage",

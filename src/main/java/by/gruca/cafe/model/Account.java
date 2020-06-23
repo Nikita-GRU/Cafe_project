@@ -2,31 +2,31 @@ package by.gruca.cafe.model;
 
 public class Account {
     private int id;
-    private int phoneNumber;
+    private long phoneNumber;
     private String password;
     private String email;
     private String firstName;
-    private String lastName;
     private Role role;
-    private boolean isEnabled;
+    private int bonusPoints;
+
 
     public Account() {
     }
 
-    public int getPhoneNumber() {
+    public int getBonusPoints() {
+        return bonusPoints;
+    }
+
+    public void setBonusPoints(int bonusPoints) {
+        this.bonusPoints = bonusPoints;
+    }
+
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public boolean isEnabled() {
-        return isEnabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        isEnabled = enabled;
     }
 
     public int getId() {
@@ -61,34 +61,12 @@ public class Account {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public Role getRole() {
         return role;
     }
 
     public void setRole(Role role) {
         this.role = role;
-    }
-
-    @Override
-    public String toString() {
-        return "Account{" +
-                "id=" + id +
-                ", phoneNumber=" + phoneNumber +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", role=" + role +
-                ", isEnabled=" + isEnabled +
-                '}';
     }
 
     @Override
@@ -100,26 +78,37 @@ public class Account {
 
         if (getId() != account.getId()) return false;
         if (getPhoneNumber() != account.getPhoneNumber()) return false;
-        if (isEnabled() != account.isEnabled()) return false;
-        if (!getPassword().equals(account.getPassword())) return false;
+        if (getBonusPoints() != account.getBonusPoints()) return false;
+        if (getPassword() != null ? !getPassword().equals(account.getPassword()) : account.getPassword() != null)
+            return false;
         if (!getEmail().equals(account.getEmail())) return false;
         if (getFirstName() != null ? !getFirstName().equals(account.getFirstName()) : account.getFirstName() != null)
             return false;
-        if (getLastName() != null ? !getLastName().equals(account.getLastName()) : account.getLastName() != null)
-            return false;
-        return getRole().equals(account.getRole());
+        return getRole() == account.getRole();
     }
 
     @Override
     public int hashCode() {
         int result = getId();
-        result = 31 * result + getPhoneNumber();
-        result = 31 * result + getPassword().hashCode();
+        result = 31 * result + (int) (getPhoneNumber() ^ (getPhoneNumber() >>> 32));
+        result = 31 * result + (getPassword() != null ? getPassword().hashCode() : 0);
         result = 31 * result + getEmail().hashCode();
         result = 31 * result + (getFirstName() != null ? getFirstName().hashCode() : 0);
-        result = 31 * result + (getLastName() != null ? getLastName().hashCode() : 0);
         result = 31 * result + getRole().hashCode();
-        result = 31 * result + (isEnabled() ? 1 : 0);
+        result = 31 * result + getBonusPoints();
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", phoneNumber=" + phoneNumber +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", role=" + role +
+                ", bonusPoints=" + bonusPoints +
+                '}';
     }
 }
