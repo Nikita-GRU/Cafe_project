@@ -6,13 +6,20 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="ru-RU"/>
+<fmt:setBundle basename="messages" var="message"/>
 <html>
 <head>
     <jsp:include page="common/header.jsp"/>
 </head>
 <body>
 
-<jsp:include page="common/footer.jsp"/>
+<form method="post" action="${pageContext.request.contextPath}\image" enctype="multipart/form-data">
+    <input type="file" /><br/><br/>
+    <input type="submit" value="Отправить"><
+</form>
 
+<jsp:include page="common/footer.jsp"/>
 </body>
 </html>

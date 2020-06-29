@@ -1,7 +1,6 @@
 package by.gruca.cafe.service.impl;
 
 import by.gruca.cafe.dao.exception.DAOException;
-import by.gruca.cafe.dao.impl.ProductDAOImpl;
 import by.gruca.cafe.factory.DAOFactory;
 import by.gruca.cafe.model.Product;
 import by.gruca.cafe.service.ProductService;
@@ -9,24 +8,10 @@ import by.gruca.cafe.service.exception.ServiceException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductServiceImpl implements ProductService {
     Logger logger = LogManager.getLogger(AccountServiceImpl.class);
-
-    @Override
-    public List<Product> getProducts() throws ServiceException {
-        ProductDAOImpl productDAO = new ProductDAOImpl();
-        List<Product> products = new ArrayList();
-
-        try {
-            products = productDAO.getAll();
-        } catch (DAOException e) {
-            throw new ServiceException("get products service exception", e);
-        }
-        return products;
-    }
 
     @Override
     public void addNewProduct(Product newProduct) throws ServiceException {
@@ -39,8 +24,19 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void updateProduct(Product product) throws ServiceException {
+    public void updateProduct(Product newProduct, int productId) throws ServiceException {
         try {
+            Product product = DAOFactory.INSTANCE.getProductDAO().read(productId).get();
+            if (newProduct.getName() != null) {
+                product.setName(newProduct.getName());
+            }
+            if (newProduct.getPrice() != 0.0) {
+                product.setPrice(newProduct.getPrice());
+            }
+            if (newProduct.getDescription() != null) {
+                product.setDescription(newProduct.getDescription());
+            }
+
             DAOFactory.INSTANCE.getProductDAO().update(product);
         } catch (DAOException e) {
             logger.error(e);
@@ -57,5 +53,17 @@ public class ProductServiceImpl implements ProductService {
             throw new ServiceException(e);
         }
         return product;
+    }
+
+    @Override
+    public List<Product> getAllProducts() throws ServiceException {
+        List<Product> products;
+        try {
+            products = DAOFactory.INSTANCE.getProductDAO().getAllProducts();
+        } catch (DAOException e) {
+            logger.error(e);
+            throw new ServiceException(e);
+        }
+        return products;
     }
 }

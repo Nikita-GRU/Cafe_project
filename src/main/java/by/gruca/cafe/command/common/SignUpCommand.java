@@ -1,6 +1,7 @@
-package by.gruca.cafe.command;
+package by.gruca.cafe.command.common;
 
 
+import by.gruca.cafe.command.ActionCommand;
 import by.gruca.cafe.configuration.MessageManager;
 import by.gruca.cafe.configuration.UrlManager;
 import by.gruca.cafe.factory.ServiceFactory;
@@ -14,7 +15,6 @@ public class SignUpCommand implements ActionCommand {
     private static final String PARAM_NAME_PASSWORD = "password";
     private static final String PARAM_NAME_EMAIL = "email";
     private static final String PARAM_NAME_FIRSTNAME = "firstname";
-    private static final String PARAM_NAME_LASTNAME = "lastname";
     private static final String PARAM_NAME_PHONE_NUMBER = "phonenumber";
 
     @Override
@@ -23,7 +23,7 @@ public class SignUpCommand implements ActionCommand {
         Account account = new Account();
         account.setEmail(request.getParameter(PARAM_NAME_EMAIL));
         account.setPassword(request.getParameter(PARAM_NAME_PASSWORD));
-        account.setPhoneNumber(Long.parseLong(request.getParameter(PARAM_NAME_PHONE_NUMBER)));
+        account.setPhoneNumber(Long.parseLong(request.getParameter(PARAM_NAME_PHONE_NUMBER).replaceAll("\\+", "")));
         account.setFirstName(request.getParameter(PARAM_NAME_FIRSTNAME));
         try {
             ServiceFactory.INSTANCE.getAccountService().createAccount(account);

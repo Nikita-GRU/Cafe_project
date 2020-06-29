@@ -27,13 +27,13 @@ public class OrderDAOImpl implements OrderDAO {
     private static final String SQL_GET_NOT_DELIVERED_ORDERS = "SELECT * FROM `order` WHERE is_delivered=?";
     private static final String SQL_READ_BY_TIME_AND_ACCOUNT = "SELECT * FROM `order` where date=? AND account=? ";
     private static final String SQL_ATTACH_PRODUCTS = "insert into order_detail(id, order_id, product_id, quantity) values(DEFAULT,?,?,?)";
-    private static final String SQL_GET = "select * from order where id=(?)";
-    private static final String SQL_GET_ALL = "select * from order";
+    private static final String SQL_GET = "select * from `order` where id=(?)";
+    private static final String SQL_GET_ALL = "select * from `order`";
     private static final String SQL_GET_ALL_BY_LOGIN = "select * from order join account on order.id = account.id where account=?";
     private static final String SQL_CREATE = "INSERT INTO `order` (id,date, price, account, review) values (DEFAULT,?,?,?,?)";
-    private static final String SQL_UPDATE = "update order set date=?,price=?,account=?,review=?" +
+    private static final String SQL_UPDATE = "update `order` set date=?,price=?,account=?,review=?" +
             "where id=?";
-    private static final String SQL_DELETE = "delete from order where id=?";
+    private static final String SQL_DELETE = "delete from `order` where id=?";
     private static final String SQL_GET_PRODUCTS = "select product_id from order join product on order.product_id=product.id where order.id=?";
     private static final String SQL_GET_ORDER_PRODUCTS = "SELECT * FROM order_detail where order_id=?";
     private static final String SQL_SET_ACCEPTED = "UPDATE `order` SET is_accepted=? where id=?";
@@ -67,10 +67,7 @@ public class OrderDAOImpl implements OrderDAO {
             readStatement.setString(2, account.getEmail());
             try (ResultSet resultSet = readStatement.executeQuery()) {
                 if (resultSet.next()) {
-                    order.setId(resultSet.getInt("id"));
-                    order.setReview(resultSet.getString("review"));
-                    order.setAccount(accountDAO.read(resultSet.getString("account")).get());
-                    order.setPrice(resultSet.getDouble("price"));
+                    order = buildOrder(resultSet);
                 } else throw new DAOException("Account is not exist");
             } catch (SQLException e) {
                 logger.error(e);
@@ -91,10 +88,7 @@ public class OrderDAOImpl implements OrderDAO {
             readStatement.setInt(1, orderId);
             try (ResultSet resultSet = readStatement.executeQuery()) {
                 if (resultSet.next()) {
-                    order.setId(resultSet.getInt("id"));
-                    order.setReview(resultSet.getString("review"));
-                    order.setAccount(accountDAO.read(resultSet.getString("email")).get());
-                    order.setPrice(resultSet.getDouble("price"));
+                    order = buildOrder(resultSet);
                 } else throw new DAOException("Order is not exist");
             } catch (SQLException e) {
                 logger.error(e);
@@ -139,24 +133,39 @@ public class OrderDAOImpl implements OrderDAO {
     }
 
     @Override
-    public List<Order> getAll() throws UnsupportedOperationException {
-        throw new UnsupportedOperationException("");
-    }
-
-    @Override
-    public List<Order> getAllByAccount(String email) throws DAOException {
+    public List<Order> getAll() throws DAOException {
+        List<Order> orders = new ArrayList<>();
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_GET_ALL_BY_LOGIN)) {
-            statement.setString(1, email);
+             PreparedStatement statement = connection.prepareStatement(SQL_GET_ALL)) {
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
-                Order receivedUser = new Order();
+                Order currentOrder = buildOrder(resultSet);
+                orders.add(currentOrder);
             }
         } catch (SQLException e) {
             logger.error(e);
             throw new DAOException("SQL statement error", e);
         }
-        return null;
+        return orders;
+    }
+
+
+    @Override
+    public List<Order> getAllByAccount(String email) throws DAOException {
+        List<Order> orders = new ArrayList<Order>();
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement statement = connection.prepareStatement(SQL_GET_ALL_BY_LOGIN)) {
+            statement.setString(1, email);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Order order = buildOrder(resultSet);
+                orders.add(order);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException("SQL statement error", e);
+        }
+        return orders;
     }
 
     @Override
@@ -167,16 +176,8 @@ public class OrderDAOImpl implements OrderDAO {
             readStatement.setBoolean(1, false);
             try (ResultSet resultSet = readStatement.executeQuery()) {
                 while (resultSet.next()) {
-                    Order currentOrder = new Order();
-                    currentOrder.setId(resultSet.getInt("id"));
-                    currentOrder.setReview(resultSet.getString("review"));
-                    currentOrder.setAccount(accountDAO.read(resultSet.getString("account")).get());
-                    currentOrder.setPrice(resultSet.getDouble("price"));
-                    currentOrder.setProducts(DAOFactory.INSTANCE.getOrderDAO().getOrderProducts(currentOrder.getId()));
-                    currentOrder.setDate(TimeConverter.convertFromSQLDateTimeToLocalDateTime(resultSet.getString("date")));
-                    currentOrder.setAccepted(resultSet.getBoolean("is_accepted"));
-                    currentOrder.setDelivered(resultSet.getBoolean("is_delivered"));
-                    orders.add(currentOrder);
+                    Order order = buildOrder(resultSet);
+                    orders.add(order);
                 }
             } catch (SQLException e) {
                 logger.error(e);
@@ -256,26 +257,22 @@ public class OrderDAOImpl implements OrderDAO {
 
 
     }
-//    @Override
-//    public List<Order> getAll() throws DAOException {
-//        List<Order> resultCollection = new ArrayList<>();
-//        ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-//        if (Objects.isNull(connection)) {
-//            throw new RuntimeException("No connection");
-//        }
-//        try {
-//            PreparedStatement preparedStatement = connection.prepareStatement(SQL_GET_ALL);
-//            ResultSet resultSet = preparedStatement.executeQuery();
-//            while (resultSet.next()) {
-//                Order receivedUser = new Order();
-//
-//            }
-//            private String orderDate;
-//            private int totalPrice;
-//            private int bonusPoints;
-//            private List<Product> products;
-//            private String review;
-//            private Account account;
-//            private PaymentMethod paymentMethod;
-    //
+
+    private Order buildOrder(ResultSet resultSet) throws DAOException {
+        Order currentOrder = new Order();
+        try {
+            currentOrder.setId(resultSet.getInt("id"));
+            currentOrder.setReview(resultSet.getString("review"));
+            currentOrder.setAccount(accountDAO.read(resultSet.getString("account")).get());
+            currentOrder.setPrice(resultSet.getDouble("price"));
+            currentOrder.setProducts(DAOFactory.INSTANCE.getOrderDAO().getOrderProducts(currentOrder.getId()));
+            currentOrder.setDate(TimeConverter.convertFromSQLDateTimeToLocalDateTime(resultSet.getString("date")));
+            currentOrder.setAccepted(resultSet.getBoolean("is_accepted"));
+            currentOrder.setDelivered(resultSet.getBoolean("is_delivered"));
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(e);
+        }
+        return currentOrder;
+    }
 }

@@ -1,5 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %><%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="ru-RU"/>
+<fmt:setBundle basename="messages" var="message"/>
 <html>
 <head>
     <title>Menu</title>
@@ -31,7 +34,7 @@
 </div>
 <a href="cart">go to cart</a>
 <footer>
-    <jsp:include page="common/footer.jsp"/>
+<%--    <jsp:include page="common/footer.jsp"/>--%>
 </footer>
 </body>
 </html>

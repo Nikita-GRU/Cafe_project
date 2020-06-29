@@ -1,5 +1,6 @@
-package by.gruca.cafe.command;
+package by.gruca.cafe.command.common;
 
+import by.gruca.cafe.command.ActionCommand;
 import by.gruca.cafe.configuration.UrlManager;
 import by.gruca.cafe.model.Product;
 

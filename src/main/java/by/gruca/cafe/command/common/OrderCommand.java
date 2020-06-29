@@ -1,5 +1,6 @@
-package by.gruca.cafe.command;
+package by.gruca.cafe.command.common;
 
+import by.gruca.cafe.command.ActionCommand;
 import by.gruca.cafe.configuration.UrlManager;
 import by.gruca.cafe.factory.ServiceFactory;
 import by.gruca.cafe.model.Account;
@@ -38,7 +39,7 @@ public class OrderCommand implements ActionCommand {
         req.setAttribute("map", groupOrderProducts(products));
         if (account == null) {
             try {
-                account = ServiceFactory.INSTANCE.getAccountService().getGuestAccountByEmail(email);
+                account = ServiceFactory.INSTANCE.getAccountService().getAccountByEmail(email);
             } catch (ServiceException e) {
                 logger.error(e);
             }
@@ -55,7 +56,7 @@ public class OrderCommand implements ActionCommand {
                 account.setFirstName(firstName);
                 try {
                     ServiceFactory.INSTANCE.getAccountService().createAccount(account);
-                    account = ServiceFactory.INSTANCE.getAccountService().getGuestAccountByEmail(email);
+                    account = ServiceFactory.INSTANCE.getAccountService().getAccountByEmail(email);
                 } catch (ServiceException e) {
                     logger.error(e);
                 }
@@ -72,6 +73,7 @@ public class OrderCommand implements ActionCommand {
             logger.error(e);
         }
         req.getSession().removeAttribute("cart");
+        req.getSession().setAttribute("cart_count", 0);
         return UrlManager.getProperty("path.page.ordersuccess");
     }
 

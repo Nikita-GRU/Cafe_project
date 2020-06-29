@@ -1,22 +1,11 @@
 package by.gruca.cafe.model;
 
 public class Product {
+
     private int id;
     private String name;
     private double price;
     private String description;
-    private int quantity;
-
-    public Product() {
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
 
     public int getId() {
         return id;

@@ -25,7 +25,7 @@ public class UriFilter implements Filter {
         if (command == null || command.isEmpty()) {
             for (UrlsEnum url : UrlsEnum.values()
             ) {
-                if (req.getRequestURI().equals(req.getContextPath() + "/" + url.toString().toLowerCase())) {
+                if (req.getRequestURI().equals((req.getContextPath() + "/" + url.toString().toLowerCase()).replace("_", "/"))) {
                     dispatcher = req.getRequestDispatcher(url.getPage());
                     dispatcher.forward(request, response);
                     return;

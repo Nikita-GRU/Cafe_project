@@ -15,10 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class ProductDAOImpl implements ProductDAO {
+public class ProductDAOImpl implements by.gruca.cafe.dao.ProductDAO {
     private static final String SQL_GET_ALL = "select * from product";
     private static final String SQL_GET = "select * from product where id=? ";
-    private static final String SQL_CREATE = "insert into product(id,name,price,description) " +
+    private static final String SQL_CREATE = "insert into product (id,name,price,description) " +
             "values(DEFAULT,?,?,?)";
     private static final String SQL_UPDATE = "update product set name=?,price=?,description=? where id=?";
     private static final String SQL_DELETE = "delete from product where id=? ";
@@ -119,11 +119,9 @@ public class ProductDAOImpl implements ProductDAO {
             throw new DAOException("SQL statement error", e);
         }
     }
-
-    public List<Product> getAll() throws DAOException {
-        List productList = new ArrayList();
-
-
+@Override
+    public List<Product> getAllProducts() throws DAOException {
+        List<Product> productList = new ArrayList<Product>();
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(SQL_GET_ALL);
              ResultSet resultSet = preparedStatement.executeQuery()) {
@@ -132,6 +130,7 @@ public class ProductDAOImpl implements ProductDAO {
                 product.setName(resultSet.getString("name"));
                 product.setPrice(Integer.parseInt(resultSet.getString("price")));
                 product.setDescription(resultSet.getString("description"));
+                product.setId(resultSet.getInt("id"));
                 productList.add(product);
             }
         } catch (SQLException e) {

@@ -9,11 +9,15 @@ import java.util.HashMap;
 import java.util.List;
 
 public interface OrderService {
-     Order createOrder(Order order, HashMap<Product, Integer> products) throws ServiceException;
+    Order createOrder(Order order, HashMap<Product, Integer> products) throws ServiceException;
 
-     List<Order> getNotDeliveredOrders() throws ServiceException;
+    List<Order> getNotDeliveredOrders() throws ServiceException;
 
+    void setOrderAccepted(int orderId) throws ServiceException;
 
-     void setOrderAccepted(int orderId) throws ServiceException;
-     void setOrderDelivered(int orderId) throws ServiceException;
+    void setOrderDelivered(int orderId) throws ServiceException;
+
+    List<Order> getAllOrders() throws ServiceException;
+
+    void deleteOrder(int orderId) throws ServiceException;
 }

@@ -78,7 +78,7 @@ public class AccountDAOImpl implements AccountDAO {
             statement.setString(2, account.getPassword());
             statement.setString(3, account.getEmail());
             statement.setString(4, account.getFirstName());
-            statement.setString(5, Role.USER.getRoleValue());
+            statement.setString(5, account.getRole().getRoleValue());
             statement.setInt(6, account.getBonusPoints());
             return statement.execute();
         } catch (SQLException e) {

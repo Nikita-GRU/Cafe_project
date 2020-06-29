@@ -13,7 +13,7 @@ public class ProductManager {
 
     public ProductManager() {
         try {
-            products = ServiceFactory.INSTANCE.getProductService().getProducts();
+            products = ServiceFactory.INSTANCE.getProductService().getAllProducts();
         } catch (ServiceException e) {
             logger.error(e);
         }

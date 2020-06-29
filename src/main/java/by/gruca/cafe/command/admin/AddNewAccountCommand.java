@@ -1,12 +1,14 @@
 package by.gruca.cafe.command.admin;
 
 import by.gruca.cafe.command.ActionCommand;
+import by.gruca.cafe.configuration.UrlManager;
 
 import javax.servlet.http.HttpServletRequest;
 
-public class EditOrderCommand implements ActionCommand {
+public class AddNewAccountCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest req) {
-        return null;
+
+        return UrlManager.getProperty("path.page.admin");
     }
 }

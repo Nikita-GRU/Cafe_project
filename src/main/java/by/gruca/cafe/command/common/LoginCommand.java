@@ -1,5 +1,6 @@
-package by.gruca.cafe.command;
+package by.gruca.cafe.command.common;
 
+import by.gruca.cafe.command.ActionCommand;
 import by.gruca.cafe.configuration.MessageManager;
 import by.gruca.cafe.configuration.UrlManager;
 import by.gruca.cafe.model.Account;
@@ -23,7 +24,7 @@ public class LoginCommand implements ActionCommand {
         String pass = request.getParameter(PARAM_NAME_PASSWORD);
         AccountService accountService = new AccountServiceImpl();
         try {
-            account = accountService.getAccountByEmail(email, pass);
+            account = accountService.getAccountByEmailAndPassword(email, pass);
             request.getSession().setAttribute("username", account.getFirstName());
             request.getSession().setAttribute("account", account);
             request.getSession().setAttribute("role", account.getRole().getRoleValue());

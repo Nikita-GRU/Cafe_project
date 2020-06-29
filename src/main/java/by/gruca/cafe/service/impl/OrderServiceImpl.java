@@ -12,6 +12,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
 public class OrderServiceImpl implements OrderService {
     Logger logger = LogManager.getLogger(OrderServiceImpl.class);
@@ -20,7 +21,8 @@ public class OrderServiceImpl implements OrderService {
     public Order createOrder(Order order, HashMap<Product, Integer> products) throws ServiceException {
         try {
             DAOFactory.INSTANCE.getOrderDAO().create(order);
-            Order order2 = DAOFactory.INSTANCE.getOrderDAO().readByTimeAndAccount(TimeConverter.convertFromLocalDateTimeToSQLDateTime(order.getDate()), order.getAccount()).get();
+            Order order2 = DAOFactory.INSTANCE.getOrderDAO()
+                    .readByTimeAndAccount(TimeConverter.convertFromLocalDateTimeToSQLDateTime(order.getDate()), order.getAccount()).get();
             DAOFactory.INSTANCE.getOrderDAO().attachProductsToOrder(products, order2);
         } catch (DAOException e) {
             logger.error(e);
@@ -56,5 +58,29 @@ public class OrderServiceImpl implements OrderService {
             logger.error(e);
             throw new ServiceException(e);
         }
+    }
+
+    @Override
+    public List<Order> getAllOrders() throws ServiceException {
+        List<Order> orders;
+        try {
+            orders = DAOFactory.INSTANCE.getOrderDAO().getAll();
+        } catch (DAOException e) {
+            logger.error(e);
+            throw new ServiceException(e);
+        }
+        return orders;
+    }
+
+    @Override
+    public void deleteOrder(int orderId) throws ServiceException {
+        try {
+            Optional<Order> order = DAOFactory.INSTANCE.getOrderDAO().read(orderId);
+            DAOFactory.INSTANCE.getOrderDAO().delete(order.orElse(new Order()));
+        } catch (DAOException e) {
+            logger.error(e);
+            throw new ServiceException(e);
+        }
+
     }
 }

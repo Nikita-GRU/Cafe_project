@@ -3,6 +3,7 @@ package by.gruca.cafe.service.impl;
 
 import by.gruca.cafe.dao.exception.DAOException;
 import by.gruca.cafe.factory.DAOFactory;
+import by.gruca.cafe.factory.ServiceFactory;
 import by.gruca.cafe.model.Account;
 import by.gruca.cafe.model.Role;
 import by.gruca.cafe.service.AccountService;
@@ -16,6 +17,14 @@ import java.util.List;
 
 
 public class AccountServiceImpl implements AccountService {
+    HashGeneratorUtil hashGeneratorUtil;
+    Logger logger = LogManager.getLogger(AccountServiceImpl.class);
+
+    public AccountServiceImpl() {
+        hashGeneratorUtil = new HashGeneratorUtil();
+    }
+
+
     @Override
     public List<Account> getAllAccounts() throws ServiceException {
         List<Account> accounts;
@@ -28,18 +37,23 @@ public class AccountServiceImpl implements AccountService {
         return accounts;
     }
 
-    HashGeneratorUtil hashGeneratorUtil;
-    Logger logger = LogManager.getLogger(AccountServiceImpl.class);
-
-    public AccountServiceImpl() {
-        hashGeneratorUtil = new HashGeneratorUtil();
-    }
-
     @Override
-    public void updateAccount(Account account, String email, String firstName, String lastName) throws ServiceException {
-        account.setEmail(email);
-        account.setFirstName(firstName);
+    public void updateAccount(Account newAccount, String email) throws ServiceException {
+        Account account = null;
         try {
+            account = ServiceFactory.INSTANCE.getAccountService().getAccountByEmail(email);
+            if (newAccount.getRole() != null) {
+                account.setRole(newAccount.getRole());
+            }
+            if (newAccount.getFirstName() != null) {
+                account.setFirstName(newAccount.getFirstName());
+            }
+            if (newAccount.getPhoneNumber() != 0) {
+                account.setPhoneNumber(newAccount.getPhoneNumber());
+            }
+            if (newAccount.getBonusPoints() != 0) {
+                account.setBonusPoints(newAccount.getBonusPoints());
+            }
             DAOFactory.INSTANCE.getAccountDAO().update(account);
         } catch (DAOException e) {
             logger.error(e);
@@ -78,6 +92,9 @@ public class AccountServiceImpl implements AccountService {
 
         try {
             account.setPassword(hashGeneratorUtil.generateHash(account.getPassword()));
+            if (account.getRole() == null) {
+                account.setRole(Role.USER);
+            }
             DAOFactory.INSTANCE.getAccountDAO().create(account);
             logger.info("Account" + account.getEmail() + " created");
         } catch (DAOException | UtilException e) {
@@ -87,7 +104,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Account getAccountByEmail(String email, String password) throws ServiceException {
+    public Account getAccountByEmailAndPassword(String email, String password) throws ServiceException {
         Account account = null;
         try {
             account = DAOFactory.INSTANCE.getAccountDAO().read(email).get();
@@ -103,7 +120,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Account getGuestAccountByEmail(String email) throws ServiceException {
+    public Account getAccountByEmail(String email) throws ServiceException {
         Account account = null;
         try {
             account = DAOFactory.INSTANCE.getAccountDAO().read(email).get();

@@ -1,8 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %><%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<fmt:setLocale value="ru-RU"/>
+<fmt:setBundle basename="messages" var="message"/>
 <html>
 <head>
-    <title>Cart</title>
+    <title><fmt:message bundle="${message}" key="header.cart"/></title>
     <jsp:include page="common/header.jsp"/>
 </head>
 <body>

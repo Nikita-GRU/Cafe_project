@@ -1,10 +1,11 @@
-package by.gruca.cafe.command;
+package by.gruca.cafe.command.common;
 
+import by.gruca.cafe.command.ActionCommand;
 import by.gruca.cafe.configuration.MessageManager;
 import by.gruca.cafe.configuration.UrlManager;
+import by.gruca.cafe.factory.ServiceFactory;
 import by.gruca.cafe.model.Product;
 import by.gruca.cafe.service.exception.ServiceException;
-import by.gruca.cafe.service.impl.ProductServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,14 +22,14 @@ public class ShowMenuCommand implements ActionCommand {
         Product product = null;
         ArrayList<Product> productsInCart = (ArrayList<Product>) req.getSession().getAttribute("cart");
         String page;
-        ProductServiceImpl productService = new ProductServiceImpl();
         try {
-            List<Product> products = productService.getProducts();
+            List<Product> products = ServiceFactory.INSTANCE.getProductService().getAllProducts();
             req.setAttribute("products", products);
             try {
-                product = productService.getProductByName(checkedProduct);//!!!!!!!!
+                product = ServiceFactory.INSTANCE.getProductService().getProductByName(checkedProduct);//!!!!!!!!
 
             } catch (ServiceException e) {
+                logger.error(e);
             }
             logger.info("checkedproduct= " + req.getParameter("checkedproduct"));
             logger.info("command= " + req.getParameter("command"));
@@ -37,6 +38,8 @@ public class ShowMenuCommand implements ActionCommand {
             }
             if (product != null) {
                 productsInCart.add(product);
+                req.getSession().setAttribute("cart_count", productsInCart.size());
+
             }
             req.getSession().setAttribute("cart", productsInCart);
 
