@@ -8,9 +8,17 @@ public class Account {
     private String firstName;
     private Role role;
     private int bonusPoints;
-
+    private double balance;
 
     public Account() {
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public int getBonusPoints() {
@@ -109,6 +117,7 @@ public class Account {
                 ", firstName='" + firstName + '\'' +
                 ", role=" + role +
                 ", bonusPoints=" + bonusPoints +
+                ", balance=" + balance +
                 '}';
     }
 }

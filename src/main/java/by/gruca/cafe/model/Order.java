@@ -6,14 +6,32 @@ import java.util.HashMap;
 public class Order {
     private int id;
     private LocalDateTime date;
+    private LocalDateTime deliveryDate;
     private double price;
     private HashMap<Product, Integer> products;
     private String review;
     private Account account;
     private boolean isDelivered;
     private boolean isAccepted;
+    private Address address;
 
     public Order() {
+    }
+
+    public LocalDateTime getDeliveryDate() {
+        return deliveryDate;
+    }
+
+    public void setDeliveryDate(LocalDateTime deliveryDate) {
+        this.deliveryDate = deliveryDate;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public boolean isDelivered() {

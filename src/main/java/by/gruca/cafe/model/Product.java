@@ -6,6 +6,24 @@ public class Product {
     private String name;
     private double price;
     private String description;
+    private String imageUri;
+    private int bonus;
+
+    public String getImageUri() {
+        return imageUri;
+    }
+
+    public void setImageUri(String imageUri) {
+        this.imageUri = imageUri;
+    }
+
+    public int getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
+    }
 
     public int getId() {
         return id;
@@ -40,16 +58,6 @@ public class Product {
     }
 
     @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Product)) return false;
@@ -72,6 +80,18 @@ public class Product {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", imageUri='" + imageUri + '\'' +
+                ", bonus=" + bonus +
+                '}';
     }
 }
 

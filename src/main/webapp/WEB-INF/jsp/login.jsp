@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %><%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<fmt:setLocale value="ru-RU"/>
+<fmt:setLocale value="${sessionScope.locale}"/>
 <fmt:setBundle basename="messages" var="message"/>
 <html>
 <head><title><fmt:message bundle="${message}" key="header.login"/></title>
@@ -9,17 +9,9 @@
 <%--<link rel ="stylesheet" href="${pageContext.request.contextPath}/css/loginstyle.css"--%>
 
 
-<%--<form name="loginForm" method="POST" action="main">--%>
-<%--    <input type="hidden" name="command" value="login"/>--%>
-<%--    Login:<br/>--%>
-<%--    <input type="text" name="email" value=""/>--%>
-<%--    <br/>Password:<br/>--%>
-<%--    <input type="password" name="password" value=""/>--%>
-<%--    <br/>--%>
-<%--    <input type="submit" value="Log in"/>--%>
-
 <body class="text-center">
-<form class="form-signin" method="POST" action="main">
+<form class="form-signin" method="POST" action="${pageContext.request.contextPath}/controller?command=login">
+    <input type="hidden" name="command" value="login">
     <h1 class="h3 mb-3 font-weight-normal"><fmt:message bundle="${message}" key="login.please_login"/></h1>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input name="email" type="email" id="inputEmail" class="form-control" placeholder="<fmt:message bundle="${message}" key="login.email_address"/>" required
@@ -36,12 +28,12 @@
 </body>
 
 <br/>
-${errorLoginPassMessage}
+${sessionScope.errorMessage}
 <br/>
 ${wrongAction}
 <br/>
 ${nullPage}
 <br/>
-<jsp:include page="common/footer.jsp"/>
+<%--<jsp:include page="common/footer.jsp"/>--%>
 </body>
 </html>

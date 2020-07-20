@@ -9,9 +9,9 @@ import by.gruca.cafe.service.impl.ProductServiceImpl;
 
 public enum ServiceFactory {
     INSTANCE;
-    private ProductService productService;
-    private AccountService accountService;
-    private OrderService orderService;
+    private final ProductService productService;
+    private final AccountService accountService;
+    private final OrderService orderService;
 
     ServiceFactory() {
         productService = new ProductServiceImpl();

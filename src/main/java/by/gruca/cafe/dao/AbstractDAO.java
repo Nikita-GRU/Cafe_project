@@ -6,7 +6,7 @@ import by.gruca.cafe.dao.exception.DAOException;
 import java.util.Optional;
 
 public interface AbstractDAO<Entity, Key> {
-    boolean create(Entity model) throws DAOException, DAOException;
+    int create(Entity model) throws DAOException, DAOException;
 
     Optional<Entity> read(Key key) throws DAOException;
 

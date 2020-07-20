@@ -36,6 +36,12 @@ public class ProductServiceImpl implements ProductService {
             if (newProduct.getDescription() != null) {
                 product.setDescription(newProduct.getDescription());
             }
+            if (newProduct.getImageUri() != null) {
+                product.setImageUri(newProduct.getImageUri());
+            }
+            if (newProduct.getBonus() != 0) {
+                product.setBonus(newProduct.getBonus());
+            }
 
             DAOFactory.INSTANCE.getProductDAO().update(product);
         } catch (DAOException e) {

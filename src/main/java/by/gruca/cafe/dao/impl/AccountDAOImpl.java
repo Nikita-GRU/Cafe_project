@@ -13,11 +13,13 @@ import org.apache.logging.log4j.Logger;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class AccountDAOImpl implements AccountDAO {
+
     private static final String ACCOUNT_ID = "id";
     private static final String ACCOUNT_PHONE_NUMBER = "phone_number";
     private static final String ACCOUNT_PASSWORD = "password";
@@ -30,8 +32,12 @@ public class AccountDAOImpl implements AccountDAO {
     private static final String SQL_CREATE = "insert into account (id,phone_number,password,email,firstname,role,bonus_points) " +
             "values(DEFAULT,?,?,?,?,?,?)";
     private static final String SQL_UPDATE = "update account set phone_number=?,password=?,email=?" +
-            ",firstname=?, role=?, bonus_points=? where id=?";
+            ",firstname=?, role=?, bonus_points=? where email=?";
     private static final String SQL_DELETE = "delete from account where email=? ";
+    private static final String SQL_GET_BONUS = "SELECT bonus_points from account where email=?";
+    public static final String SQL_UPDATE_BONUS = "update account set bonus_points=? where email=?";
+    public static final String SQL_UPDATE_BALANCE = "update bank_balance set balance=? where email=?";
+    public static final String SQL_GET_BALANCE = "SELECT balance FROM bank_balance where email=?";
     Logger logger = LogManager.getLogger(AccountDAO.class);
 
 
@@ -71,16 +77,22 @@ public class AccountDAOImpl implements AccountDAO {
     }
 
     @Override
-    public boolean create(Account account) throws DAOException {
+    public int create(Account account) throws DAOException {
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_CREATE)) {
+             PreparedStatement statement = connection.prepareStatement(SQL_CREATE, Statement.RETURN_GENERATED_KEYS)) {
             statement.setLong(1, account.getPhoneNumber());
             statement.setString(2, account.getPassword());
             statement.setString(3, account.getEmail());
             statement.setString(4, account.getFirstName());
             statement.setString(5, account.getRole().getRoleValue());
             statement.setInt(6, account.getBonusPoints());
-            return statement.execute();
+            statement.execute();
+            ResultSet resultSet = statement.getGeneratedKeys();
+            if (resultSet.next()) {
+                return resultSet.getInt(1);
+            }
+            return -1;
+
         } catch (SQLException e) {
             logger.error(e);
             throw new DAOException("SQL statement error", e);
@@ -106,7 +118,7 @@ public class AccountDAOImpl implements AccountDAO {
                             account.setRole(role);
                         }
                     }
-                } else throw new DAOException("Account is not exist");
+                }
             } catch (SQLException e) {
                 logger.error(e);
             }
@@ -128,7 +140,7 @@ public class AccountDAOImpl implements AccountDAO {
             statement.setString(4, account.getFirstName());
             statement.setString(5, account.getRole().getRoleValue());
             statement.setInt(6, account.getBonusPoints());
-            statement.setInt(7, account.getId());
+            statement.setString(7, account.getEmail());
             int rowsAffected = statement.executeUpdate();
             logger.info(rowsAffected + " row affected");
             return rowsAffected;
@@ -153,6 +165,74 @@ public class AccountDAOImpl implements AccountDAO {
 
     }
 
+    @Override
+    public double getAccountBalance(String email) throws DAOException {
+        double balance = 0.0;
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement readStatement = connection.prepareStatement(SQL_GET_BALANCE)) {
+            readStatement.setString(1, email);
+            try (ResultSet rs = readStatement.executeQuery()) {
+                if (rs.next()) {
+                    balance = rs.getDouble("balance");
+                }
+            } catch (SQLException e) {
+                logger.error(e);
+                throw new DAOException("ResultSet error", e);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException("SQL statement error", e);
+        }
+        return balance;
+    }
 
-//
+    @Override
+    public void setAccountBonus(String email, int bonus) throws DAOException {
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement statement = connection.prepareStatement(SQL_UPDATE_BONUS)) {
+            statement.setInt(1, bonus);
+            statement.setString(2, email);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException("SQL statement error", e);
+        }
+
+    }
+
+    @Override
+    public void setAccountBalance(String email, double balance) throws DAOException {
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement statement = connection.prepareStatement(SQL_UPDATE_BALANCE)) {
+            statement.setDouble(1, balance);
+            statement.setString(2, email);
+            statement.executeUpdate();
+
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException("SQL statement error", e);
+        }
+
+    }
+
+    @Override
+    public int getAccountBonus(String email) throws DAOException {
+        int bonus = 0;
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement readStatement = connection.prepareStatement(SQL_GET_BONUS)) {
+            readStatement.setString(1, email);
+            try (ResultSet rs = readStatement.executeQuery()) {
+                if (rs.next()) {
+                    bonus = rs.getInt("bonus_points");
+                }
+            } catch (SQLException e) {
+                logger.error(e);
+                throw new DAOException("ResultSet error", e);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException("SQL statement error", e);
+        }
+        return bonus;
+    }
 }

@@ -1,9 +1,9 @@
 package by.gruca.cafe.controller;
 
-import by.gruca.cafe.command.ActionCommand;
-import by.gruca.cafe.command.UrlsEnum;
 import by.gruca.cafe.configuration.MessageManager;
 import by.gruca.cafe.configuration.UrlManager;
+import by.gruca.cafe.controller.command.ActionCommand;
+import com.google.api.client.http.HttpMethods;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -42,10 +42,18 @@ public class Controller extends HttpServlet {
         ActionFactory client = new ActionFactory();
         ActionCommand command = client.defineCommand(request);
         page = command.execute(request);
+
+
         if (page != null) {
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
-            logger.info("reqURL=" + request.getRequestURL());
-            dispatcher.forward(request, response);
+            if (request.getMethod().equals(HttpMethods.POST)) {
+                response.sendRedirect(page);
+
+            } else {
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
+                logger.info("reqURL=" + request.getRequestURL());
+                dispatcher.forward(request, response);
+            }
+
         } else {
             page = UrlManager.getProperty("path.page.error");
             request.getSession().setAttribute("nullPage",

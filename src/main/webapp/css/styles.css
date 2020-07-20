@@ -41,13 +41,23 @@
     background: rgba(244, 244, 244, 0.79);
 }
 
+.table-admin {
+    overflow-y: auto;
+    width: 100%;
+}
+
 .content {
     margin-top: 40px;
 }
 
+.product {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 table.table-content {
     margin-top: 40px;
-    margin-left:20px;
+    margin-left: 20px;
     border: 1px solid gray;
 }
 
@@ -58,8 +68,13 @@ tr, td, th.table-content {
 
 
 .product-image {
-    height: 300px;
-    width: 350px;
+    height: 200px;
+    width: 300px;
+}
+
+.order-image {
+    height: 100px;
+    width: 150px;
 }
 
 .align-center {
@@ -96,7 +111,8 @@ tr, td, th.table-content {
         margin-left: 230px;
     }
 }
-.add-new-product{
+
+.add-new-product {
     margin-left: 500px;
 }
 
@@ -144,6 +160,18 @@ tr, td, th.table-content {
         margin-left: -15rem;
     }
 }
+.index-font{
+    font-family:  "Verdana", sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.nav-font{
+
+}
+
+
+
+
 
 
 

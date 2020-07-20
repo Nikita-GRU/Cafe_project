@@ -10,10 +10,12 @@ import by.gruca.cafe.service.AccountService;
 import by.gruca.cafe.service.exception.ServiceException;
 import by.gruca.cafe.util.HashGeneratorUtil;
 import by.gruca.cafe.util.UtilException;
+import by.gruca.cafe.util.Validator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.List;
+import java.util.Optional;
 
 
 public class AccountServiceImpl implements AccountService {
@@ -129,6 +131,71 @@ public class AccountServiceImpl implements AccountService {
             logger.error(e);
             throw new ServiceException(e);
         }
+        return account;
+    }
+
+    @Override
+    public void createAccount(String emailParam, String passwordParam, String phoneNumberParam, String firstNameParam) throws ServiceException {
+
+        try {
+            if (Validator.validateEmail(emailParam) && Validator.validateLong(phoneNumberParam)//do it in service
+                    && Validator.validateNames(firstNameParam) && Validator.validatePassword(passwordParam)) {
+                Account account = buildAccount(emailParam, phoneNumberParam, firstNameParam);
+                account.setPassword(hashGeneratorUtil.generateHash(passwordParam));
+                account.setRole(Role.USER);
+                Optional<Account> possibleExistingAccount = DAOFactory.INSTANCE.getAccountDAO().read(emailParam);
+                if (possibleExistingAccount.isPresent() && possibleExistingAccount.get().getRole() == Role.GUEST) {
+                    DAOFactory.INSTANCE.getAccountDAO().update(account);
+                } else {
+                    DAOFactory.INSTANCE.getAccountDAO().create(account);
+                }
+                logger.info("Account" + account.getEmail() + " created");
+            } else {
+                throw new ServiceException("Invalid input data");
+            }
+        } catch (DAOException | UtilException e) {
+            logger.error(e);
+            throw new ServiceException(e);
+        }
+    }
+
+    @Override
+    public void createGuestAccount(String emailParam, String phoneNumberParam, String firstNameParam) throws ServiceException {
+        if (Validator.validateEmail(emailParam) && Validator.validateLong(phoneNumberParam)
+                && Validator.validateNames(firstNameParam)) {
+            try {
+                Account account = buildAccount(emailParam, phoneNumberParam, firstNameParam);
+                account.setPassword(hashGeneratorUtil.generateHash(String.valueOf((Math.random() * 2048))));
+                account.setRole(Role.GUEST);
+                DAOFactory.INSTANCE.getAccountDAO().create(account);
+                logger.info("Account" + account.getEmail() + " created");
+
+            } catch (DAOException | UtilException e) {
+                logger.error(e);
+                throw new ServiceException(e);
+            }
+        } else {
+            throw new ServiceException("Invalid input data");
+        }
+    }
+
+    @Override
+    public double getBalance(String emailParam) throws ServiceException {
+        double balance;
+        try {
+            balance = DAOFactory.INSTANCE.getAccountDAO().getAccountBalance(emailParam);
+        } catch (DAOException e) {
+            logger.error(e);
+            throw new ServiceException(e);
+        }
+        return balance;
+    }
+
+    private Account buildAccount(String email, String phoneNumber, String firstName) {
+        Account account = new Account();
+        account.setEmail(email);
+        account.setPhoneNumber(Long.parseLong(phoneNumber));
+        account.setFirstName(firstName);
         return account;
     }
 }

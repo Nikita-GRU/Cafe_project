@@ -9,9 +9,9 @@ import by.gruca.cafe.dao.impl.ProductDAOImpl;
 
 public enum DAOFactory {
     INSTANCE;
-    private OrderDAO orderDAO;
-    private AccountDAO accountDAO;
-    private ProductDAO productDAO;
+    private final OrderDAO orderDAO;
+    private final AccountDAO accountDAO;
+    private final ProductDAO productDAO;
 
     DAOFactory() {
         accountDAO = new AccountDAOImpl();

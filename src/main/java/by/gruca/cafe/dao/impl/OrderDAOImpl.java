@@ -8,6 +8,7 @@ import by.gruca.cafe.dao.connectionpool.SQLConnectionPool;
 import by.gruca.cafe.dao.exception.DAOException;
 import by.gruca.cafe.factory.DAOFactory;
 import by.gruca.cafe.model.Account;
+import by.gruca.cafe.model.Address;
 import by.gruca.cafe.model.Order;
 import by.gruca.cafe.model.Product;
 import by.gruca.cafe.util.TimeConverter;
@@ -17,6 +18,7 @@ import org.apache.logging.log4j.Logger;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,7 +31,7 @@ public class OrderDAOImpl implements OrderDAO {
     private static final String SQL_ATTACH_PRODUCTS = "insert into order_detail(id, order_id, product_id, quantity) values(DEFAULT,?,?,?)";
     private static final String SQL_GET = "select * from `order` where id=(?)";
     private static final String SQL_GET_ALL = "select * from `order`";
-    private static final String SQL_GET_ALL_BY_LOGIN = "select * from order join account on order.id = account.id where account=?";
+    private static final String SQL_GET_ALL_BY_ACCOUNT = "select * from `order` where order.account =?";
     private static final String SQL_CREATE = "INSERT INTO `order` (id,date, price, account, review) values (DEFAULT,?,?,?,?)";
     private static final String SQL_UPDATE = "update `order` set date=?,price=?,account=?,review=?" +
             "where id=?";
@@ -45,14 +47,19 @@ public class OrderDAOImpl implements OrderDAO {
     }
 
     @Override
-    public boolean create(Order order) throws DAOException {
+    public int create(Order order) throws DAOException {
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_CREATE)) {
+             PreparedStatement statement = connection.prepareStatement(SQL_CREATE, Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, TimeConverter.convertFromLocalDateTimeToSQLDateTime(order.getDate()));
             statement.setDouble(2, order.getPrice());
             statement.setString(3, order.getAccount().getEmail());
             statement.setString(4, order.getReview());
-            return statement.execute();
+            statement.execute();
+            ResultSet resultSet = statement.getGeneratedKeys();
+            if (resultSet.next()) {
+                return resultSet.getInt(1);
+            }
+            return -1;
         } catch (SQLException e) {
             logger.error(e);
             throw new DAOException("SQL statement error", e);
@@ -83,6 +90,7 @@ public class OrderDAOImpl implements OrderDAO {
     @Override
     public Optional<Order> read(Integer orderId) throws DAOException {
         Order order = new Order();
+
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement readStatement = connection.prepareStatement(SQL_GET)) {
             readStatement.setInt(1, orderId);
@@ -151,11 +159,11 @@ public class OrderDAOImpl implements OrderDAO {
 
 
     @Override
-    public List<Order> getAllByAccount(String email) throws DAOException {
+    public List<Order> getAllByAccount(String accountEmail) throws DAOException {
         List<Order> orders = new ArrayList<Order>();
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_GET_ALL_BY_LOGIN)) {
-            statement.setString(1, email);
+             PreparedStatement statement = connection.prepareStatement(SQL_GET_ALL_BY_ACCOUNT)) {
+            statement.setString(1, accountEmail);
             ResultSet resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Order order = buildOrder(resultSet);
@@ -241,11 +249,11 @@ public class OrderDAOImpl implements OrderDAO {
     }
 
     @Override
-    public void attachProductsToOrder(HashMap<Product, Integer> products, Order order) throws DAOException {
+    public void attachProductsToOrder(HashMap<Product, Integer> products, int orderId) throws DAOException {
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_ATTACH_PRODUCTS)) {
             for (Product product : products.keySet()) {
-                statement.setInt(1, order.getId());
+                statement.setInt(1, orderId);
                 statement.setInt(2, product.getId());
                 statement.setInt(3, products.get(product));
                 statement.execute();

@@ -24,4 +24,9 @@ public interface AccountService {
     List<Account> getAllAccounts() throws ServiceException;
 
 
+    void createAccount(String emailParam, String passwordParam, String phoneNumberParam, String firstNameParam) throws ServiceException;
+
+    void createGuestAccount(String emailParam, String phoneNumberParam, String firstNameParam) throws ServiceException;
+
+    double getBalance(String emailParam) throws ServiceException;
 }

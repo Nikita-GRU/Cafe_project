@@ -1,12 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<fmt:setLocale value="ru-RU"/>
+
+<fmt:setLocale value="${sessionScope.locale}"/>
 <fmt:setBundle basename="messages" var="message"/>
 
 <html>
 <head>
-    <title>Title</title>
+    <title><fmt:message bundle="${message}" key="header.moderation"/></title>
     <jsp:include page="../common/header.jsp"/>
 </head>
 <body>
@@ -23,7 +24,7 @@
     </div>
 
     <c:if test="${pageContext.request.getParameter('command') == 'moderator_show_orders'}">
-    <table frame="border" border="10px" cellpadding="10px">
+    <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
         <tr>
             <th><fmt:message bundle="${message}" key="moderation.order_table.id"/></th>
             <th><fmt:message bundle="${message}" key="moderation.order_table.date"/></th>
@@ -51,7 +52,7 @@
                 <td>${order.accepted}</td>
                 <td>${order.delivered}</td>
                 <td>
-                    <form method="post" action="moderator">
+                    <form method="post" action="${pageContext.request.contextPath}\moderator\orders">
                         <input type="hidden" name="command" value="order_set_accepted">
                         <input type="hidden" name="order_id_to_set_accepted" value="${order.id}">
                         <input type="submit"
@@ -59,7 +60,7 @@
                     </form>
                 </td>
                 <td>
-                    <form method="post" action="moderator">
+                    <form method="post" action="${pageContext.request.contextPath}\moderator\orders">
                         <input type="hidden" name="command" value="order_set_delivered">
                         <input type="hidden" name="order_id_to_set_delivered" value="${order.id}">
                         <input type="submit"
@@ -67,7 +68,7 @@
                     </form>
                 </td>
                 <td>
-                    <form method="post" action="moderator">
+                    <form method="post" action="${pageContext.request.contextPath}\moderator\orders">
                         <input type="hidden" name="command" value="order_delete">
                         <input type="hidden" name="order_id_to_delete" value="${order.id}">
                         <input type="submit" value="<fmt:message bundle="${message}" key="moderation.button.delete"/>">
@@ -79,8 +80,6 @@
     </c:if>
 
     <c:if test="${pageContext.request.getParameter('command') == 'moderator_add_order'}">
-
-
     </c:if>
 </body>
 </html>

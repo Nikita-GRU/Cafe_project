@@ -1,22 +1,15 @@
 package by.gruca.cafe.model;
 
 public enum Role {
-    ADMIN {{
-        this.roleValue = "admin";
-    }},
-    MODERATOR {{
-        this.roleValue = "moderator";
-    }}, USER {{
-        this.roleValue = "user";
-    }}, GUEST {{
-        this.roleValue = "guest";
-    }}, BANNED {{
-        this.roleValue = "banned";
-    }};
+    ADMIN("admin"),
+    MODERATOR("moderator"),
+    USER("user"),
+    GUEST("guest");
 
     String roleValue;
 
-    Role() {
+    Role(String role) {
+        this.roleValue = role;
     }
 
     public String getRoleValue() {
