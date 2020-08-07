@@ -19,7 +19,7 @@ public class ActionFactory {
             command = currentEnum.getCurrentCommand();
         } catch (IllegalArgumentException e) {
             request.setAttribute("wrongAction", action
-                    + MessageManager.getProperty("message.wrongaction"));
+                    + MessageManager.getProperty("message.wrong_action"));
         }
         return command;
     }

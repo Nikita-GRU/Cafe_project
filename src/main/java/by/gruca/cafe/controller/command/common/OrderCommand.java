@@ -13,7 +13,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 
 public class OrderCommand implements ActionCommand {
     Logger logger = LogManager.getLogger(OrderCommand.class);
@@ -21,22 +23,21 @@ public class OrderCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest req) {
         String page;
-        String deliveryType = req.getParameter("delivery_option");
-        String paymentType = req.getParameter("payment");
-
-        String street = req.getParameter("street");
-        String building = req.getParameter("building");
-        String apartment = req.getParameter("apartment");
-        String bonusToPay = req.getParameter("bonus_to_pay");
-        String deliveryDate = req.getParameter("delivery_date");
-
+        String deliveryTypeParam = req.getParameter("delivery_option");
+        String paymentTypeParam = req.getParameter("payment");
+        String addressParam = req.getParameter("address");
+        String apartmentParam = req.getParameter("apartment");
+        String deliveryDateParam = req.getParameter("delivery_date");
         String emailParam = req.getParameter("email");
-        String firstNameParam = req.getParameter("firstname");
-        String phoneNumberParam = req.getParameter("phonenumber").replaceAll("\\+", "");
-        String reviewParam = req.getParameter("review");
+        String firstNameParam = req.getParameter("first_name");
+        String phoneNumberParam = req.getParameter("phone_number");
+        String noteParam = req.getParameter("review");
+
 
         Account account = (Account) req.getSession().getAttribute("account");
-        ArrayList<Product> products = (ArrayList<Product>) req.getSession().getAttribute("cart");
+        Map<Product, Integer> products = (HashMap<Product, Integer>) req.getSession().getAttribute("cart");
+        BigDecimal price = BigDecimal.valueOf(Double.parseDouble(req.getParameter("price")));
+
 
         try {
             if (account == null) { // it could be guest(not logged in) account but I want to save orders that was bind to some email
@@ -45,13 +46,16 @@ public class OrderCommand implements ActionCommand {
                 // creating guest account by email with random pass( so when customer  sign up with  this
                 // email, he would see all of his *guest status* orders )
                 if (account.getEmail() == null) {
-                    ServiceFactory.INSTANCE.getAccountService().createGuestAccount(emailParam, phoneNumberParam, firstNameParam);
+                    ServiceFactory.INSTANCE.getAccountService()
+                            .createGuestAccount(emailParam, phoneNumberParam, firstNameParam);
+                    account = ServiceFactory.INSTANCE.getAccountService().getAccountByEmail(emailParam);
                 }
-                ServiceFactory.INSTANCE.getOrderService().createGuestOrder(products, emailParam, reviewParam, street, apartment, building,
-                        deliveryType, deliveryDate);
+                ServiceFactory.INSTANCE.getOrderService().createGuestOrder(products, account,
+                        noteParam, addressParam, apartmentParam, deliveryTypeParam, deliveryDateParam, price);
             } else {
-                ServiceFactory.INSTANCE.getOrderService().createOrder(products, emailParam, reviewParam,
-                        bonusToPay, paymentType, street, apartment, building, deliveryType, deliveryDate);
+                String bonusToPay = req.getParameter("bonus_to_pay");
+                ServiceFactory.INSTANCE.getOrderService().createOrder(products, account, noteParam, addressParam, apartmentParam,
+                        deliveryTypeParam, deliveryDateParam, price, paymentTypeParam, bonusToPay);
             }
 
             req.getSession().removeAttribute("cart");
@@ -67,8 +71,8 @@ public class OrderCommand implements ActionCommand {
         } catch (ServiceException e) {
             logger.error(e);
             req.getSession().setAttribute("errorMessage",
-                    MessageManager.getProperty("message.errorInputMessage"));
-            page = req.getContextPath() + UrlsEnum._ORDER.getUrl();
+                    MessageManager.getProperty("message.error_input_message"));
+            page = UrlManager.getProperty("path.page.order");
 
         }
 

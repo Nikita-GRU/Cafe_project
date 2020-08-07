@@ -18,20 +18,20 @@ public class DeleteOrderCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest req) {
         String page;
-        String orderIdParameter = req.getParameter("order_id_to_delete");
-        int orderId = Integer.parseInt(orderIdParameter);
+        String orderIdToDeleteParam = req.getParameter("order_id_to_delete");
+        int orderId = Integer.parseInt(orderIdToDeleteParam);
         try {
             ServiceFactory.INSTANCE.getOrderService().deleteOrder(orderId);
             if (req.getMethod().equals(HttpMethods.POST)) {
                 page = req.getContextPath() + UrlsEnum._MODERATOR_ORDERS.getUrl();
             } else {
-                page =  UrlManager.getProperty("path.action.moderator_show_orders");
+                page = UrlManager.getProperty("path.page.moderator");
             }
         } catch (ServiceException e) {
             logger.error(e);
             req.getSession().setAttribute("errorMessage",
                     MessageManager.getProperty("message.common_error_message"));
-            page = req.getContextPath() + UrlsEnum._MODERATOR_ORDERS.getUrl();
+            page = UrlManager.getProperty("path.page.moderator");
         }
         return page;
     }

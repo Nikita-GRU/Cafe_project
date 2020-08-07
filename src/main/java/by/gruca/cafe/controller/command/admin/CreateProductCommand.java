@@ -5,7 +5,6 @@ import by.gruca.cafe.configuration.UrlManager;
 import by.gruca.cafe.controller.UrlsEnum;
 import by.gruca.cafe.controller.command.ActionCommand;
 import by.gruca.cafe.factory.ServiceFactory;
-import by.gruca.cafe.model.Product;
 import by.gruca.cafe.service.exception.ServiceException;
 import com.google.api.client.http.HttpMethods;
 import org.apache.logging.log4j.LogManager;
@@ -19,30 +18,25 @@ public class CreateProductCommand implements ActionCommand {
     @Override
     public String execute(HttpServletRequest req) {
         String page;
-        String name = req.getParameter("name");
-        String priceString = req.getParameter("price");
-        String description = req.getParameter("description");
-        String imageUri = req.getParameter("image_uri");
-        int bonus = Integer.parseInt(req.getParameter("bonus"));
-        double price = Double.parseDouble(priceString);
-        Product product = new Product();
-        product.setName(name);
-        product.setPrice(price);
-        product.setDescription(description);
-        product.setBonus(bonus);
-        product.setImageUri(imageUri);
+        String nameParam = req.getParameter("name");
+        String priceParam = req.getParameter("price");
+        String descriptionParam = req.getParameter("description");
+        String imageUriParam = req.getParameter("image_uri");
+        String bonusParam = req.getParameter("bonus");
+        String categoryParam = req.getParameter("category");
         try {
-            ServiceFactory.INSTANCE.getProductService().addNewProduct(product);
+            ServiceFactory.INSTANCE.getProductService().addNewProduct(nameParam,priceParam,
+                    descriptionParam,imageUriParam,bonusParam,categoryParam);
             if (req.getMethod().equals(HttpMethods.POST)) {
-                page = req.getContextPath() + UrlsEnum._ADMIN_PRODUCTS.toString().toLowerCase().replace("_", "/");
+                page = req.getContextPath() + UrlsEnum._ADMIN_PRODUCTS.getUrl();
             } else {
                 page = UrlManager.getProperty("path.action.show_products");
             }
         } catch (ServiceException e) {
             logger.error(e);
             req.setAttribute("errorInputMessage",
-                    MessageManager.getProperty("message.errorInputMessage"));
-            page = req.getContextPath() + UrlsEnum._ADMIN_PRODUCTS.toString().toLowerCase().replace("_", "/");
+                    MessageManager.getProperty("message.error_input_message"));
+            page = req.getContextPath() + UrlsEnum._ADMIN_PRODUCTS.getUrl();
         }
         return page;
     }

@@ -5,7 +5,9 @@ import by.gruca.cafe.configuration.UrlManager;
 import by.gruca.cafe.controller.UrlsEnum;
 import by.gruca.cafe.controller.command.ActionCommand;
 import by.gruca.cafe.factory.ServiceFactory;
+import by.gruca.cafe.model.Category;
 import by.gruca.cafe.model.Order;
+import by.gruca.cafe.model.OrderStatus;
 import by.gruca.cafe.service.exception.ServiceException;
 import com.google.api.client.http.HttpMethods;
 import org.apache.logging.log4j.LogManager;
@@ -21,7 +23,9 @@ public class ShowNotDeliveredOrders implements ActionCommand {
     @Override
     public String execute(HttpServletRequest req) {
         String page;
-        List<Order> orders = new ArrayList<Order>();
+        List<OrderStatus> orderStatuses = List.of(OrderStatus.values());
+        req.setAttribute("order_statuses", orderStatuses);
+        List<Order> orders = new ArrayList<>();
         try {
             orders = ServiceFactory.INSTANCE.getOrderService().getNotDeliveredOrders();
             if (req.getMethod().equals(HttpMethods.POST)) {
@@ -33,7 +37,7 @@ public class ShowNotDeliveredOrders implements ActionCommand {
             logger.error(e);
             req.getSession().setAttribute("errorMessage",
                     MessageManager.getProperty("message.common_error_message"));
-            page = req.getContextPath() + UrlsEnum._MODERATOR.getUrl();
+            page = UrlManager.getProperty("path.page.moderator");
         }
         req.setAttribute("orders", orders);
         return page;

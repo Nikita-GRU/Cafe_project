@@ -2,7 +2,6 @@ package by.gruca.cafe.controller.filter;
 
 
 import by.gruca.cafe.controller.UrlsEnum;
-import com.google.api.client.http.HttpMethods;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,26 +20,29 @@ public class UriFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
+        request.setCharacterEncoding("UTF-8");
         HttpSession session = req.getSession(true);
         RequestDispatcher dispatcher;
         String requestURI = req.getRequestURI();
         String command = req.getParameter("command");
-        // if (command == null || command.isEmpty()) {
+
+//        for (Map.Entry<String, String[]> entry : req.getParameterMap().entrySet()
+//        ) {
+//            logger.info(entry.getKey() + "/" + Arrays.toString(entry.getValue()));
+//        }
+//        String baseUrl = req.getRequestURI() + "?" + req.getQueryString();
+//        request.setAttribute("baseUrl", baseUrl);
 
         for (UrlsEnum url : UrlsEnum.values()
         ) {
-            if (req.getRequestURI().equals((req.getContextPath() + url.getUrl()))) {
+            String requestUrl = req.getContextPath() + url.getUrl();
+            if (req.getRequestURI().equals(requestUrl)) {
                 dispatcher = req.getRequestDispatcher(url.getPage());
+                response.setCharacterEncoding("UTF-8");
                 dispatcher.forward(request, response);
                 return;
             }
         }
-
-//        } else {
-//            dispatcher = req.getRequestDispatcher("/controller?command=" + command);
-//            dispatcher.forward(request, response);
-//            return;
-//        }
         chain.doFilter(request, response);
     }
 

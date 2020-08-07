@@ -8,53 +8,54 @@ import by.gruca.cafe.factory.ServiceFactory;
 import by.gruca.cafe.model.Account;
 import by.gruca.cafe.model.Role;
 import by.gruca.cafe.service.exception.ServiceException;
+import by.gruca.cafe.util.Paginator;
+import by.gruca.cafe.util.UtilException;
 import com.google.api.client.http.HttpMethods;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ShowAccountsCommand implements ActionCommand {
-    private Logger logger = LogManager.getLogger(ShowAccountsCommand.class);
+    private final Logger logger = LogManager.getLogger(ShowAccountsCommand.class);
 
     @Override
     public String execute(HttpServletRequest req) {
         String page;
+        List<Role> roles = List.of(Role.values());
+        req.setAttribute("roles", roles);
         String subCommand = req.getParameter("sub_command");
+
         if (subCommand != null && !subCommand.isEmpty() && subCommand.equals("update")) {
             String email = req.getParameter("email_to_update");
-            int bonusPoints = Integer.parseInt(req.getParameter("new_bonus"));
             String newRole = req.getParameter("new_role");
-            Role role = Arrays.stream(Role.values())
-                    .filter(r -> r.getRoleValue().equals(newRole))
-                    .findAny().orElse(Role.GUEST);
-            Account account = new Account();
-            account.setBonusPoints(bonusPoints);
-            account.setRole(role);
+            String newBonus = req.getParameter("new_bonus");
 
             try {
-                ServiceFactory.INSTANCE.getAccountService().updateAccount(account, email);
+                ServiceFactory.INSTANCE.getAccountService().updateAccount(email, newRole, newBonus);
             } catch (ServiceException e) {
                 logger.error(e);
             }
         }
-        List<Account> accounts = new ArrayList<Account>();
 
+        List<Account> accounts = new ArrayList<>();
         try {
-            accounts = ServiceFactory.INSTANCE.getAccountService().getAllAccounts();
+            int accountsCount = ServiceFactory.INSTANCE.getAccountService().getAccountsCount();
+            Paginator paginator = new Paginator(req, accountsCount);
+            accounts = ServiceFactory.INSTANCE.getAccountService().getPaginatedAccounts(paginator.getItemsPerPage(), paginator.getPageNumber());
+
             if (req.getMethod().equals(HttpMethods.POST)) {
-                page = req.getContextPath() + UrlsEnum._ADMIN_ACCOUNTS.getUrl();
+                page = req.getParameter("redirect_uri") + "?" + req.getParameter("redirect_query");
             } else {
                 page = UrlManager.getProperty("path.page.admin");
             }
-        } catch (ServiceException e) {
+        } catch (ServiceException | UtilException e) {
             logger.error(e);
             req.getSession().setAttribute("errorMessage",
                     MessageManager.getProperty("message.common_error_message"));
-            page = req.getContextPath() + UrlsEnum._ADMIN_ACCOUNTS.getUrl();
+            page = UrlManager.getProperty("path.page.admin");
         }
         req.setAttribute("accounts", accounts);
 

@@ -4,16 +4,12 @@ import by.gruca.cafe.dao.exception.DAOException;
 import by.gruca.cafe.model.Account;
 
 import java.util.List;
+import java.util.Optional;
 
-public interface AccountDAO extends AbstractDAO<Account,String>{
+public interface AccountDAO extends AbstractDAO<Account> {
+    Optional<Account> read(String email) throws DAOException;
 
-    List<Account> getAllAccounts() throws DAOException;
+    List<Account> readAll(int itemsPerPage, int pageNumber) throws DAOException;
 
-    double getAccountBalance(String email) throws DAOException;
-
-    void setAccountBonus(String email, int bonus) throws DAOException;
-
-    void setAccountBalance(String email, double balance) throws DAOException;
-
-    int getAccountBonus(String email) throws DAOException;
+    int readAccountCount() throws DAOException;
 }

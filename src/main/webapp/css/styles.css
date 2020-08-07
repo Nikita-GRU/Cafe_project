@@ -1,5 +1,9 @@
+body {
+    background-color: #f4f4f4
+}
+
 .navbar {
-    background: #0f6674;
+    background: #17a2b8;
 }
 
 .nav-link, .navbar-brand {
@@ -13,7 +17,7 @@
 
 .nav-link:hover {
     background: #f4f4f4;
-    color: #0f6674;
+    color: #17a2b8;
 }
 
 .navbar-collapse {
@@ -47,7 +51,8 @@
 }
 
 .content {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .product {
@@ -67,9 +72,25 @@ tr, td, th.table-content {
 }
 
 
-.product-image {
-    height: 200px;
-    width: 300px;
+.product-block {
+    height: 300px;
+    width: 350px;
+}
+
+.my-color {
+    background-color: #17a2b8;
+    color: #f4f4f4;
+}
+
+.tr-color {
+    background-color: #17a2b8;
+    color: #f4f4f4;
+}
+.items-per-page-input{
+    width: 40px;
+}
+.page-link {
+    color: #17a2b8
 }
 
 .order-image {
@@ -90,85 +111,13 @@ tr, td, th.table-content {
     background-color: #ccc;
 }
 
-@media (min-width: 992px) {
-    .sidenav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 230px;
-        height: calc(100vh - 3.5rem);
-        margin-top: 3.5rem;
-        background: #0f6674;
-        box-sizing: border-box;
-        border-top: 1px solid rgba(15, 102, 116, 0.3);
-    }
-
-    .navbar-expand-lg .sidenav {
-        flex-direction: column;
-    }
-
-    .content-wrapper {
-        margin-left: 230px;
-    }
-}
-
 .add-new-product {
     margin-left: 500px;
 }
 
-#wrapper {
-    overflow-x: hidden;
+.footer {
+    background-color: #f4f4f4
 }
-
-#sidebar-wrapper {
-    min-height: 100vh;
-    margin-left: -15rem;
-    -webkit-transition: margin .25s ease-out;
-    -moz-transition: margin .25s ease-out;
-    -o-transition: margin .25s ease-out;
-    transition: margin .25s ease-out;
-}
-
-#sidebar-wrapper .sidebar-heading {
-    padding: 0.875rem 1.25rem;
-    font-size: 1.2rem;
-}
-
-#sidebar-wrapper .list-group {
-    width: 15rem;
-}
-
-#page-content-wrapper {
-    min-width: 100vw;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-    margin-left: 0;
-}
-
-@media (min-width: 768px) {
-    #sidebar-wrapper {
-        margin-left: 0;
-    }
-
-    #page-content-wrapper {
-        min-width: 0;
-        width: 100%;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        margin-left: -15rem;
-    }
-}
-.index-font{
-    font-family:  "Verdana", sans-serif;
-    font-weight: bold;
-    font-size: 1.25rem;
-}
-.nav-font{
-
-}
-
 
 
 

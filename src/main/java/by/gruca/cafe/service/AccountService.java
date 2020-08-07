@@ -2,31 +2,31 @@ package by.gruca.cafe.service;
 
 
 import by.gruca.cafe.model.Account;
-import by.gruca.cafe.model.Role;
+import by.gruca.cafe.model.PaymentType;
 import by.gruca.cafe.service.exception.ServiceException;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public interface AccountService {
 
-    void createAccount(Account account) throws ServiceException;
+    void changePassword(String emailParam, String oldPasswordParam, String newPasswordParam) throws ServiceException;
 
-    void updateAccount(Account newAccount, String email) throws ServiceException;
+    Account getAccountByEmailAndPassword(String emailParam, String passwordParam) throws ServiceException;
 
-    boolean changePassword(Account account, String oldPassword, String newPassword) throws ServiceException;
-
-    void setAccountRole(Account account, Role role) throws ServiceException;
-
-    Account getAccountByEmailAndPassword(String email, String password) throws ServiceException;
-
-    Account getAccountByEmail(String email) throws ServiceException;
+    Account getAccountByEmail(String emailParam) throws ServiceException;
 
     List<Account> getAllAccounts() throws ServiceException;
 
-
-    void createAccount(String emailParam, String passwordParam, String phoneNumberParam, String firstNameParam) throws ServiceException;
+    void createAccount(String emailParam, String passwordParam, String phoneNumberParam, String firstNameParam, String roleParam) throws ServiceException;
 
     void createGuestAccount(String emailParam, String phoneNumberParam, String firstNameParam) throws ServiceException;
 
-    double getBalance(String emailParam) throws ServiceException;
+    void updateAccount(String emailParam, String roleParam, String bonusParam) throws ServiceException;
+
+    void updateAccountBalanceAndBonus(Account account, BigDecimal price, int bonusToPay, PaymentType paymentType) throws ServiceException;
+
+    List<Account> getPaginatedAccounts(int itemsPerPage, int pageNumber) throws ServiceException;
+
+    int getAccountsCount() throws ServiceException;
 }

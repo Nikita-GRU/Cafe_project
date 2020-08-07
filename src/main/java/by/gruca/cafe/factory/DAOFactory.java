@@ -1,11 +1,7 @@
 package by.gruca.cafe.factory;
 
-import by.gruca.cafe.dao.AccountDAO;
-import by.gruca.cafe.dao.OrderDAO;
-import by.gruca.cafe.dao.ProductDAO;
-import by.gruca.cafe.dao.impl.AccountDAOImpl;
-import by.gruca.cafe.dao.impl.OrderDAOImpl;
-import by.gruca.cafe.dao.impl.ProductDAOImpl;
+import by.gruca.cafe.dao.*;
+import by.gruca.cafe.dao.impl.*;
 
 public enum DAOFactory {
     INSTANCE;
@@ -13,10 +9,33 @@ public enum DAOFactory {
     private final AccountDAO accountDAO;
     private final ProductDAO productDAO;
 
+    private final OrderDetailDAO orderDetailDAO;
+    private final OrderStatusDAO orderStatusDAO;
+    private final CategoryDAO categoryDAO;
+
+
     DAOFactory() {
         accountDAO = new AccountDAOImpl();
         productDAO = new ProductDAOImpl();
         orderDAO = new OrderDAOImpl();
+
+        orderDetailDAO = new OrderDetailDAOImpl();
+        orderStatusDAO = new OrderStatusDAOImpl();
+        categoryDAO = new CategoryDAOImpl();
+    }
+
+
+
+    public OrderDetailDAO getOrderDetailDAO() {
+        return orderDetailDAO;
+    }
+
+    public OrderStatusDAO getOrderStatusDAO() {
+        return orderStatusDAO;
+    }
+
+    public CategoryDAO getCategoryDAO() {
+        return categoryDAO;
     }
 
     public OrderDAO getOrderDAO() {

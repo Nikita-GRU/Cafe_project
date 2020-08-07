@@ -18,4 +18,5 @@ public class EmptyCommand implements ActionCommand {
         logger.info("reqURI=" + request.getRequestURI());
         return page;
     }
+
 }

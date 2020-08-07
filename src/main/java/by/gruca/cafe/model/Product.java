@@ -1,13 +1,26 @@
 package by.gruca.cafe.model;
 
-public class Product {
 
+import java.io.Serializable;
+import java.math.BigDecimal;
+
+public class Product implements Serializable {
+    private static final long serialVersionUID = 42L;
     private int id;
     private String name;
-    private double price;
+    private BigDecimal price;
     private String description;
     private String imageUri;
     private int bonus;
+    private Category category;
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     public String getImageUri() {
         return imageUri;
@@ -49,11 +62,11 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -65,20 +78,25 @@ public class Product {
         Product product = (Product) o;
 
         if (getId() != product.getId()) return false;
-        if (Double.compare(product.getPrice(), getPrice()) != 0) return false;
+        if (getBonus() != product.getBonus()) return false;
         if (!getName().equals(product.getName())) return false;
-        return getDescription() != null ? getDescription().equals(product.getDescription()) : product.getDescription() == null;
+        if (!getPrice().equals(product.getPrice())) return false;
+        if (getDescription() != null ? !getDescription().equals(product.getDescription()) : product.getDescription() != null)
+            return false;
+        if (getImageUri() != null ? !getImageUri().equals(product.getImageUri()) : product.getImageUri() != null)
+            return false;
+        return getCategory() == product.getCategory();
     }
 
     @Override
     public int hashCode() {
-        int result;
-        long temp;
-        result = getId();
+        int result = getId();
         result = 31 * result + getName().hashCode();
-        temp = Double.doubleToLongBits(getPrice());
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + getPrice().hashCode();
         result = 31 * result + (getDescription() != null ? getDescription().hashCode() : 0);
+        result = 31 * result + (getImageUri() != null ? getImageUri().hashCode() : 0);
+        result = 31 * result + getBonus();
+        result = 31 * result + (getCategory() != null ? getCategory().hashCode() : 0);
         return result;
     }
 
@@ -91,6 +109,7 @@ public class Product {
                 ", description='" + description + '\'' +
                 ", imageUri='" + imageUri + '\'' +
                 ", bonus=" + bonus +
+                ", category=" + category +
                 '}';
     }
 }

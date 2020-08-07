@@ -18,9 +18,9 @@ public enum UrlsEnum {
     _MODERATOR(UrlManager.getProperty("path.page.moderator")),
     _ORDERSUCCESS(UrlManager.getProperty("path.page.order_success")),
     _CART(UrlManager.getProperty("path.action.show_cart")),
-    _SIGNUP(UrlManager.getProperty("path.page.signup")),
-    _LOGIN(UrlManager.getProperty("path.page.login")),
-    _ORDER(UrlManager.getProperty("path.page.order")),
+    _SIGNUP(UrlManager.getProperty("path.page.sign_up")),
+    _LOGIN(UrlManager.getProperty("path.page.log_in")),
+    _ORDER(UrlManager.getProperty("path.action.order")),
     _ACCOUNT(UrlManager.getProperty("path.page.account")),
     _MENU(UrlManager.getProperty("path.action.show_menu")),
     _MAIN(UrlManager.getProperty("path.page.main"));

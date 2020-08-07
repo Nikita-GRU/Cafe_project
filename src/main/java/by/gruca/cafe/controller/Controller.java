@@ -7,6 +7,7 @@ import com.google.api.client.http.HttpMethods;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.servlet.DispatcherType;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -46,19 +47,18 @@ public class Controller extends HttpServlet {
 
         if (page != null) {
             if (request.getMethod().equals(HttpMethods.POST)) {
+                response.setCharacterEncoding("UTF-8");
                 response.sendRedirect(page);
-
             } else {
+                if (request.getDispatcherType() != DispatcherType.FORWARD)
+                    page = UrlManager.getProperty("path.page.main");
+
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
                 logger.info("reqURL=" + request.getRequestURL());
+                response.setCharacterEncoding("UTF-8");
                 dispatcher.forward(request, response);
             }
 
-        } else {
-            page = UrlManager.getProperty("path.page.error");
-            request.getSession().setAttribute("nullPage",
-                    MessageManager.getProperty("message.nullpage"));
-            response.sendRedirect(request.getContextPath() + page);
         }
     }
 }

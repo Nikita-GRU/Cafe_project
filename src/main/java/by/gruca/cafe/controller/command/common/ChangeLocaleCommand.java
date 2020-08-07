@@ -1,7 +1,6 @@
 package by.gruca.cafe.controller.command.common;
 
 import by.gruca.cafe.configuration.UrlManager;
-import by.gruca.cafe.controller.UrlsEnum;
 import by.gruca.cafe.controller.command.ActionCommand;
 import com.google.api.client.http.HttpMethods;
 
@@ -13,8 +12,9 @@ public class ChangeLocaleCommand implements ActionCommand {
         String page;
         String locale = req.getParameter("new_locale");
         req.getSession().setAttribute("locale", locale);
+
         if (req.getMethod().equals(HttpMethods.POST)) {
-            page = req.getContextPath() + UrlsEnum._MAIN.getUrl();
+            page = req.getParameter("redirect_uri") + "?" + req.getParameter("redirect_query");
         } else {
             page = UrlManager.getProperty("path.page.main");
         }

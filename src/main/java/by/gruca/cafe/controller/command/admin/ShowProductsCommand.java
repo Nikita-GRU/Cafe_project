@@ -8,6 +8,8 @@ import by.gruca.cafe.controller.command.ActionCommand;
 import by.gruca.cafe.factory.ServiceFactory;
 import by.gruca.cafe.model.Product;
 import by.gruca.cafe.service.exception.ServiceException;
+import by.gruca.cafe.util.Paginator;
+import by.gruca.cafe.util.UtilException;
 import com.google.api.client.http.HttpMethods;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,40 +25,38 @@ public class ShowProductsCommand implements ActionCommand {
     public String execute(HttpServletRequest req) {
         String page;
         String subCommand = req.getParameter("sub_command");
-        Product product = new Product();
+        String productIdToUpdate = req.getParameter("product_id_to_update");
+        String newNameParam = req.getParameter("new_name");
+        String newPriceParam = req.getParameter("new_price");
+        String newImageUriParam = req.getParameter("new_image_uri");
+        String newBonusParam = req.getParameter("new_bonus");
+        String newDescriptionParam = req.getParameter("new_description");
         if (subCommand != null && !subCommand.isEmpty() && subCommand.equals("update")) {
-            int productId = Integer.parseInt(req.getParameter("product_id_to_update"));
-            String newName = req.getParameter("new_name");
-            double newPrice = Double.parseDouble(req.getParameter("new_price"));
-            String newImageUri = req.getParameter("new_image_uri");
-            int newBonus = Integer.parseInt(req.getParameter("new_bonus"));
-            String newDescription = req.getParameter("new_description");
-            product.setName(newName);
-            product.setPrice(newPrice);
-            product.setDescription(newDescription);
-            product.setImageUri(newImageUri);
-            product.setBonus(newBonus);
+
             try {
-                ServiceFactory.INSTANCE.getProductService().updateProduct(product, productId);
+                ServiceFactory.INSTANCE.getProductService().updateProduct(productIdToUpdate, newNameParam, newPriceParam
+                        , newImageUriParam, newDescriptionParam, newBonusParam);
             } catch (ServiceException e) {
                 logger.error(e);
             }
 
         }
 
-        List<Product> products = new ArrayList<Product>();
+        List<Product> products = new ArrayList<>();
         try {
-            products = ServiceFactory.INSTANCE.getProductService().getAllProducts();
+            int productsCount = ServiceFactory.INSTANCE.getProductService().getProductsCount();
+            Paginator paginator = new Paginator(req, productsCount);
+            products = ServiceFactory.INSTANCE.getProductService().getPaginatedProducts(paginator.getItemsPerPage(), paginator.getPageNumber());
             if (req.getMethod().equals(HttpMethods.POST)) {
-                page = req.getContextPath() + UrlsEnum._ADMIN_PRODUCTS.getUrl();
+                page = req.getParameter("redirect_uri") + "?" + req.getParameter("redirect_query");
             } else {
                 page = UrlManager.getProperty("path.page.admin");
             }
-        } catch (ServiceException e) {
+        } catch (ServiceException | UtilException e) {
             logger.error(e);
             req.getSession().setAttribute("errorMessage",
                     MessageManager.getProperty("message.common_error_message"));
-            page = req.getContextPath() + UrlsEnum._ADMIN_PRODUCTS.getUrl();
+            page = UrlManager.getProperty("path.page.admin");
         }
         req.setAttribute("products", products);
         return page;

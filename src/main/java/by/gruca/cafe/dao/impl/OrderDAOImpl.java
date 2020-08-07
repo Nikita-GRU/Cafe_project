@@ -1,16 +1,16 @@
 package by.gruca.cafe.dao.impl;
 
 
-import by.gruca.cafe.dao.AccountDAO;
 import by.gruca.cafe.dao.OrderDAO;
 import by.gruca.cafe.dao.connectionpool.ConnectionProxy;
 import by.gruca.cafe.dao.connectionpool.SQLConnectionPool;
 import by.gruca.cafe.dao.exception.DAOException;
 import by.gruca.cafe.factory.DAOFactory;
-import by.gruca.cafe.model.Account;
-import by.gruca.cafe.model.Address;
 import by.gruca.cafe.model.Order;
+import by.gruca.cafe.model.OrderDetail;
+import by.gruca.cafe.model.OrderStatus;
 import by.gruca.cafe.model.Product;
+import by.gruca.cafe.util.ModelMapper;
 import by.gruca.cafe.util.TimeConverter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,268 +19,255 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 
 public class OrderDAOImpl implements OrderDAO {
-    private static final String SQL_GET_NOT_DELIVERED_ORDERS = "SELECT * FROM `order` WHERE is_delivered=?";
-    private static final String SQL_READ_BY_TIME_AND_ACCOUNT = "SELECT * FROM `order` where date=? AND account=? ";
-    private static final String SQL_ATTACH_PRODUCTS = "insert into order_detail(id, order_id, product_id, quantity) values(DEFAULT,?,?,?)";
-    private static final String SQL_GET = "select * from `order` where id=(?)";
-    private static final String SQL_GET_ALL = "select * from `order`";
-    private static final String SQL_GET_ALL_BY_ACCOUNT = "select * from `order` where order.account =?";
-    private static final String SQL_CREATE = "INSERT INTO `order` (id,date, price, account, review) values (DEFAULT,?,?,?,?)";
-    private static final String SQL_UPDATE = "update `order` set date=?,price=?,account=?,review=?" +
-            "where id=?";
-    private static final String SQL_DELETE = "delete from `order` where id=?";
-    private static final String SQL_GET_PRODUCTS = "select product_id from order join product on order.product_id=product.id where order.id=?";
-    private static final String SQL_GET_ORDER_PRODUCTS = "SELECT * FROM order_detail where order_id=?";
-    private static final String SQL_SET_ACCEPTED = "UPDATE `order` SET is_accepted=? where id=?";
-    private static final String SQL_SET_DELIVERED = "UPDATE `order` SET is_delivered=? where id=?";
-    private final AccountDAO accountDAO = new AccountDAOImpl();
+    public static final String ORDER_ID = "order_id";
+    public static final String ORDER_PRICE = "order_price";
+    public static final String ORDER_CREATION_DATE = "creation_date";
+    public static final String ORDER_DELIVERY_DATE = "delivery_date";
+    public static final String ORDER_NOTE = "note";
+    public static final String ORDER_SCORE = "score";
+    public static final String ORDER_FEEDBACK = "feedback";
+    public static final String SQL_STATEMENT_ERROR = "SQL statement error";
+    public static final String ORDER_ADDRESS = "address";
+    public static final String ORDER_APARTMENT = "apartment";
+    public static final String ORDER_BONUS_TO_PAY = "bonus_to_pay";
+    public static final String ORDER_COUNT = "order_count";
+    private static final String SQL_READ_ORDERS_COUNT = "SELECT COUNT(*) order_count FROM `order`";
+    private static final String SQL_READ_PAGINATED_ORDERS = "SELECT * FROM `order` " +
+            "JOIN account a on `order`.account_id = a.account_id " +
+            "JOIN order_status os on `order`.order_status_id = os.order_status_id " +
+            "JOIN order_payment op on `order`.order_payment_id = op.order_payment_id " +
+            "JOIN role r on a.role_id = r.role_id ORDER BY `order`.order_id LIMIT ? OFFSET ?";
+    private static final String SQL_READ_NOT_DELIVERED_ORDERS = "SELECT * FROM `order` " +
+            "JOIN account a on `order`.account_id = a.account_id " +
+            "JOIN order_status os on `order`.order_status_id = os.order_status_id " +
+            "JOIN order_payment op on `order`.order_payment_id = op.order_payment_id " +
+            "JOIN role r on a.role_id = r.role_id  " +
+            "WHERE status!=? ORDER BY `order`.order_id";
+    private static final String SQL_READ = "SELECT * FROM `order` " +
+            "JOIN account a on `order`.account_id = a.account_id " +
+            "JOIN order_status os on `order`.order_status_id = os.order_status_id " +
+            "JOIN order_payment op on `order`.order_payment_id = op.order_payment_id " +
+            "JOIN role r on a.role_id = r.role_id " +
+            "WHERE `order`.order_id=?";
+    private static final String SQL_READ_ALL = "SELECT * FROM `order` " +
+            "JOIN account a on `order`.account_id = a.account_id " +
+            "JOIN order_status os on `order`.order_status_id = os.order_status_id " +
+            "JOIN order_payment op on `order`.order_payment_id = op.order_payment_id " +
+            "JOIN role r on a.role_id = r.role_id ORDER BY `order`.order_id";
+    private static final String SQL_READ_ALL_BY_ACCOUNT = "SELECT * FROM `order` " +
+            "JOIN account a on `order`.account_id = a.account_id " +
+            "JOIN order_status os on `order`.order_status_id = os.order_status_id " +
+            "JOIN order_payment op on `order`.order_payment_id = op.order_payment_id " +
+            "JOIN role r on a.role_id = r.role_id " +
+            "WHERE a.account_id=? ORDER BY `order`.order_id ";
+    private static final String SQL_CREATE = "INSERT INTO `order` (order_id, account_id,order_status_id," +
+            "order_payment_id,creation_date,delivery_date, order_price, note,feedback,score,address,apartment,bonus_to_pay) " +
+            "VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?)";
+    private static final String SQL_UPDATE = "UPDATE `order` SET  account_id=?,order_status_id=?," +
+            "order_payment_id=?,creation_date=?,delivery_date=?, " +
+            "order_price=?, note=?,feedback=?,score=?, address=?,apartment=?, bonus_to_pay=? WHERE `order`.order_id=?";
+    private static final String SQL_DELETE = "DELETE FROM `order` WHERE order_id=?";
     Logger logger = LogManager.getLogger(OrderDAOImpl.class);
 
-    public OrderDAOImpl() {
+
+    @Override
+    public Optional<Order> read(long id) throws DAOException {
+        Order order;
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement readStatement = connection.prepareStatement(SQL_READ)) {
+            readStatement.setLong(1, id);
+            order = buildOrder(readStatement);
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
+        }
+        return Optional.ofNullable(order);
     }
 
     @Override
-    public int create(Order order) throws DAOException {
+    public List<Order> readAll() throws DAOException {
+        List<Order> orders;
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_CREATE, Statement.RETURN_GENERATED_KEYS)) {
-            statement.setString(1, TimeConverter.convertFromLocalDateTimeToSQLDateTime(order.getDate()));
-            statement.setDouble(2, order.getPrice());
-            statement.setString(3, order.getAccount().getEmail());
-            statement.setString(4, order.getReview());
-            statement.execute();
-            ResultSet resultSet = statement.getGeneratedKeys();
+             PreparedStatement statement = connection.prepareStatement(SQL_READ_ALL);) {
+            orders = buildOrderList(statement);
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
+        }
+        return orders;
+    }
+
+    @Override
+    public List<Order> readAll(int itemsPerPage, int pageNumber) throws DAOException {
+        List<Order> orders;
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement statement =
+                     connection.prepareStatement(SQL_READ_PAGINATED_ORDERS);) {
+            statement.setInt(1, itemsPerPage);
+            statement.setInt(2, (pageNumber - 1) * itemsPerPage);
+            orders = buildOrderList(statement);
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
+        }
+        return orders;
+    }
+
+    @Override
+    public int readOrdersCount() throws DAOException {
+        int ordersCount = 0;
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement statement = connection.prepareStatement(SQL_READ_ORDERS_COUNT);
+             ResultSet rs = statement.executeQuery();) {
+            if (rs.next()) {
+                ordersCount = rs.getInt(ORDER_COUNT);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
+        }
+        return ordersCount;
+    }
+
+    @Override
+    public long create(Order entity) throws DAOException {
+
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement orderCreateStatement = connection.prepareStatement(SQL_CREATE, Statement.RETURN_GENERATED_KEYS);
+        ) {
+            orderCreateStatement.setLong(1, entity.getAccount().getId());
+            orderCreateStatement.setLong(2, entity.getOrderStatus().getId());
+            orderCreateStatement.setInt(3, entity.getPaymentType().getId());
+            orderCreateStatement.setString(4, TimeConverter.convertFromLocalDateTimeToSQLDateTime(entity.getCreationDate()));
+            orderCreateStatement.setString(5, TimeConverter.convertFromLocalDateTimeToSQLDateTime(entity.getDeliveryDate()));
+            orderCreateStatement.setBigDecimal(6, entity.getPrice());
+            orderCreateStatement.setString(7, entity.getNote());
+            orderCreateStatement.setString(8, entity.getFeedback());
+            orderCreateStatement.setInt(9, entity.getScore());
+            orderCreateStatement.setString(10, entity.getAddress());
+            orderCreateStatement.setString(11, entity.getApartment());
+            orderCreateStatement.setInt(12, entity.getBonusToPay());
+            orderCreateStatement.execute();
+
+            ResultSet resultSet = orderCreateStatement.getGeneratedKeys();
             if (resultSet.next()) {
-                return resultSet.getInt(1);
+                return resultSet.getLong(1);
             }
             return -1;
         } catch (SQLException e) {
             logger.error(e);
-            throw new DAOException("SQL statement error", e);
-        }
-    }
-
-    public Optional<Order> readByTimeAndAccount(String time, Account account) throws DAOException {
-        Order order = new Order();
-        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement readStatement = connection.prepareStatement(SQL_READ_BY_TIME_AND_ACCOUNT)) {
-            readStatement.setString(1, time);
-            readStatement.setString(2, account.getEmail());
-            try (ResultSet resultSet = readStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    order = buildOrder(resultSet);
-                } else throw new DAOException("Account is not exist");
-            } catch (SQLException e) {
-                logger.error(e);
-                throw new DAOException("SQL statement error", e);
-            }
-        } catch (SQLException e) {
-            logger.error(e);
-            throw new DAOException("SQL statement error", e);
-        }
-        return Optional.of(order);
-    }
-
-    @Override
-    public Optional<Order> read(Integer orderId) throws DAOException {
-        Order order = new Order();
-
-        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement readStatement = connection.prepareStatement(SQL_GET)) {
-            readStatement.setInt(1, orderId);
-            try (ResultSet resultSet = readStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    order = buildOrder(resultSet);
-                } else throw new DAOException("Order is not exist");
-            } catch (SQLException e) {
-                logger.error(e);
-                throw new DAOException("SQL statement error", e);
-            }
-        } catch (SQLException e) {
-            logger.error(e);
-            throw new DAOException("SQL statement error", e);
-        }
-        return Optional.of(order);
-    }
-
-    @Override
-    public int update(Order order) throws DAOException {
-        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_UPDATE)) {
-            statement.setString(1, order.getDate().toString());
-            statement.setDouble(2, order.getPrice());
-            statement.setString(3, order.getAccount().getEmail());
-            statement.setString(4, order.getReview());
-            statement.setInt(5, order.getId());
-            int rowsAffected = statement.executeUpdate();
-            logger.info(rowsAffected + " row affected");
-            return rowsAffected;
-
-        } catch (SQLException e) {
-            logger.error(e);
-            throw new DAOException("SQL statement error", e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
         }
     }
 
     @Override
-    public boolean delete(Order order) throws DAOException {
+    public int update(Order entity) throws DAOException {
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement updateStatement = connection.prepareStatement(SQL_UPDATE)) {
+            updateStatement.setLong(1, entity.getAccount().getId());
+            updateStatement.setInt(2, entity.getOrderStatus().getId());
+            updateStatement.setInt(3, entity.getPaymentType().getId());
+            updateStatement.setString(4, entity.getCreationDate().toString());
+            updateStatement.setString(5, entity.getDeliveryDate().toString());
+            updateStatement.setBigDecimal(6, entity.getPrice());
+            updateStatement.setString(7, entity.getNote());
+            updateStatement.setString(8, entity.getFeedback());
+            updateStatement.setInt(9, entity.getScore());
+            updateStatement.setString(10, entity.getAddress());
+            updateStatement.setString(11, entity.getApartment());
+            updateStatement.setInt(12, entity.getBonusToPay());
+            updateStatement.setLong(13, entity.getId());
+            return updateStatement.executeUpdate();
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
+        }
+    }
+
+    @Override
+    public boolean delete(Order entity) throws DAOException {
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_DELETE);) {
-            statement.setInt(1, order.getId());
+            statement.setLong(1, entity.getId());
             return statement.execute();
         } catch (SQLException e) {
             logger.error(e);
-            throw new DAOException("SQL statement error", e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
         }
     }
 
+
     @Override
-    public List<Order> getAll() throws DAOException {
-        List<Order> orders = new ArrayList<>();
+    public List<Order> readAllByAccount(long accountId) throws DAOException {
+        List<Order> orders;
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_GET_ALL)) {
-            ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()) {
-                Order currentOrder = buildOrder(resultSet);
-                orders.add(currentOrder);
-            }
+             PreparedStatement statement = connection.prepareStatement(SQL_READ_ALL_BY_ACCOUNT);) {
+            statement.setLong(1, accountId);
+            orders = buildOrderList(statement);
         } catch (SQLException e) {
             logger.error(e);
-            throw new DAOException("SQL statement error", e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
+        }
+        return orders;
+
+    }
+
+    @Override
+    public List<Order> readNotDeliveredOrders() throws DAOException {
+        List<Order> orders;
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement statement = connection.prepareStatement(SQL_READ_NOT_DELIVERED_ORDERS);) {
+            statement.setString(1, OrderStatus.DELIVERED.getStatus());
+            orders = buildOrderList(statement);
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
         }
         return orders;
     }
 
+    private Order buildOrder(PreparedStatement readStatement) throws DAOException {
+        Order currentOrder = null;
+        try (ResultSet rs = readStatement.executeQuery()) {
 
-    @Override
-    public List<Order> getAllByAccount(String accountEmail) throws DAOException {
-        List<Order> orders = new ArrayList<Order>();
-        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_GET_ALL_BY_ACCOUNT)) {
-            statement.setString(1, accountEmail);
-            ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()) {
-                Order order = buildOrder(resultSet);
-                orders.add(order);
+            if (rs.next()) {
+                currentOrder = ModelMapper.INSTANCE.getOrderFromResultSet(rs);
+                currentOrder.setProducts(getOrderProducts(currentOrder.getId()));
             }
-        } catch (SQLException e) {
-            logger.error(e);
-            throw new DAOException("SQL statement error", e);
-        }
-        return orders;
-    }
-
-    @Override
-    public List<Order> getNotDeliveredOrders() throws DAOException {
-        List<Order> orders = new ArrayList<>();
-        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement readStatement = connection.prepareStatement(SQL_GET_NOT_DELIVERED_ORDERS)) {
-            readStatement.setBoolean(1, false);
-            try (ResultSet resultSet = readStatement.executeQuery()) {
-                while (resultSet.next()) {
-                    Order order = buildOrder(resultSet);
-                    orders.add(order);
-                }
-            } catch (SQLException e) {
-                logger.error(e);
-                throw new DAOException("SQL statement error", e);
-            }
-        } catch (SQLException e) {
-            logger.error(e);
-            throw new DAOException("SQL statement error", e);
-        }
-        return orders;
-    }
-
-    @Override
-    public HashMap<Product, Integer> getOrderProducts(Integer orderId) throws DAOException {
-        HashMap<Product, Integer> products = new HashMap<>();
-        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement readStatement = connection.prepareStatement(SQL_GET_ORDER_PRODUCTS)) {
-            readStatement.setInt(1, orderId);
-            try (ResultSet resultSet = readStatement.executeQuery()) {
-                while (resultSet.next()) {
-                    products.put((DAOFactory.INSTANCE.getProductDAO().read(resultSet.getInt("product_id"))).get()
-                            , resultSet.getInt("quantity"));
-                }
-            } catch (SQLException e) {
-                logger.error(e);
-                throw new DAOException("SQL statement error", e);
-            }
-        } catch (SQLException e) {
-            logger.error(e);
-            throw new DAOException("SQL statement error", e);
-        }
-
-
-        return products;
-    }
-
-    @Override
-    public void setAccepted(int orderId) throws DAOException {
-        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_SET_ACCEPTED)) {
-            statement.setBoolean(1, true);
-            statement.setInt(2, orderId);
-            statement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error(e);
-            throw new DAOException(e);
-        }
-    }
-
-    @Override
-    public void setDelivered(int orderId) throws DAOException {
-        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_SET_DELIVERED)) {
-            statement.setBoolean(1, true);
-            statement.setInt(2, orderId);
-            statement.executeUpdate();
-        } catch (SQLException e) {
-            logger.error(e);
-            throw new DAOException(e);
-        }
-    }
-
-    @Override
-    public void attachProductsToOrder(HashMap<Product, Integer> products, int orderId) throws DAOException {
-        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SQL_ATTACH_PRODUCTS)) {
-            for (Product product : products.keySet()) {
-                statement.setInt(1, orderId);
-                statement.setInt(2, product.getId());
-                statement.setInt(3, products.get(product));
-                statement.execute();
-            }
-        } catch (SQLException e) {
-            logger.error(e);
-            throw new DAOException("SQL statement error", e);
-        }
-
-
-    }
-
-    private Order buildOrder(ResultSet resultSet) throws DAOException {
-        Order currentOrder = new Order();
-        try {
-            currentOrder.setId(resultSet.getInt("id"));
-            currentOrder.setReview(resultSet.getString("review"));
-            currentOrder.setAccount(accountDAO.read(resultSet.getString("account")).get());
-            currentOrder.setPrice(resultSet.getDouble("price"));
-            currentOrder.setProducts(DAOFactory.INSTANCE.getOrderDAO().getOrderProducts(currentOrder.getId()));
-            currentOrder.setDate(TimeConverter.convertFromSQLDateTimeToLocalDateTime(resultSet.getString("date")));
-            currentOrder.setAccepted(resultSet.getBoolean("is_accepted"));
-            currentOrder.setDelivered(resultSet.getBoolean("is_delivered"));
         } catch (SQLException e) {
             logger.error(e);
             throw new DAOException(e);
         }
         return currentOrder;
+    }
+
+    private List<Order> buildOrderList(PreparedStatement readStatement) throws DAOException {
+        List<Order> orders = new ArrayList<>();
+        Order currentOrder;
+        try (ResultSet rs = readStatement.executeQuery()) {
+            while (rs.next()) {
+                currentOrder = ModelMapper.INSTANCE.getOrderFromResultSet(rs);
+                currentOrder.setProducts(getOrderProducts(currentOrder.getId()));
+                orders.add(currentOrder);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(e);
+        }
+        return orders;
+    }
+
+    private Map<Product, Integer> getOrderProducts(long orderId) throws DAOException {
+        Map<Product, Integer> products = new HashMap<>();
+        List<OrderDetail> orderDetails = DAOFactory.INSTANCE.getOrderDetailDAO().readAllByOrder(orderId);
+        for (OrderDetail orderDetail : orderDetails
+        ) {
+            products.put(orderDetail.getProduct(), orderDetail.getQuantity());
+        }
+        return products;
     }
 }

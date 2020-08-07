@@ -6,28 +6,33 @@ import by.gruca.cafe.model.Order;
 import by.gruca.cafe.model.Product;
 import by.gruca.cafe.service.exception.ServiceException;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 
 public interface OrderService {
-    Order createOrder(Order order, HashMap<Product, Integer> products) throws ServiceException;
 
-    List<Order> getNotDeliveredOrders() throws ServiceException;
-
-    void setOrderAccepted(int orderId) throws ServiceException;
-
-    void setOrderDelivered(int orderId) throws ServiceException;
+    Order getOrder(String orderIdParam) throws ServiceException;
 
     List<Order> getAllOrders() throws ServiceException;
 
     void deleteOrder(int orderId) throws ServiceException;
 
+    void createOrder(Map<Product, Integer> products, Account account, String noteParam, String addressParam, String apartment,
+                     String deliveryType, String deliveryDate, BigDecimal price, String paymentType, String bonusToPay) throws ServiceException;
+
+    void createGuestOrder(Map<Product, Integer> products, Account emailParam, String noteParam, String addressParam, String apartment,
+                           String deliveryType, String deliveryDate, BigDecimal price) throws ServiceException;
+
+    List<Order> getNotDeliveredOrders() throws ServiceException;
+
     List<Order> getOrdersByAccount(Account account) throws ServiceException;
 
-    void createOrder(ArrayList<Product> products, String param, String emailParam, String reviewParam, String bonusToPay,
-                     String paymentType, String street, String apartment, String building, String deliveryType) throws ServiceException;
+    void updateOrderStatus(String orderIdToUpdate, String orderStatusParam) throws ServiceException;
 
-    void createGuestOrder(ArrayList<Product> products, String emailParam, String reviewParam, String street, String apartment,
-                          String building, String deliveryType, String deliveryDate) throws ServiceException;
+    List<Order> getPaginatedOrders(int itemsPerPage, int pageNumber) throws ServiceException;
+
+    int getOrdersCount() throws ServiceException;
+
+    void updateOrderFeedback(String orderIdParam, String feedbackParam, String scoreParam) throws ServiceException;
 }

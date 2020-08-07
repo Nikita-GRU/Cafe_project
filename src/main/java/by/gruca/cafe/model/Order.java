@@ -1,93 +1,79 @@
 package by.gruca.cafe.model;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.HashMap;
+import java.util.Map;
 
 public class Order {
-    private int id;
-    private LocalDateTime date;
+    private long id;
+    private LocalDateTime creationDate;
     private LocalDateTime deliveryDate;
-    private double price;
-    private HashMap<Product, Integer> products;
-    private String review;
+    private BigDecimal price;
+    private String note;
+    private String feedback;
     private Account account;
-    private boolean isDelivered;
-    private boolean isAccepted;
-    private Address address;
+    private Map<Product, Integer> products;
+    private OrderStatus orderStatus;
+    private int score;
+    private PaymentType paymentType;
+    private String address;
+    private String apartment;
+    private int bonusToPay;
 
-    public Order() {
+    public int getBonusToPay() {
+        return bonusToPay;
     }
 
-    public LocalDateTime getDeliveryDate() {
-        return deliveryDate;
+    public void setBonusToPay(int bonusToPay) {
+        this.bonusToPay = bonusToPay;
     }
 
-    public void setDeliveryDate(LocalDateTime deliveryDate) {
-        this.deliveryDate = deliveryDate;
+    public PaymentType getPaymentType() {
+        return paymentType;
     }
 
-    public Address getAddress() {
+    public void setPaymentType(PaymentType paymentType) {
+        this.paymentType = paymentType;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
-    public boolean isDelivered() {
-        return isDelivered;
+    public String getApartment() {
+        return apartment;
     }
 
-    public void setDelivered(boolean delivered) {
-        isDelivered = delivered;
+    public void setApartment(String apartment) {
+        this.apartment = apartment;
     }
 
-    public boolean isAccepted() {
-        return isAccepted;
+    public String getFeedback() {
+        return feedback;
     }
 
-    public void setAccepted(boolean accepted) {
-        isAccepted = accepted;
+    public void setFeedback(String feedback) {
+        this.feedback = feedback;
     }
 
-    public HashMap<Product, Integer> getProducts() {
-        return products;
+    public LocalDateTime getCreationDate() {
+        return creationDate;
     }
 
-    public void setProducts(HashMap<Product, Integer> products) {
-        this.products = products;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public String getReview() {
-        return review;
-    }
-
-    public void setReview(String review) {
-        this.review = review;
+    public void setCreationDate(LocalDateTime creationDate) {
+        this.creationDate = creationDate;
     }
 
     public Account getAccount() {
@@ -98,51 +84,69 @@ public class Order {
         this.account = account;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Order)) return false;
-
-        Order order = (Order) o;
-
-        if (getId() != order.getId()) return false;
-        if (Double.compare(order.getPrice(), getPrice()) != 0) return false;
-        if (isDelivered() != order.isDelivered()) return false;
-        if (isAccepted() != order.isAccepted()) return false;
-        if (!getDate().equals(order.getDate())) return false;
-        if (getProducts() != null ? !getProducts().equals(order.getProducts()) : order.getProducts() != null)
-            return false;
-        if (getReview() != null ? !getReview().equals(order.getReview()) : order.getReview() != null) return false;
-        return getAccount().equals(order.getAccount());
+    public Map<Product, Integer> getProducts() {
+        return products;
     }
 
-    @Override
-    public int hashCode() {
-        int result;
-        long temp;
-        result = getId();
-        result = 31 * result + getDate().hashCode();
-        temp = Double.doubleToLongBits(getPrice());
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (getProducts() != null ? getProducts().hashCode() : 0);
-        result = 31 * result + (getReview() != null ? getReview().hashCode() : 0);
-        result = 31 * result + getAccount().hashCode();
-        result = 31 * result + (isDelivered() ? 1 : 0);
-        result = 31 * result + (isAccepted() ? 1 : 0);
-        return result;
+    public void setProducts(Map<Product, Integer> products) {
+        this.products = products;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public LocalDateTime getDeliveryDate() {
+        return deliveryDate;
+    }
+
+    public void setDeliveryDate(LocalDateTime deliveryDate) {
+        this.deliveryDate = deliveryDate;
+    }
+
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
     }
 
     @Override
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", date=" + date +
+                ", creationDate=" + creationDate +
+                ", deliveryDate=" + deliveryDate +
                 ", price=" + price +
-                ", products=" + products +
-                ", review='" + review + '\'' +
+                ", note='" + note + '\'' +
+                ", feedback='" + feedback + '\'' +
                 ", account=" + account +
-                ", isDelivered=" + isDelivered +
-                ", isAccepted=" + isAccepted +
+                ", orderDetails=" + products +
+                ", orderStatus=" + orderStatus +
+                ", score=" + score +
+                ", paymentType=" + paymentType +
                 '}';
     }
 }

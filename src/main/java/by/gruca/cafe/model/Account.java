@@ -1,47 +1,48 @@
 package by.gruca.cafe.model;
 
-public class Account {
-    private int id;
-    private long phoneNumber;
+import java.io.Serializable;
+import java.math.BigDecimal;
+
+public class Account implements Serializable {
+    private static final long serialVersionUID = 42L;
+    private long id;
+    private String phoneNumber;
     private String password;
     private String email;
     private String firstName;
     private Role role;
-    private int bonusPoints;
-    private double balance;
+    private BigDecimal balance;
+    private int bonus;
 
-    public Account() {
+    public int getBonus() {
+        return bonus;
     }
 
-    public double getBalance() {
+    public void setBonus(int bonus) {
+        this.bonus = bonus;
+    }
+
+    public BigDecimal getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
-    public int getBonusPoints() {
-        return bonusPoints;
-    }
-
-    public void setBonusPoints(int bonusPoints) {
-        this.bonusPoints = bonusPoints;
-    }
-
-    public long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -85,25 +86,28 @@ public class Account {
         Account account = (Account) o;
 
         if (getId() != account.getId()) return false;
-        if (getPhoneNumber() != account.getPhoneNumber()) return false;
-        if (getBonusPoints() != account.getBonusPoints()) return false;
+        if (getBonus() != account.getBonus()) return false;
+        if (getPhoneNumber() != null ? !getPhoneNumber().equals(account.getPhoneNumber()) : account.getPhoneNumber() != null)
+            return false;
         if (getPassword() != null ? !getPassword().equals(account.getPassword()) : account.getPassword() != null)
             return false;
         if (!getEmail().equals(account.getEmail())) return false;
         if (getFirstName() != null ? !getFirstName().equals(account.getFirstName()) : account.getFirstName() != null)
             return false;
-        return getRole() == account.getRole();
+        if (getRole() != account.getRole()) return false;
+        return getBalance() != null ? getBalance().equals(account.getBalance()) : account.getBalance() == null;
     }
 
     @Override
     public int hashCode() {
-        int result = getId();
-        result = 31 * result + (int) (getPhoneNumber() ^ (getPhoneNumber() >>> 32));
+        int result = (int) (getId() ^ (getId() >>> 32));
+        result = 31 * result + (getPhoneNumber() != null ? getPhoneNumber().hashCode() : 0);
         result = 31 * result + (getPassword() != null ? getPassword().hashCode() : 0);
         result = 31 * result + getEmail().hashCode();
         result = 31 * result + (getFirstName() != null ? getFirstName().hashCode() : 0);
         result = 31 * result + getRole().hashCode();
-        result = 31 * result + getBonusPoints();
+        result = 31 * result + (getBalance() != null ? getBalance().hashCode() : 0);
+        result = 31 * result + getBonus();
         return result;
     }
 
@@ -111,13 +115,13 @@ public class Account {
     public String toString() {
         return "Account{" +
                 "id=" + id +
-                ", phoneNumber=" + phoneNumber +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", role=" + role +
-                ", bonusPoints=" + bonusPoints +
                 ", balance=" + balance +
+                ", bonus=" + bonus +
                 '}';
     }
 }

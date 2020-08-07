@@ -1,6 +1,7 @@
 package by.gruca.cafe.controller.filter;
 
 import by.gruca.cafe.controller.UrlsEnum;
+import by.gruca.cafe.model.Account;
 import by.gruca.cafe.model.Role;
 
 import javax.servlet.*;
@@ -15,8 +16,8 @@ public class AdminFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         HttpServletResponse httpServletResponse = (HttpServletResponse) response;
-        Object role = httpServletRequest.getSession().getAttribute("role");
-        if (role.toString().equals(Role.ADMIN.getRoleValue())) {
+        Account account = (Account) httpServletRequest.getSession().getAttribute("account");
+        if (account!= null && account.getRole() == Role.ADMIN) {
             chain.doFilter(request, response);
         } else {
             RequestDispatcher requestDispatcher = httpServletRequest.getRequestDispatcher(UrlsEnum._MAIN.getPage());

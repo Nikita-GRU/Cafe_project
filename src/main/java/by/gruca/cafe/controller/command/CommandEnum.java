@@ -3,8 +3,7 @@ package by.gruca.cafe.controller.command;
 import by.gruca.cafe.controller.command.admin.*;
 import by.gruca.cafe.controller.command.common.*;
 import by.gruca.cafe.controller.command.moderator.DeleteOrderCommand;
-import by.gruca.cafe.controller.command.moderator.OrderSetAcceptedCommand;
-import by.gruca.cafe.controller.command.moderator.OrderSetDeliveredCommand;
+import by.gruca.cafe.controller.command.moderator.SetOrderStatus;
 import by.gruca.cafe.controller.command.moderator.ShowNotDeliveredOrders;
 
 public enum CommandEnum {
@@ -20,20 +19,19 @@ public enum CommandEnum {
     ADD_NEW_PRODUCT(new AddNewProductCommand()),
     SHOW_PRODUCTS(new ShowProductsCommand()),
     SHOW_ORDERS(new ShowOrdersCommand()),
-    ORDER_SET_ACCEPTED(new OrderSetAcceptedCommand()),
-    ORDER_SET_DELIVERED(new OrderSetDeliveredCommand()),
+    SET_ORDER_STATUS(new SetOrderStatus()),
     DELETE_FROM_CART(new DeleteFromCartCommand()),
     ORDER_DELETE(new DeleteOrderCommand()),
-    EDIT_ACCOUNT(new EditAccountCommand()),
-    BAN_ACCOUNT(new BanAccountCommand()),
-    DELETE_ACCOUNT(new DeleteAccountCommand()),
     SHOW_ACCOUNTS(new ShowAccountsCommand()),
     ORDER(new OrderCommand()),
     SHOW_CART(new AddToCartCommand()),
-    LOGIN(new LoginCommand()),
-    LOGOUT(new LogoutCommand()),
-    SIGNUP(new SignUpCommand()),
-    SHOW_MENU(new ShowMenuCommand());
+    LOG_IN(new LogInCommand()),
+    LOG_OUT(new LogOutCommand()),
+    SIGN_UP(new SignUpCommand()),
+    SHOW_MENU(new ShowMenuCommand()),
+    TO_ORDER(new ToOrderCommand()),
+    TO_CART(new ToCartCommand()),
+    SET_ORDER_FEEDBACK(new SetOrderFeedbackCommand());
 
     ActionCommand command;
 

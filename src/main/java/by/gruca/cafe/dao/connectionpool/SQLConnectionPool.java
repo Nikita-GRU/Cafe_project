@@ -13,12 +13,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public enum SQLConnectionPool {
-    INSTANCE {{
-        isActive = new AtomicBoolean();
-        isActive.getAndSet(false);
-        connectionPool = new LinkedBlockingQueue<>();
-        usedConnections = new ArrayList<>();
-    }};
+    INSTANCE;
     AtomicBoolean isActive;
     LinkedBlockingQueue<ConnectionProxy> connectionPool;
     List<ConnectionProxy> usedConnections;
@@ -30,6 +25,10 @@ public enum SQLConnectionPool {
     private String password;
 
     SQLConnectionPool() {
+        isActive = new AtomicBoolean();
+        isActive.getAndSet(false);
+        connectionPool = new LinkedBlockingQueue<>();
+        usedConnections = new ArrayList<>();
     }
 
     private ConnectionProxy createConnection() throws DAOException {
@@ -51,6 +50,7 @@ public enum SQLConnectionPool {
                 connectionPool.put(createConnection());
             } catch (InterruptedException e) {
                 logger.error(e);
+                Thread.currentThread().interrupt();
                 throw new DAOException(e);
             }
         }
@@ -66,18 +66,12 @@ public enum SQLConnectionPool {
         }
         ConnectionProxy connection = connectionPool.poll();
         usedConnections.add(connection);
-        logger.info("GETOONN");
-        logger.info("conpool = " + connectionPool.size());
-        logger.info("usedcon = " + usedConnections.size());
         return connection;
     }
 
     public void releaseConnection(ConnectionProxy connection) {
         usedConnections.remove(connection);
         connectionPool.add(connection);
-        logger.info("OUTCONN");
-        logger.info("conpool = " + connectionPool.size());
-        logger.info("usedcon = " + usedConnections.size());
     }
 
     public int getSize() {

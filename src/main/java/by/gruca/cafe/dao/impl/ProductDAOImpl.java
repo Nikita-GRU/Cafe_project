@@ -3,7 +3,9 @@ package by.gruca.cafe.dao.impl;
 import by.gruca.cafe.dao.connectionpool.ConnectionProxy;
 import by.gruca.cafe.dao.connectionpool.SQLConnectionPool;
 import by.gruca.cafe.dao.exception.DAOException;
+import by.gruca.cafe.model.Category;
 import by.gruca.cafe.model.Product;
+import by.gruca.cafe.util.ModelMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,29 +18,44 @@ import java.util.List;
 import java.util.Optional;
 
 public class ProductDAOImpl implements by.gruca.cafe.dao.ProductDAO {
-    private static final String SQL_GET_ALL = "select * from product";
-    private static final String SQL_GET = "select * from product where id=? ";
-    private static final String SQL_CREATE = "insert into product (id,name,price,description,image_uri,bonus) " +
-            "values(DEFAULT,?,?,?,?,?)";
-    private static final String SQL_UPDATE = "update product set name=?,price=?,description=?, image_uri=?, bonus=? where id=?";
-    private static final String SQL_DELETE = "delete from product where id=? ";
-    private static final String SQL_GET_BY_NAME = "SELECT * FROM product WHERE name=?";
+    public static final String SQL_STATEMENT_ERROR = "SQL statement error";
+    public static final String PRODUCT_ID = "product_id";
+    public static final String PRODUCT_DESCRIPTION = "description";
+    public static final String PRODUCT_PRICE = "price";
+    public static final String PRODUCT_NAME = "name";
+    public static final String PRODUCT_IMAGE_URI = "image_uri";
+    public static final String PRODUCT_BONUS = "bonus";
+    private static final String SQL_READ_ALL_BY_CATEGORY = "SELECT * FROM product " +
+            "JOIN category ON product.category_id = category.category_id WHERE category.category_name=? ORDER BY product.product_id";
+    private static final String SQL_READ_ALL = "SELECT * FROM product  " +
+            "JOIN category ON product.category_id = category.category_id ORDER BY product.product_id";
+    private static final String SQL_READ = "SELECT * FROM product " +
+            "JOIN category ON product.category_id = category.category_id WHERE product_id=? ";
+    private static final String SQL_CREATE = "INSERT INTO product (product_id,category_id,name,price," +
+            "description,image_uri,bonus) " +
+            "VALUES(DEFAULT,?,?,?,?,?,?)";
+    private static final String SQL_UPDATE = "UPDATE product SET category_id=?,name=?,price=?," +
+            "description=?, image_uri=?, bonus=? WHERE product_id=?";
+    private static final String SQL_DELETE = "DELETE FROM product WHERE product_id=? ";
+    private static final String SQL_READ_BY_NAME = "SELECT * FROM product " +
+            "JOIN category ON product.category_id = category.category_id WHERE name=?";
+    private static final String SQL_READ_PAGINATED_PRODUCTS = "SELECT * FROM product " +
+            "JOIN category ON product.category_id = category.category_id ORDER BY product.product_id " +
+            "LIMIT ? OFFSET ?";
+    private static final String PRODUCTS_COUNT = "products_count";
+    private static final String SQL_READ_PRODUCTS_COUNT = "SELECT COUNT(*) products_count FROM product";
     Logger logger = LogManager.getLogger(ProductDAOImpl.class);
 
-
-    public ProductDAOImpl() {
-    }
-
     @Override
-    public int create(Product product) throws DAOException {
+    public long create(Product entity) throws DAOException {
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_CREATE, Statement.RETURN_GENERATED_KEYS)) {
-            statement.setString(1, product.getName());
-            statement.setDouble(2, product.getPrice());
-            statement.setString(3, product.getDescription());
-            statement.setString(4, product.getImageUri());
-            statement.setInt(5, product.getBonus());
-            logger.info(product.toString() + " created");
+            statement.setInt(1, entity.getCategory().getId());
+            statement.setString(2, entity.getName());
+            statement.setBigDecimal(3, entity.getPrice());
+            statement.setString(4, entity.getDescription());
+            statement.setString(5, entity.getImageUri());
+            statement.setInt(6, entity.getBonus());
             statement.execute();
             ResultSet resultSet = statement.getGeneratedKeys();
             if (resultSet.next()) {
@@ -52,44 +69,31 @@ public class ProductDAOImpl implements by.gruca.cafe.dao.ProductDAO {
     }
 
     @Override
-    public Optional<Product> read(Integer productId) throws DAOException {
-        Product product = new Product();
+    public Optional<Product> read(long id) throws DAOException {
+        Product product;
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement readStatement = connection.prepareStatement(SQL_GET)) {
-            readStatement.setInt(1, productId);
-            try (ResultSet resultSet = readStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    product.setId(resultSet.getInt("id"));
-                    product.setDescription(resultSet.getString("description"));
-                    product.setPrice(resultSet.getDouble("price"));
-                    product.setName(resultSet.getString("name"));
-                    product.setImageUri(resultSet.getString("image_uri"));
-                    product.setBonus(resultSet.getInt("bonus"));
-                    logger.info(product.toString() + "  was read");
-                } else throw new DAOException("Product is not exist");
-            } catch (SQLException e) {
-                logger.error(e);
-            }
+             PreparedStatement readStatement = connection.prepareStatement(SQL_READ)) {
+            readStatement.setLong(1, id);
+            product = buildProduct(readStatement);
         } catch (SQLException e) {
             logger.error(e);
-            throw new DAOException("SQL read error", e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
         }
-        return Optional.of(product);
+        return Optional.ofNullable(product);
     }
 
     @Override
-    public int update(Product product) throws DAOException {
+    public int update(Product entity) throws DAOException {
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_UPDATE)) {
-            statement.setString(1, product.getName());
-            statement.setDouble(2, product.getPrice());
-            statement.setString(3, product.getDescription());
-            statement.setString(4, product.getImageUri());
-            statement.setInt(5, product.getBonus());
-            statement.setInt(6, product.getId());
-            int rowsAffected = statement.executeUpdate();
-            logger.info("update " + product.toString() + " row affected" + rowsAffected);
-            return rowsAffected;
+            statement.setInt(1, entity.getCategory().getId());
+            statement.setString(2, entity.getName());
+            statement.setBigDecimal(3, entity.getPrice());
+            statement.setString(4, entity.getDescription());
+            statement.setString(5, entity.getImageUri());
+            statement.setInt(6, entity.getBonus());
+            statement.setLong(7, entity.getId());
+            return statement.executeUpdate();
         } catch (SQLException e) {
             logger.error(e);
             throw new DAOException("SQL update error", e);
@@ -97,37 +101,71 @@ public class ProductDAOImpl implements by.gruca.cafe.dao.ProductDAO {
     }
 
     @Override
-    public Optional<Product> getProductByName(String productName) throws DAOException {
+    public Optional<Product> readByName(String productName) throws DAOException {
         Product product = new Product();
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement readStatement = connection.prepareStatement(SQL_GET_BY_NAME)) {
+             PreparedStatement readStatement = connection.prepareStatement(SQL_READ_BY_NAME)) {
             readStatement.setString(1, productName);
-            try (ResultSet resultSet = readStatement.executeQuery()) {
-                if (resultSet.next()) {
-                    product.setId(resultSet.getInt("id"));
-                    product.setDescription(resultSet.getString("description"));
-                    product.setPrice(resultSet.getDouble("price"));
-                    product.setName(resultSet.getString("name"));
-                    product.setImageUri(resultSet.getString("image_uri"));
-                    product.setBonus(resultSet.getInt("bonus"));
-                    logger.info(product.toString() + "  was read");
-                } else throw new DAOException("Product is not exist");
-            } catch (SQLException e) {
-                logger.error(e);
-            }
+            product = buildProduct(readStatement);
         } catch (SQLException e) {
             logger.error(e);
-            throw new DAOException("SQL getByName error", e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
         }
-        return Optional.of(product);
+        return Optional.ofNullable(product);
 
     }
 
     @Override
-    public boolean delete(Product product) throws DAOException {
+    public List<Product> readAll() throws DAOException {
+        List<Product> products;
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL_READ_ALL);) {
+            products = buildProductList(preparedStatement);
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException("getAll query error", e);
+        }
+
+        return products;
+    }
+
+    @Override
+    public List<Product> readAll(int itemsPerPage, int pageNumber) throws DAOException {
+        List<Product> products;
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement statement =
+                     connection.prepareStatement(SQL_READ_PAGINATED_PRODUCTS);) {
+            statement.setInt(1, itemsPerPage);
+            statement.setInt(2, (pageNumber - 1) * itemsPerPage);
+            products = buildProductList(statement);
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
+        }
+        return products;
+    }
+
+    @Override
+    public int readProductCount() throws DAOException {
+        int productsCount = 0;
+        try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
+             PreparedStatement statement = connection.prepareStatement(SQL_READ_PRODUCTS_COUNT);
+             ResultSet rs = statement.executeQuery();) {
+            if (rs.next()) {
+                productsCount = rs.getInt(PRODUCTS_COUNT);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(SQL_STATEMENT_ERROR, e);
+        }
+        return productsCount;
+    }
+
+    @Override
+    public boolean delete(Product entity) throws DAOException {
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
              PreparedStatement statement = connection.prepareStatement(SQL_DELETE);) {
-            statement.setInt(1, product.getId());
+            statement.setLong(1, entity.getId());
             return statement.execute();
         } catch (SQLException e) {
             logger.error(e);
@@ -136,26 +174,47 @@ public class ProductDAOImpl implements by.gruca.cafe.dao.ProductDAO {
     }
 
     @Override
-    public List<Product> getAllProducts() throws DAOException {
-        List<Product> productList = new ArrayList<Product>();
+    public List<Product> readAllByCategory(Category category) throws DAOException {
+        List<Product> products;
         try (ConnectionProxy connection = SQLConnectionPool.INSTANCE.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(SQL_GET_ALL);
-             ResultSet resultSet = preparedStatement.executeQuery()) {
-            while (resultSet.next()) {
-                Product product = new Product();
-                product.setName(resultSet.getString("name"));
-                product.setPrice(Double.parseDouble(resultSet.getString("price")));
-                product.setDescription(resultSet.getString("description"));
-                product.setId(resultSet.getInt("id"));
-                product.setImageUri(resultSet.getString("image_uri"));
-                product.setBonus(resultSet.getInt("bonus"));
-                productList.add(product);
-            }
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL_READ_ALL_BY_CATEGORY);) {
+            preparedStatement.setString(1, category.getCategory());
+            products = buildProductList(preparedStatement);
         } catch (SQLException e) {
             logger.error(e);
             throw new DAOException("getAll query error", e);
         }
 
-        return productList;
+        return products;
     }
+
+    private Product buildProduct(PreparedStatement readStatement) throws DAOException {
+        Product product = null;
+        try (ResultSet rs = readStatement.executeQuery()) {
+            if (rs.next()) {
+                product = ModelMapper.INSTANCE.getProductFromResultSet(rs);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(e);
+        }
+        return product;
+    }
+
+    private List<Product> buildProductList(PreparedStatement readStatement) throws DAOException {
+        List<Product> products = new ArrayList<>();
+        Product product;
+        try (ResultSet rs = readStatement.executeQuery()) {
+            while (rs.next()) {
+                product = ModelMapper.INSTANCE.getProductFromResultSet(rs);
+                products.add(product);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw new DAOException(e);
+        }
+        return products;
+    }
+
+
 }
